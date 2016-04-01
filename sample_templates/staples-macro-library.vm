@@ -1,0 +1,14 @@
+#macro ( trackingPixel )
+	#set( $notificationUrl = $cttOpenURL+ $root.headers.notificationId))
+	<pre>
+	V2
+	Notification URL : $notificationUrl
+	Image URL is $urlCryptoUtil.encryptAndEncode(${notificationUrl})
+	
+	Config : $cttOpenURL
+
+	NotificationId:  $notificationId
+	</pre>
+	<img src='$urlCryptoUtil.encryptAndEncode(${notificationUrl})' />
+	
+#end

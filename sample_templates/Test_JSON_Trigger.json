@@ -1,0 +1,28 @@
+{
+  "headers": {
+    "triggerType":1,
+    "senderId": 3,
+    "brandId": 3,
+    "notificationType": [{ "contactType":"EMAIL","contactValue":"srini@joseki-tech.com"}],
+    "orderNumber": "0596782734",
+    "customerId": ["0"],
+    "customerTypeId":"0",
+    "triggerDate": "2015-05-07 6:00:00",
+    "notificationId": 1234
+  },
+  "data": {
+    "OrderNumber": "0123456789012345",
+    "Shipments": [{
+      "ShipmentItems": [{
+        "ItemNumber": "285195",
+        "CustomerItemNumber": "0123456",
+        "Description": "Apple iPad 2 with Wifi + 3G (Verizon Wireless) 16GB, White",
+        "Quantity":"1",
+        "ImageUrl": "http://product.image",
+        "Budget Center": "A-12345r0596759409384576568450340",
+        "OnContractFlag":1,
+        "OpenMarketBuyFlag":1
+      }]
+    }]
+  }
+}

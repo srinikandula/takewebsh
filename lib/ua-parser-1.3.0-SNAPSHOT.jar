@@ -1,0 +1,3048 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled is-u2f-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    <meta content="origin-when-cross-origin" name="referrer" />
+    
+    <title>ube/ua-parser-1.3.0-SNAPSHOT.jar at master · Shodogg/ube</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="Shodogg/ube" name="twitter:title" /><meta content="ube - Universal Backend" name="twitter:description" /><meta content="https://avatars0.githubusercontent.com/u/1401932?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars0.githubusercontent.com/u/1401932?v=3&amp;s=400" property="og:image" /><meta content="Shodogg/ube" property="og:title" /><meta content="https://github.com/Shodogg/ube" property="og:url" /><meta content="ube - Universal Backend" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MjIxMDM4Ojc5MWYxOWE4OGUyNGQzZjBjNTM1MWZlOGEwZGRjY2IyOmJlNWM0ZWY2OGU0NGNkN2FkZDgzNjdjZjU4OTI2MTY5YWIwNTdhOTU2NWViYWViODhhMWIwN2NkZWRmNTU3NTU=--22167037ef7c6e382f7dd78a5aa92990db5d2cc8">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="AA25F425:448B:310E2E3A:568020E9" name="octolytics-dimension-request_id" /><meta content="221038" name="octolytics-actor-id" /><meta content="srinikandula" name="octolytics-actor-login" /><meta content="c08816c4254aa466382b5a5539e85d6a9db17af982694566d7edabd34b9a60a5" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+<meta content="Rails, view, blob#show" data-pjax-transient="true" name="analytics-event" />
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="srinikandula">
+
+        <meta name="expected-hostname" content="github.com">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" name="form-nonce" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-16bf5399d85a6f926eb6af8f983ed5cf907e97b4da4a650dc11920d425826218.css" integrity="sha256-Fr9Tmdhab5Jutq+PmD7Vz5B+l7TaSmUNwRkg1CWCYhg=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-451ab63ad67fa9af580e5d9a3b2b7de911ce2e4b2437638f26fe8cb3879e67d8.css" integrity="sha256-RRq2OtZ/qa9YDl2aOyt96RHOLkskN2OPJv6Ms4eeZ9g=" media="all" rel="stylesheet" />
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="be269b1951a3572820c1f935e13a2f75">
+
+      
+  <meta name="description" content="ube - Universal Backend">
+  <meta name="go-import" content="github.com/Shodogg/ube git https://github.com/Shodogg/ube.git">
+
+  <meta content="1401932" name="octolytics-dimension-user_id" /><meta content="Shodogg" name="octolytics-dimension-user_login" /><meta content="11257306" name="octolytics-dimension-repository_id" /><meta content="Shodogg/ube" name="octolytics-dimension-repository_nwo" /><meta content="false" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="11257306" name="octolytics-dimension-repository_network_root_id" /><meta content="Shodogg/ube" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/Shodogg/ube/commits/master.atom?token=AANfbr2bN01Ci0F-GSDQa7Ym0m1LGlTuks60jVNuwA%3D%3D" rel="alternate" title="Recent Commits to ube:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_in   env-production windows vis-private page-blob">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github "></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search" role="search">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/Shodogg/ube/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/Shodogg/ube/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      aria-label="Search this repository"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+      </div>
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+      <span class="js-socket-channel js-updatable-content"
+        data-channel="notification-changed:srinikandula"
+        data-url="/notifications/header">
+      <a href="/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+          <span class="mail-status unread"></span>
+          <span class="octicon octicon-bell "></span>
+</a>  </span>
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="Shodogg/ube">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/Shodogg/ube/settings/collaboration" data-ga-click="Header, create new collaborator">
+      New collaborator
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/srinikandula"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@srinikandula" class="avatar" height="20" src="https://avatars0.githubusercontent.com/u/221038?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">srinikandula</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/srinikandula" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="s0DzCCheAUEbdE6RMn82dIG5yzT3Mz5P+IRUN+AGTqElqbbef13QBKG+vqiPPUNHWJOb15yCPaWLPk10jvi+Lg==" /></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-repo-pjax-container" class="context-loader-container js-repo-nav-next" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="rOXRcttW2hdF/ChI2/0i02XgDPl4XKUOvU0YXdUM6ZoRZbO+BV2unZUtvQWNkH3gUG2ocLO4YmNdB/nV5Ho5NA==" /></div>      <input id="repository_id" name="repository_id" type="hidden" value="11257306" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/Shodogg/ube/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:blob#show">
+            <span class="js-select-button">
+              <span class="octicon octicon-eye "></span>
+              Unwatch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="/Shodogg/ube/watchers">
+            6
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header">
+              <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <span class="select-menu-item-icon octicon octicon-check"></span>
+                  <div class="select-menu-item-text">
+                    <input id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <span class="octicon octicon-eye"></span>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <span class="octicon octicon-eye"></span>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <span class="select-menu-item-icon octicon octicon-check"></span>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <span class="octicon octicon-mute"></span>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/Shodogg/ube/unstar" class="js-toggler-form starred js-unstar-button" data-form-nonce="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="uCtoVJ04cKTEKXmg3cKoCx369bXjPBNOKbTqkgSjFTqMwTjLXfVIziOq5nntEqRPu8YKsnZ/Bem2wNh7C5PmkQ==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar Shodogg/ube"
+        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <span class="octicon octicon-star "></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/Shodogg/ube/stargazers">
+          0
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/Shodogg/ube/star" class="js-toggler-form unstarred js-star-button" data-form-nonce="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="HPOUhEMogP9ORM8nMXd04yF+Cs9N04db1NscpK40fHitITkB0MCv+exeH82N45sB8vTG/2HCZagZttAcEbLidA==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star Shodogg/ube"
+        data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <span class="octicon octicon-star "></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/Shodogg/ube/stargazers">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <a href="#fork-destination-box" class="btn btn-sm btn-with-count"
+              title="Fork your own copy of Shodogg/ube to your account"
+              aria-label="Fork your own copy of Shodogg/ube to your account"
+              rel="facebox"
+              data-ga-click="Repository, show fork modal, action:blob#show; text:Fork">
+              <span class="octicon octicon-repo-forked "></span>
+            Fork
+          </a>
+
+          <div id="fork-destination-box" style="display: none;">
+            <h2 class="facebox-header" data-facebox-id="facebox-header">Where should we fork this repository?</h2>
+            <include-fragment src=""
+                class="js-fork-select-fragment fork-select-fragment"
+                data-url="/Shodogg/ube/fork?fragment=1">
+              <img alt="Loading" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" />
+            </include-fragment>
+          </div>
+
+    <a href="/Shodogg/ube/network" class="social-count">
+      0
+    </a>
+  </li>
+</ul>
+
+    <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title private ">
+  <span class="octicon octicon-lock "></span>
+  <span class="author"><a href="/Shodogg" class="url fn" itemprop="url" rel="author"><span itemprop="title">Shodogg</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/Shodogg/ube" data-pjax="#js-repo-pjax-container">ube</a></strong>
+    <span class="repo-private-label">private</span>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+  </span>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <a href="/Shodogg/ube" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /Shodogg/ube">
+    <span class="octicon octicon-code "></span>
+    Code
+</a>
+
+  <a href="/Shodogg/ube/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /Shodogg/ube/pulls">
+    <span class="octicon octicon-git-pull-request "></span>
+    Pull requests
+    <span class="counter">2</span>
+</a>
+    <a href="/Shodogg/ube/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /Shodogg/ube/wiki">
+      <span class="octicon octicon-book "></span>
+      Wiki
+</a>
+  <a href="/Shodogg/ube/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /Shodogg/ube/pulse">
+    <span class="octicon octicon-pulse "></span>
+    Pulse
+</a>
+  <a href="/Shodogg/ube/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /Shodogg/ube/graphs">
+    <span class="octicon octicon-graph "></span>
+    Graphs
+</a>
+    <a href="/Shodogg/ube/settings" class="js-selected-navigation-item reponav-item" data-selected-links="repo_settings repo_branch_settings hooks /Shodogg/ube/settings">
+      <span class="octicon octicon-gear "></span>
+      Settings
+</a>
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/Shodogg/ube/blob/912190703527ba06b93f8edafcb50110be47b58f/service/lib/ua-parser-1.3.0-SNAPSHOT.jar" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:ff38be5d61e0c9a1276ff57e811ee8ca -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Find or create a branch…" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Find or create a branch…">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Find or create a branch…" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/HPSN/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="HPSN"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="HPSN">
+                HPSN
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/MID-pilot/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="MID-pilot"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="MID-pilot">
+                MID-pilot
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/SD_HP_Companies/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/SD_HP_Companies"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/SD_HP_Companies">
+                brian/SD_HP_Companies
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/SD_companies/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/SD_companies"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/SD_companies">
+                brian/SD_companies
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/analytics-temp/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/analytics-temp"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/analytics-temp">
+                brian/analytics-temp
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/angular1.3/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/angular1.3"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/angular1.3">
+                brian/angular1.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/commsfactory/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/commsfactory"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/commsfactory">
+                brian/commsfactory
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/file_management/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/file_management"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/file_management">
+                brian/file_management
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/final_HP_email/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/final_HP_email"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/final_HP_email">
+                brian/final_HP_email
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/follow-up-frontend/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/follow-up-frontend"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/follow-up-frontend">
+                brian/follow-up-frontend
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/follow-up-wip/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/follow-up-wip"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/follow-up-wip">
+                brian/follow-up-wip
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/gulp-with-css/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/gulp-with-css"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/gulp-with-css">
+                brian/gulp-with-css
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/hotfix/browser-alert/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/hotfix/browser-alert"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/hotfix/browser-alert">
+                brian/hotfix/browser-alert
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/internationalization/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/internationalization"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/internationalization">
+                brian/internationalization
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/jaspersoft-demo/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/jaspersoft-demo"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/jaspersoft-demo">
+                brian/jaspersoft-demo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/portal-rails-demo/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/portal-rails-demo"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/portal-rails-demo">
+                brian/portal-rails-demo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/rs-additions/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/rs-additions"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/rs-additions">
+                brian/rs-additions
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/scportal/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/scportal"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/scportal">
+                brian/scportal
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian_shobott_wip/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian_shobott_wip"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian_shobott_wip">
+                brian_shobott_wip
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/ube1302-analytics-frontend/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/ube1302-analytics-frontend"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/ube1302-analytics-frontend">
+                brian/ube1302-analytics-frontend
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/user_portal_backup/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/user_portal_backup"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/user_portal_backup">
+                brian/user_portal_backup
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/youtube-v3-pagination/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/youtube-v3-pagination"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/youtube-v3-pagination">
+                brian/youtube-v3-pagination
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/brian/youtube-v3/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="brian/youtube-v3"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="brian/youtube-v3">
+                brian/youtube-v3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/compare/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="compare"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="compare">
+                compare
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/alex/mm2/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/alex/mm2"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/alex/mm2">
+                dev/alex/mm2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/browser-unsupported/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/browser-unsupported"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/browser-unsupported">
+                dev/brian/browser-unsupported
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/cogniance-staging-branch/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/cogniance-staging-branch"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/cogniance-staging-branch">
+                dev/brian/cogniance-staging-branch
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/company_compound_index/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/company_compound_index"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/company_compound_index">
+                dev/brian/company_compound_index
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/custom-logo/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/custom-logo"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/custom-logo">
+                dev/brian/custom-logo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/email-changes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/email-changes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/email-changes">
+                dev/brian/email-changes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/eventUrlRecscreen/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/eventUrlRecscreen"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/eventUrlRecscreen">
+                dev/brian/eventUrlRecscreen
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/events_and_images/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/events_and_images"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/events_and_images">
+                dev/brian/events_and_images
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/file_upload_to_group/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/file_upload_to_group"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/file_upload_to_group">
+                dev/brian/file_upload_to_group
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/hotfix-changes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/hotfix-changes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/hotfix-changes">
+                dev/brian/hotfix-changes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/hpsn-company-settings/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/hpsn-company-settings"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/hpsn-company-settings">
+                dev/brian/hpsn-company-settings
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/hpsn-jssdk-favorites/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/hpsn-jssdk-favorites"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/hpsn-jssdk-favorites">
+                dev/brian/hpsn-jssdk-favorites
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/hpsn-sow1-portal-settings/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/hpsn-sow1-portal-settings"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/hpsn-sow1-portal-settings">
+                dev/brian/hpsn-sow1-portal-settings
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/image-preloading/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/image-preloading"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/image-preloading">
+                dev/brian/image-preloading
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/jrs-fix/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/jrs-fix"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/jrs-fix">
+                dev/brian/jrs-fix
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/js-library-pilot/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/js-library-pilot"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/js-library-pilot">
+                dev/brian/js-library-pilot
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/media-types/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/media-types"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/media-types">
+                dev/brian/media-types
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/meteor-test/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/meteor-test"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/meteor-test">
+                dev/brian/meteor-test
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/portal-signup-flow/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/portal-signup-flow"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/portal-signup-flow">
+                dev/brian/portal-signup-flow
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/portal_fixes_additions/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/portal_fixes_additions"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/portal_fixes_additions">
+                dev/brian/portal_fixes_additions
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/recscreen_fixes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/recscreen_fixes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/recscreen_fixes">
+                dev/brian/recscreen_fixes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/redshift-connection/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/redshift-connection"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/redshift-connection">
+                dev/brian/redshift-connection
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/redshift-data-query/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/redshift-data-query"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/redshift-data-query">
+                dev/brian/redshift-data-query
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/reporting_script/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/reporting_script"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/reporting_script">
+                dev/brian/reporting_script
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/salesforce-poc/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/salesforce-poc"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/salesforce-poc">
+                dev/brian/salesforce-poc
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/sync_post_connect/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/sync_post_connect"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/sync_post_connect">
+                dev/brian/sync_post_connect
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/test-commit/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/test-commit"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/test-commit">
+                dev/brian/test-commit
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/brian/user-changes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/brian/user-changes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/brian/user-changes">
+                dev/brian/user-changes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/analytics-enum-errors/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/analytics-enum-errors"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/analytics-enum-errors">
+                dev/jason/analytics-enum-errors
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/analytics-ui-bugs/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/analytics-ui-bugs"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/analytics-ui-bugs">
+                dev/jason/analytics-ui-bugs
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/extra-tests-1972/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/extra-tests-1972"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/extra-tests-1972">
+                dev/jason/extra-tests-1972
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/hotfix-dropbox-user-validation/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/hotfix-dropbox-user-validation"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/hotfix-dropbox-user-validation">
+                dev/jason/hotfix-dropbox-user-validation
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/hotfix-oxagile/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/hotfix-oxagile"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/hotfix-oxagile">
+                dev/jason/hotfix-oxagile
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/kinesis-redshift-connector/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/kinesis-redshift-connector"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/kinesis-redshift-connector">
+                dev/jason/kinesis-redshift-connector
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/mid-event-tracking/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/mid-event-tracking"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/mid-event-tracking">
+                dev/jason/mid-event-tracking
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/minor_bugs/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/minor_bugs"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/minor_bugs">
+                dev/jason/minor_bugs
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/notifSettingsDTO/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/notifSettingsDTO"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/notifSettingsDTO">
+                dev/jason/notifSettingsDTO
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/reaper-stacktraces/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/reaper-stacktraces"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/reaper-stacktraces">
+                dev/jason/reaper-stacktraces
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/recScreenBugs/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/recScreenBugs"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/recScreenBugs">
+                dev/jason/recScreenBugs
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube568-socketio-safari-bug/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube568-socketio-safari-bug"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube568-socketio-safari-bug">
+                dev/jason/ube568-socketio-safari-bug
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube1186-box/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube1186-box"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube1186-box">
+                dev/jason/ube1186-box
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube1284-socketio10/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube1284-socketio10"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube1284-socketio10">
+                dev/jason/ube1284-socketio10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube1752-notifEntryEndpoints/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube1752-notifEntryEndpoints"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube1752-notifEntryEndpoints">
+                dev/jason/ube1752-notifEntryEndpoints
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube1752-notifEntryEndpoints427/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube1752-notifEntryEndpoints427"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube1752-notifEntryEndpoints427">
+                dev/jason/ube1752-notifEntryEndpoints427
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube1858-hpsn-kinesis-server/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube1858-hpsn-kinesis-server"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube1858-hpsn-kinesis-server">
+                dev/jason/ube1858-hpsn-kinesis-server
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/jason/ube1875-dupe-fldr/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/jason/ube1875-dupe-fldr"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/jason/ube1875-dupe-fldr">
+                dev/jason/ube1875-dupe-fldr
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/merge-youtubev3-hotifx/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/merge-youtubev3-hotifx"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/merge-youtubev3-hotifx">
+                dev/merge-youtubev3-hotifx
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/AddCreatedDateToAnalyticsReport/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/AddCreatedDateToAnalyticsReport"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/AddCreatedDateToAnalyticsReport">
+                dev/srini/AddCreatedDateToAnalyticsReport
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/AnalyticsTreeViewBugFix/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/AnalyticsTreeViewBugFix"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/AnalyticsTreeViewBugFix">
+                dev/srini/AnalyticsTreeViewBugFix
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/ChangesToEventURLManager/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/ChangesToEventURLManager"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/ChangesToEventURLManager">
+                dev/srini/ChangesToEventURLManager
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/HPPWS/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/HPPWS"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/HPPWS">
+                dev/srini/HPPWS
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/HPPWSChanges/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/HPPWSChanges"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/HPPWSChanges">
+                dev/srini/HPPWSChanges
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/HPSNReportFixes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/HPSNReportFixes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/HPSNReportFixes">
+                dev/srini/HPSNReportFixes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/MandrillEmailTemplates/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/MandrillEmailTemplates"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/MandrillEmailTemplates">
+                dev/srini/MandrillEmailTemplates
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/MergedChangesFromMaster/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/MergedChangesFromMaster"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/MergedChangesFromMaster">
+                dev/srini/MergedChangesFromMaster
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/MessageFeedBackEnd/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/MessageFeedBackEnd"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/MessageFeedBackEnd">
+                dev/srini/MessageFeedBackEnd
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/RefactorAndBugFixes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/RefactorAndBugFixes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/RefactorAndBugFixes">
+                dev/srini/RefactorAndBugFixes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/UBE1426/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/UBE1426"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/UBE1426">
+                dev/srini/UBE1426
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/UBE1522/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/UBE1522"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/UBE1522">
+                dev/srini/UBE1522
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/UBE1602/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/UBE1602"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/UBE1602">
+                dev/srini/UBE1602
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/UBE1856/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/UBE1856"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/UBE1856">
+                dev/srini/UBE1856
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/nginxConf/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/nginxConf"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/nginxConf">
+                dev/srini/nginxConf
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/srini/springUpgrade/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/srini/springUpgrade"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/srini/springUpgrade">
+                dev/srini/springUpgrade
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/dev/zack/ube-544-defensive-event-url-rec-screen/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="dev/zack/ube-544-defensive-event-url-rec-screen"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="dev/zack/ube-544-defensive-event-url-rec-screen">
+                dev/zack/ube-544-defensive-event-url-rec-screen
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/develop/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="develop"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="develop">
+                develop
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/feature/MYM-32/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="feature/MYM-32"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="feature/MYM-32">
+                feature/MYM-32
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/feature/instagram_integration/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="feature/instagram_integration"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="feature/instagram_integration">
+                feature/instagram_integration
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/UBE-2284/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/UBE-2284"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/UBE-2284">
+                hotfix/UBE-2284
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/browser-alert/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/browser-alert"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/browser-alert">
+                hotfix/browser-alert
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/event-addition/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/event-addition"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/event-addition">
+                hotfix/event-addition
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/hotfix-cogniance-staging-branch/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/hotfix-cogniance-staging-branch"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/hotfix-cogniance-staging-branch">
+                hotfix/hotfix-cogniance-staging-branch
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/hotfix-ios-jrs/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/hotfix-ios-jrs"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/hotfix-ios-jrs">
+                hotfix/hotfix-ios-jrs
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/hotfix1620/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/hotfix1620"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/hotfix1620">
+                hotfix/hotfix1620
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/hp_email_fix_524/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/hp_email_fix_524"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/hp_email_fix_524">
+                hotfix/hp_email_fix_524
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/jason/hotfix-oxagile/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/jason/hotfix-oxagile"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/jason/hotfix-oxagile">
+                hotfix/jason/hotfix-oxagile
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/ube1846/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/ube1846"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/ube1846">
+                hotfix/ube1846
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/ube1847-fromprod1139/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/ube1847-fromprod1139"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/ube1847-fromprod1139">
+                hotfix/ube1847-fromprod1139
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/ube2287/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/ube2287"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/ube2287">
+                hotfix/ube2287
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/youtubev3-day2/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/youtubev3-day2"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/youtubev3-day2">
+                hotfix/youtubev3-day2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hotfix/youtubev3/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hotfix/youtubev3"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hotfix/youtubev3">
+                hotfix/youtubev3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/hpsn-sow1/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="hpsn-sow1"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="hpsn-sow1">
+                hpsn-sow1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/basic-analytics-for-stephen/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/basic-analytics-for-stephen"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/basic-analytics-for-stephen">
+                jason/basic-analytics-for-stephen
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/box-stuff/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/box-stuff"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/box-stuff">
+                jason/box-stuff
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/chrome-extension-configurable/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/chrome-extension-configurable"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/chrome-extension-configurable">
+                jason/chrome-extension-configurable
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/chrome-plugin/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/chrome-plugin"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/chrome-plugin">
+                jason/chrome-plugin
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/fetchit-poc-m3u8/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/fetchit-poc-m3u8"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/fetchit-poc-m3u8">
+                jason/fetchit-poc-m3u8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/followup-controller/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/followup-controller"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/followup-controller">
+                jason/followup-controller
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/hack-nes/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/hack-nes"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/hack-nes">
+                jason/hack-nes
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/jsondoc-upgrade-WIP/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/jsondoc-upgrade-WIP"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/jsondoc-upgrade-WIP">
+                jason/jsondoc-upgrade-WIP
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/kinesis-redshift-connector/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/kinesis-redshift-connector"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/kinesis-redshift-connector">
+                jason/kinesis-redshift-connector
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/mobile-commands/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/mobile-commands"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/mobile-commands">
+                jason/mobile-commands
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ph-demo/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ph-demo"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ph-demo">
+                jason/ph-demo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/portal-rails-demo/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/portal-rails-demo"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/portal-rails-demo">
+                jason/portal-rails-demo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/recursive-folder-int-tests/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/recursive-folder-int-tests"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/recursive-folder-int-tests">
+                jason/recursive-folder-int-tests
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/saml-openssl-x509/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/saml-openssl-x509"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/saml-openssl-x509">
+                jason/saml-openssl-x509
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/saml2/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/saml2"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/saml2">
+                jason/saml2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/springsocial-facebook-api-upgrade/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/springsocial-facebook-api-upgrade"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/springsocial-facebook-api-upgrade">
+                jason/springsocial-facebook-api-upgrade
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/sweet-alerts/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/sweet-alerts"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/sweet-alerts">
+                jason/sweet-alerts
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube-1843/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube-1843"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube-1843">
+                jason/ube-1843
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube-1896/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube-1896"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube-1896">
+                jason/ube-1896
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube211-analytics/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube211-analytics"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube211-analytics">
+                jason/ube211-analytics
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube351-capture-analytics/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube351-capture-analytics"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube351-capture-analytics">
+                jason/ube351-capture-analytics
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube444-rec-screen-stop-responding/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube444-rec-screen-stop-responding"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube444-rec-screen-stop-responding">
+                jason/ube444-rec-screen-stop-responding
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube830-mp4-content-type/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube830-mp4-content-type"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube830-mp4-content-type">
+                jason/ube830-mp4-content-type
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube871-saml-acs/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube871-saml-acs"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube871-saml-acs">
+                jason/ube871-saml-acs
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube1186-box/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube1186-box"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube1186-box">
+                jason/ube1186-box
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube1284-socketio10/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube1284-socketio10"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube1284-socketio10">
+                jason/ube1284-socketio10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube1291-hpsn-security/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube1291-hpsn-security"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube1291-hpsn-security">
+                jason/ube1291-hpsn-security
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube1302-analytics/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube1302-analytics"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube1302-analytics">
+                jason/ube1302-analytics
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube1548-rec-screen-reconnect/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube1548-rec-screen-reconnect"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube1548-rec-screen-reconnect">
+                jason/ube1548-rec-screen-reconnect
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube1746-notification-model/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube1746-notification-model"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube1746-notification-model">
+                jason/ube1746-notification-model
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube2060-portal-rebranding-tab/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube2060-portal-rebranding-tab"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube2060-portal-rebranding-tab">
+                jason/ube2060-portal-rebranding-tab
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/jason/ube2061-asset-search/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="jason/ube2061-asset-search"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="jason/ube2061-asset-search">
+                jason/ube2061-asset-search
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/Shodogg/ube/blob/master/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/mm2-dev/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="mm2-dev"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="mm2-dev">
+                mm2-dev
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/mm2-featureMYM-27/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="mm2-featureMYM-27"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="mm2-featureMYM-27">
+                mm2-featureMYM-27
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/mm2-samvit/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="mm2-samvit"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="mm2-samvit">
+                mm2-samvit
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/srini/ChangesForCreatingMetricsCSVDump/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="srini/ChangesForCreatingMetricsCSVDump"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="srini/ChangesForCreatingMetricsCSVDump">
+                srini/ChangesForCreatingMetricsCSVDump
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/srini/PortalNotifications/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="srini/PortalNotifications"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="srini/PortalNotifications">
+                srini/PortalNotifications
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/sriniDeve/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="sriniDeve"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="sriniDeve">
+                sriniDeve
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/survey-prototype-1/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="survey-prototype-1"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="survey-prototype-1">
+                survey-prototype-1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/survey-prototype-2/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="survey-prototype-2"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="survey-prototype-2">
+                survey-prototype-2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/survey-prototype-3/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="survey-prototype-3"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="survey-prototype-3">
+                survey-prototype-3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/zack/facebook_oauth/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="zack/facebook_oauth"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="zack/facebook_oauth">
+                zack/facebook_oauth
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/Shodogg/ube/blob/zack/flickr_auth/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+               data-name="zack/flickr_auth"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="zack/flickr_auth">
+                zack/flickr_auth
+              </span>
+            </a>
+        </div>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/Shodogg/ube/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" data-form-nonce="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ACFF7InfuoU6gA7UV5x96rwS9RzbVrZ6ULGnsadw058ofF6zGHtMe/kwSGGgxW+gCa3uL0CZjJPIDJJ+3nsTjg==" /></div>
+            <span class="octicon octicon-git-branch select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <span class="select-menu-item-heading">Create branch: <span class="js-new-item-name"></span></span>
+              <span class="description">from ‘master’</span>
+            </div>
+            <input type="hidden" name="name" id="name" class="js-new-item-value">
+            <input type="hidden" name="branch" id="branch" value="master">
+            <input type="hidden" name="path" id="path" value="service/lib/ua-parser-1.3.0-SNAPSHOT.jar">
+</form>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/hpsn-rc2/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="hpsn-rc2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="hpsn-rc2">hpsn-rc2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/hpsn-rc2-securityfixes-20140702/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="hpsn-rc2-securityfixes-20140702"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="hpsn-rc2-securityfixes-20140702">hpsn-rc2-securityfixes-20140702</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/hpsn-20140715-0500/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="hpsn-20140715-0500"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="hpsn-20140715-0500">hpsn-20140715-0500</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1308/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1308"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1308">build-1308</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1307/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1307"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1307">build-1307</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1306/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1306"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1306">build-1306</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1305/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1305"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1305">build-1305</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1304/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1304"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1304">build-1304</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1303/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1303"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1303">build-1303</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1302/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1302"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1302">build-1302</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1301/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1301"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1301">build-1301</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1300/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1300"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1300">build-1300</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1299/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1299"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1299">build-1299</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1298/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1298"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1298">build-1298</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1296/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1296"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1296">build-1296</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1295/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1295"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1295">build-1295</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1294/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1294"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1294">build-1294</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1293/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1293"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1293">build-1293</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1292/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1292"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1292">build-1292</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1291/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1291"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1291">build-1291</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1290/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1290"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1290">build-1290</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1289/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1289"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1289">build-1289</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1288/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1288"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1288">build-1288</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1287/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1287"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1287">build-1287</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1286/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1286"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1286">build-1286</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1285/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1285"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1285">build-1285</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1284/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1284"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1284">build-1284</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1283/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1283"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1283">build-1283</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1282/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1282"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1282">build-1282</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1281/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1281"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1281">build-1281</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1280/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1280"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1280">build-1280</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1279/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1279"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1279">build-1279</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1278/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1278"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1278">build-1278</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1277/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1277"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1277">build-1277</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1276/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1276"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1276">build-1276</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1275/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1275"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1275">build-1275</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1274/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1274"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1274">build-1274</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1273/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1273"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1273">build-1273</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1272/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1272"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1272">build-1272</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1271/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1271"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1271">build-1271</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1270/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1270"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1270">build-1270</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1269/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1269"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1269">build-1269</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1268/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1268"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1268">build-1268</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1267/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1267"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1267">build-1267</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1266/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1266"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1266">build-1266</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1265/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1265"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1265">build-1265</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1264/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1264"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1264">build-1264</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1263/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1263"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1263">build-1263</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1262/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1262"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1262">build-1262</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1261/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1261"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1261">build-1261</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1260/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1260"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1260">build-1260</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1259/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1259"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1259">build-1259</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1258/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1258"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1258">build-1258</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1257/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1257"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1257">build-1257</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1256/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1256"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1256">build-1256</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1255/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1255"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1255">build-1255</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1254/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1254"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1254">build-1254</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1253/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1253"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1253">build-1253</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1252/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1252"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1252">build-1252</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1251/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1251"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1251">build-1251</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1250/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1250"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1250">build-1250</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1249/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1249"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1249">build-1249</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1248/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1248"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1248">build-1248</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1247/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1247"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1247">build-1247</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1246/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1246"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1246">build-1246</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1245/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1245"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1245">build-1245</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1244/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1244"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1244">build-1244</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1243/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1243"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1243">build-1243</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1242/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1242"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1242">build-1242</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1241/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1241"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1241">build-1241</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1240/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1240"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1240">build-1240</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1239/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1239"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1239">build-1239</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1238/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1238"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1238">build-1238</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1237/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1237"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1237">build-1237</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1236/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1236"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1236">build-1236</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1235/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1235"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1235">build-1235</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1234/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1234"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1234">build-1234</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1233/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1233"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1233">build-1233</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1232/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1232"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1232">build-1232</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1231/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1231"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1231">build-1231</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1230/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1230"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1230">build-1230</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1229/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1229"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1229">build-1229</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1227/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1227"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1227">build-1227</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1226/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1226"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1226">build-1226</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1225/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1225"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1225">build-1225</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1224/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1224"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1224">build-1224</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1223/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1223"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1223">build-1223</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1222/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1222"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1222">build-1222</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1221/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1221"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1221">build-1221</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1220/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1220"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1220">build-1220</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1219/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1219"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1219">build-1219</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1218/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1218"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1218">build-1218</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1217/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1217"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1217">build-1217</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1216/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1216"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1216">build-1216</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1213/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1213"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1213">build-1213</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1212/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1212"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1212">build-1212</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1211/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1211"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1211">build-1211</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1210/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1210"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1210">build-1210</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1209/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1209"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1209">build-1209</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Shodogg/ube/tree/build-1208/service/lib/ua-parser-1.3.0-SNAPSHOT.jar"
+                 data-name="build-1208"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="build-1208">build-1208</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="btn-group right">
+    <a href="/Shodogg/ube/find/master"
+          class="js-show-file-finder btn btn-sm"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Shodogg/ube" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">ube</span></a></span></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Shodogg/ube/tree/master/service" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">service</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Shodogg/ube/tree/master/service/lib" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">lib</span></a></span><span class="separator">/</span><strong class="final-path">ua-parser-1.3.0-SNAPSHOT.jar</strong>
+  </div>
+</div>
+
+
+  <div class="commit-tease">
+      <span class="right">
+        <a class="commit-tease-sha" href="/Shodogg/ube/commit/ef943a8268ee7eee90dc591d9aaac0bfdabd8289" data-pjax>
+          ef943a8
+        </a>
+        <time datetime="2013-11-22T20:16:17Z" is="relative-time">Nov 22, 2013</time>
+      </span>
+      <div>
+        <img alt="@briannSHDG" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/4906834?v=3&amp;s=40" width="20" />
+        <a href="/briannSHDG" class="user-mention" rel="contributor">briannSHDG</a>
+          <a href="/Shodogg/ube/commit/ef943a8268ee7eee90dc591d9aaac0bfdabd8289" class="message" data-pjax="true" title="Added ua_parser plugin to handle parsing of the User Agent string for browser analytics.">Added ua_parser plugin to handle parsing of the User Agent string for…</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      <a class="muted-link contributors-toggle" href="#blob_contributors_box" rel="facebox">
+        <strong>1</strong>
+         contributor
+      </a>
+      
+    </div>
+
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header" data-facebox-id="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list" data-facebox-id="facebox-description">
+          <li class="facebox-user-list-item">
+            <img alt="@briannSHDG" height="24" src="https://avatars1.githubusercontent.com/u/4906834?v=3&amp;s=48" width="24" />
+            <a href="/briannSHDG">briannSHDG</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="btn-group">
+      <a href="/Shodogg/ube/raw/master/service/lib/ua-parser-1.3.0-SNAPSHOT.jar" class="btn btn-sm " id="raw-url">Raw</a>
+      <a href="/Shodogg/ube/commits/master/service/lib/ua-parser-1.3.0-SNAPSHOT.jar" class="btn btn-sm " rel="nofollow">History</a>
+    </div>
+
+        <a class="octicon-btn tooltipped tooltipped-nw"
+           href="github-windows://openRepo/https://github.com/Shodogg/ube?branch=master&amp;filepath=service%2Flib%2Fua-parser-1.3.0-SNAPSHOT.jar"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:windows">
+            <span class="octicon octicon-device-desktop "></span>
+        </a>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/Shodogg/ube/delete/master/service/lib/ua-parser-1.3.0-SNAPSHOT.jar" class="inline-form" data-form-nonce="f3d1c5a7df3cde08b97da923e53dd3fbda81a1b8" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="CfqzJeQvZ4iEtbNsDgXuL9yIzGdNmBD9vq1BmdiqKintKTAYXtik/xevsghtEI4NAZJNJCEDUYSqN+Iusi6V7Q==" /></div>
+          <button class="octicon-btn octicon-btn-danger tooltipped tooltipped-nw" type="submit"
+            aria-label="Delete this file" data-disable-with>
+            <span class="octicon octicon-trashcan "></span>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+    25.6 KB
+  </div>
+</div>
+
+  
+
+  <div class="blob-wrapper data type-text">
+      <div class="image">
+          <a href="/Shodogg/ube/blob/master/service/lib/ua-parser-1.3.0-SNAPSHOT.jar?raw=true">View Raw</a>
+      </div>
+  </div>
+
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github " title="GitHub "></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.06883s from github-fe123-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" integrity="sha256-7460qJ7p88i3YTMH/liaj1cFgX987ie+xRzl6WMjSr8=" src="https://assets-cdn.github.com/assets/frameworks-ef8eb4a89ee9f3c8b7613307fe589a8f5705817f7cee27bec51ce5e963234abf.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-S2uOfRHrt7zoUSbTtBMMgAQfKubV1u+JAajAw/fLgNI=" src="https://assets-cdn.github.com/assets/github-4b6b8e7d11ebb7bce85126d3b4130c80041f2ae6d5d6ef8901a8c0c3f7cb80d2.js"></script>
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  </body>
+</html>
+
