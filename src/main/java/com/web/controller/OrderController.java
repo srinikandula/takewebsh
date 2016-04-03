@@ -62,12 +62,11 @@ public class OrderController {
     public ModelAndView updateOrder(final HttpServletRequest request) throws Exception{
 
         int orderId = Integer.parseInt(request.getParameter("orderid"));
-       // int orderPrice = Integer.parseInt(request.getParameter("orderprice"));
         String orderName = request.getParameter("ordername");
         String orderType = request.getParameter("ordertype");
         int orderQuantity = Integer.parseInt(request.getParameter("orderquantity"));
         MyOrder myorder = orderDAO.findOne(orderId);
-        //System.out.println("orderprice is" +myorder.getOrderPrice());
+
 
 
         int orderAmount = myorder.getOrderPrice() * orderQuantity;
@@ -86,7 +85,6 @@ public class OrderController {
     @RequestMapping (value ="/loadOrder" , method ={RequestMethod.GET})
     public ModelAndView loadOrder(final HttpServletRequest request) throws Exception{
         int orderId = Integer.parseInt(request.getParameter("orderId"));
-       // MyOrder myorder = orderDAO.findOne(orderId);
         ModelAndView modelAndView = new ModelAndView("createOrder");
         modelAndView.addObject("pagename" ,"update");
         modelAndView.addObject("order", orderDAO.findOne(orderId));
@@ -96,7 +94,6 @@ public class OrderController {
 
     @RequestMapping( value ="/deleteOrder" , method = { RequestMethod.GET })
     public ModelAndView deleteOrder(final HttpServletRequest request) throws Exception {
-
         int orderId = Integer.parseInt(request.getParameter("orderId"));
         MyOrder order = new MyOrder();
         order.setOrderId(orderId);
