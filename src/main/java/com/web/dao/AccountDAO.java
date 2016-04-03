@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccountDAO extends CrudRepository<Account, String> {
+    Account findById(String id);
 }

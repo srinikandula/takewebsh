@@ -54,6 +54,19 @@ public class AccountController {
     }
 
 
+    @RequestMapping(value = "/update", method = { RequestMethod.PUT })
+    public ModelAndView updateAccount(final HttpServletRequest request) throws Exception {
+        String id = request.getParameter("id");
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        Account account = accountDAO.findById(id);
+        account.setFirstName(firstName);
+        account.setLastName(lastName);
+        accountDAO.save(account);
+        return gotoAccountListpage();
+    }
+
+
 
     @RequestMapping(value = "/test", method = { RequestMethod.GET })
 
