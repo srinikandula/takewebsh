@@ -62,36 +62,36 @@
                     <td>
                         <input  type="text" name="name">
                     </td>
-
                 </tr>
-
                 <tr>
-                <td>
-                    Address:
-                </td>
-                <td>
-                    <input type="text" name="address">
-                </td>
-
-            </tr>
-
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        <input type="text" name="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Salary:
+                    </td>
+                    <td>
+                        <input type="text" name="salary">
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <input type="reset" name="reset" value="Clear">
-
                     </td>
                     <td>
                         <input type="submit" name="submit" value="submit">
                     </td>
                 </tr>
-
             </table>
-
         </form>
         </p>
     </div>
     <div id="tabs-2">
-
         <form action="update" method="get">
             <table id="tab2" align="center">
                 <tr>
@@ -107,9 +107,7 @@
                     <td>
                         <input  type="text" name="name">
                     </td>
-
                 </tr>
-
                 <tr>
                     <td>
                         Address:
@@ -117,23 +115,25 @@
                     <td>
                         <input type="text" name="address">
                     </td>
-
                 </tr>
-
+                <tr>
+                    <td>
+                        Salary:
+                    </td>
+                    <td>
+                        <input type="text" name="salary">
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <input type="reset" name="reset" value="Clear">
-
                     </td>
                     <td>
                         <input type="submit" name="submit" value="submit">
                     </td>
                 </tr>
-
             </table>
-
         </form>
-
     </div>
     <div id="tabs-3">
         <form action="delete" method="get">
@@ -147,13 +147,11 @@
                 <tr>
                     <td>
                         <input type="reset" name="reset" value="Clear">
-
                     </td>
                     <td>
                         <input type="submit" name="submit" value="submit">
                     </td>
                 </tr>
-
             </table>
         </form>
     </div>

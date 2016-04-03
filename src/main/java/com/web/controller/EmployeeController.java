@@ -3,7 +3,6 @@ package com.web.controller;
 
 import com.web.dao.EmployeeDAO;
 import com.web.model.Employee;
-import com.web.service.EmployeeService;
 import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,15 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by BusDa001 on 12/22/2015.
- */
 @Api(value = "Employee Controller")
 @RestController
 public class EmployeeController {
+
     private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
-
-
 
     @Autowired
     private EmployeeDAO employeeDAO;
@@ -33,33 +28,33 @@ public class EmployeeController {
         return gotoEmployeeListPage();
     }
 
-
     @RequestMapping(value = "/create", method = { RequestMethod.POST })
     public ModelAndView createEmployee(final HttpServletRequest request) throws Exception {
         String name = request.getParameter("name");
         String address = request.getParameter("address");
+        String salary = request.getParameter("salary");
         Employee employee = new Employee();
         employee.setName(name);
         employee.setAddress(address);
+        employee.setSalary(Integer.parseInt(salary));
         employeeDAO.save(employee);
         return gotoEmployeeListPage();
     }
 
-    @RequestMapping(value = "/update", method = { RequestMethod.GET })
+    @RequestMapping(value = "/update", method = { RequestMethod.PUT })
     public ModelAndView updateEmployee(final HttpServletRequest request) throws Exception {
-
         int id = Integer.parseInt(request.getParameter("id"));
         ModelAndView modelAndView = new ModelAndView("employeeList");
         String name = request.getParameter("name");
         String address = request.getParameter("address");
-        Employee employee1 =  employeeDAO.findByEmployeeId(id);
-        employee1.setName(name);
-        employee1.setAddress(address);
-        employeeDAO.save(employee1);
-       // modelAndView.addObject("updateEmp",employee1);
+        String salary = request.getParameter("salary");
+        Employee employee =  employeeDAO.findByEmployeeId(id);
+        employee.setName(name);
+        employee.setAddress(address);
+        employee.setSalary(Integer.parseInt(salary));
+        employeeDAO.save(employee);
         return gotoEmployeeListPage();
     }
-
 
     @RequestMapping(value = "/delete", method = { RequestMethod.GET })
     public ModelAndView deleteEmployee(final HttpServletRequest request) throws Exception {
@@ -70,7 +65,6 @@ public class EmployeeController {
         return gotoEmployeeListPage();
     }
 
-
     @RequestMapping(value = "/loadEmployee", method = { RequestMethod.GET })
     public ModelAndView loadEmployee(final HttpServletRequest request) throws Exception {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -78,7 +72,6 @@ public class EmployeeController {
         modelAndView.addObject("load", employeeDAO.findByEmployeeId(id));
         return modelAndView;
     }
-
 
     private ModelAndView gotoEmployeeListPage() {
         ModelAndView modelAndView = new ModelAndView("employeeList");

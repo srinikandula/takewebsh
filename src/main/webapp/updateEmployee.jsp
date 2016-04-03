@@ -30,25 +30,27 @@
 <form action="update" method="get">
 <table id="tab1" align="center">
         <%
-                    Employee employee = (Employee) request.getAttribute("load");
-
-                        out.print("<tr>");
-                        out.print("<td>Id:</td>");
-                        out.print("<td> <input type='text' name='id' readonly value="+employee.getEmployeeId() +"></td>");
-                        out.print("</tr>");
-                        out.print("<tr>");
-                        out.print("<td>Employee Name:</td>");
-                        out.print("<td> <input  type=\"text\" name=\"name\" value="+employee.getName() +"></td>");
-                        out.print("</tr>");
-                        out.print("<tr>");
-                        out.print("<td>Address:</td>");
-                        out.print("<td> <input  type=\"text\" name=\"address\" value="+employee.getAddress() +"></td>");
-                        out.print("</tr>");
-                        out.print("<tr>");
-                        out.print("<td colspan='2'> <input type=\"submit\" name=\"submit\" value=\"Update\"> </td>");
-                        out.print("</tr>");
+            Employee employee = (Employee) request.getAttribute("load");
+                out.print("<tr>");
+                out.print("<td>Id:</td>");
+                out.print("<td> <input type='text' name='id' readonly value="+employee.getEmployeeId() +"></td>");
+                out.print("</tr>");
+                out.print("<tr>");
+                out.print("<td>Employee Name:</td>");
+                out.print("<td> <input  type=\"text\" name=\"name\" value="+employee.getName() +"></td>");
+                out.print("</tr>");
+                out.print("<tr>");
+                out.print("<td>Address:</td>");
+                out.print("<td> <input  type=\"text\" name=\"address\" value="+employee.getAddress() +"></td>");
+                out.print("</tr>");
+                out.print("<tr>");
+                out.print("<td>Salary:</td>");
+                out.print("<td> <input  type=\"text\" name=\"address\" value="+employee.getSalary() +"></td>");
+                out.print("</tr>");
+                out.print("<tr>");
+                out.print("<td colspan='2'> <input type=\"submit\" name=\"submit\" value=\"Update\"> </td>");
+                out.print("</tr>");
         %>
-
     </table>
     </form>
 </body>

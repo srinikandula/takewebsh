@@ -6,8 +6,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 
-
-
 @Entity(name = "Employee")
 public class Employee implements Serializable {
 
@@ -20,7 +18,6 @@ public class Employee implements Serializable {
     @Setter
     private int employeeId;
 
-
     @Getter
     @Setter
     private String name;
@@ -28,6 +25,10 @@ public class Employee implements Serializable {
     @Getter
     @Setter
     private String address;
+
+    @Getter
+    @Setter
+    private int salary;
 
 
 

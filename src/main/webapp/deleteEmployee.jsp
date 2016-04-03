@@ -38,15 +38,12 @@
         <tr>
             <td>
                 <input type="reset" name="reset" value="Clear">
-
             </td>
             <td>
                 <input type="submit" name="submit" value="submit">
             </td>
         </tr>
-
     </table>
 </form>
-
 </body>
 </html>
