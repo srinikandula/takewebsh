@@ -40,7 +40,7 @@
 <%
     List<Employee> employeeList = (List<Employee>) request.getAttribute("employees");
     for (Employee emp : employeeList){
-        out.print("<tr><td>"+emp.getEmployeeId()+"</td><td>"+emp.getAddress()+"</td><td>"+emp.getName()+"</td>");
+        out.print("<tr><td>"+emp.getEmployeeId()+"</td><td>"+emp.getAddress()+"</td><td>"+emp.getName()+"</td><td>"+emp.getSalary()+"</td>");
         out.print("<td><a href='loadEmployee?id="+emp.getEmployeeId()+"'>Update</a></td>");
         out.print("<td><a href='delete?id="+emp.getEmployeeId()+"'>Delete</a></td></tr>");
     }
