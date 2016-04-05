@@ -2,6 +2,7 @@ package com.web.service;
 
 import com.web.dao.AccountDAO;
 import com.web.model.Account;
+import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class AccountService {
     private static final Logger logger = LoggerFactory.getLogger(AccountService.class);
 
     @Autowired
+    @Setter
     private AccountDAO accountDAO;
 
     public Account createAccount(final String firstName, final String lastName){
@@ -28,6 +30,19 @@ public class AccountService {
         account.setFirstName(firstName);
         account.setLastName(lastName);
         return accountDAO.save(account);
+    }
+
+    public void updateAccount(String id, String firstName, String lastName) {
+        if(firstName == null){
+            throw new NullPointerException("Invalid data for firstname");
+        }
+        Account account = accountDAO.findById(id);
+        if(account == null) {
+            throw new NullPointerException("Invalid id found");
+        }
+        account.setFirstName(firstName);
+        account.setLastName(lastName);
+        accountDAO.save(account);
     }
 
 }

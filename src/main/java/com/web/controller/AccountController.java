@@ -42,7 +42,6 @@ public class AccountController {
     }
 
     @RequestMapping(value = "/account", method = { RequestMethod.POST })
-
     public ModelAndView createAccount(final HttpServletRequest request) throws Exception {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -59,10 +58,7 @@ public class AccountController {
         String id = request.getParameter("id");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        Account account = accountDAO.findById(id);
-        account.setFirstName(firstName);
-        account.setLastName(lastName);
-        accountDAO.save(account);
+        accountService.updateAccount(id, firstName, lastName);
         return gotoAccountListpage();
     }
 
