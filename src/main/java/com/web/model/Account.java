@@ -1,7 +1,5 @@
 package com.web.model;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,5 +28,7 @@ public class Account implements Serializable {
     @Getter
     @Setter
     private String lastName;
-
+    @Getter
+    @Setter
+    private long balance;
 }

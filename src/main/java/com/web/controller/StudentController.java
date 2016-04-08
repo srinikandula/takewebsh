@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Api(value = "Student Controller")
 @RestController
+@RequestMapping(value = "/student")
 public class StudentController {
     private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
 

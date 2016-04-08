@@ -21,6 +21,7 @@
         out.print("<tr><td>"+account.getId()+"</td><td>"+account.getFirstName()+"</td></tr>");
       }
     %>
+  <%= request.getAttribute("accounts")%>
   </tbody>
 </table>
 

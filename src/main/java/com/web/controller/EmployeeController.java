@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Api(value = "Employee Controller")
 @RestController
+@RequestMapping(value = "/employee/v1")
 public class EmployeeController {
 
     private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
@@ -72,7 +73,10 @@ public class EmployeeController {
         modelAndView.addObject("load", employeeDAO.findByEmployeeId(id));
         return modelAndView;
     }
-
+    @RequestMapping(value = "/test", method = { RequestMethod.GET })
+    public String test(final HttpServletRequest request) {
+        return "helloWorld";
+    }
     private ModelAndView gotoEmployeeListPage() {
         ModelAndView modelAndView = new ModelAndView("employeeList");
         modelAndView.addObject("employees", employeeDAO.findAll());

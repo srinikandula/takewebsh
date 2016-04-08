@@ -21,6 +21,7 @@ import static com.web.dao.OrderDAO.*;
  */
 @Api(value = "Order Controller")
 @RestController
+@RequestMapping(value = "/order")
 public class OrderController {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
