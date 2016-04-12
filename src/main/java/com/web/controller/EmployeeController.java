@@ -28,7 +28,7 @@ public class EmployeeController {
         return gotoEmployeeListPage();
     }
 
-    @RequestMapping(value = "/create", method = { RequestMethod.POST })
+    @RequestMapping(value = "/createEmployee", method = { RequestMethod.POST })
     public ModelAndView createEmployee(final HttpServletRequest request) throws Exception {
         String name = request.getParameter("name");
         String address = request.getParameter("address");
@@ -41,7 +41,7 @@ public class EmployeeController {
         return gotoEmployeeListPage();
     }
 
-    @RequestMapping(value = "/update", method = { RequestMethod.PUT })
+    @RequestMapping(value = "/updateEmployee", method = { RequestMethod.PUT })
     public ModelAndView updateEmployee(final HttpServletRequest request) throws Exception {
         int id = Integer.parseInt(request.getParameter("id"));
         ModelAndView modelAndView = new ModelAndView("employeeList");
@@ -56,7 +56,7 @@ public class EmployeeController {
         return gotoEmployeeListPage();
     }
 
-    @RequestMapping(value = "/delete", method = { RequestMethod.GET })
+    @RequestMapping(value = "/deleteEmployee", method = { RequestMethod.GET })
     public ModelAndView deleteEmployee(final HttpServletRequest request) throws Exception {
         int id = Integer.parseInt(request.getParameter("id"));
         Employee employee = new Employee();
