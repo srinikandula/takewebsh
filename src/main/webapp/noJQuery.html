@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<script>
+    function loadAccounts(){
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange =function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                console.log("response "+ xhttp.response);
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+
+        };
+        xhttp.open("GET", "/account/list", true);
+        xhttp.send();
+    }
+
+
+</script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+    <form>
+
+        <p>
+            <input type="text" name="inputText" placeholder="First Name"/>
+        </p>
+        <p>
+        <input type="text" name="inputText" placeholder="Last Name"/>
+        </p>
+        <p>
+        <input type="text" name="inputText" placeholder="Balance"/>
+        </p>
+        <button>Create Account</button>
+    </form>
+    <br/>
+    <button onclick="loadAccounts()">Load Accounts</button>
+    <br/>
+    <p id="demo">
+
+
+    </p>
+
+
+</div>
+</body>
+</html>

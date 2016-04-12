@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<table border="2">
+<table border="2" cellpadding="4" cellspacing="4">
   <tbody>
 
   <c:forEach items="${accounts}" var="acc">
@@ -25,40 +25,20 @@
 
       <td>
         <c:if test="${acc.balance > 1000}">
-          <b> <c:out value="${acc.balance}"/> <fmt:formatNumber value="1000" type="CURRENCY"/></b>
+          <b> <c:out value="${acc.balance}"/></b>
         </c:if>
         <c:if test="${acc.balance <= 1000}">
           <i> <c:out value="${acc.balance}"/></i>
         </c:if>
       </td>
-      <td></td>
+      <td><button onclick="deleteAccount(<c:out value='${acc.id}'/>)">Delete</button> </td>
 
     </tr>
   </c:forEach>
   </tbody>
   </table>
 
-Orders  is here
-<table>
 
-  <c:forEach items="${orders}" var="account">
-    <tr>
-      <td><c:out value="${account.id}"/></td>
-      <td><c:out value="${account.firstName}"/></td>
-      <td><c:out value="${account.lastName}"/></td>
-      <td>
-        <c:if test="${account.balance > 1000}">
-          <b> <c:out value="${account.balance}"/></b>
-        </c:if>
-        <c:if test="${account.balance <= 1000}">
-          <i> <c:out value="${account.balance}"/></i>
-        </c:if>
-      </td>
-
-    </tr>
-  </c:forEach>
-
-</table>
 
 
 </body>

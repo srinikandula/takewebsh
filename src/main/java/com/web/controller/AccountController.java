@@ -44,7 +44,7 @@ public class AccountController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/account", method = { RequestMethod.POST })
+    @RequestMapping(value = "/create", method = { RequestMethod.POST })
     public ModelAndView createAccount(final HttpServletRequest request) throws Exception {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");

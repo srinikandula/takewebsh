@@ -3,8 +3,34 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="js/takewebsh.js"></script>
 </head>
 <body>
-Home page for Click Through Tracking
+<div class="container">
+    <br/>
+
+
+        <p>
+            <input type="text" id="firstName" placeholder="First Name" onblur="checkAccountWithFirstName()"/>
+        </p>
+        <p>
+            <input type="text" id="lastName" placeholder="Last Name"/>
+        </p>
+        <p>
+            <input type="text" id="balance" placeholder="Balance"/>
+        </p>
+    <button onclick="createAccount()">Create Account</button><button onclick="loadAccounts()">Load Accounts</button>
+    <p id="responseMessage" class="label label-success"></p>
+    <p id="errorMessage" class="label label-danger"></p>
+    <br/>
+    <br/>
+    <p id="accounts">
+
+
+    </p>
+</div>
 </body>
 </html>
