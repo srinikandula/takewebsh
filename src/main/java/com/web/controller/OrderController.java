@@ -2,6 +2,8 @@ package com.web.controller;
 
 import com.web.dao.OrderDAO;
 import com.web.model.MyOrder;
+import com.web.service.AccountService;
+import com.web.service.OrderService;
 import org.apache.tomcat.util.modeler.modules.ModelerSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,9 @@ public class OrderController {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
+    @Autowired(required = true)
+    private OrderService orderService;
+
     @Autowired
     private OrderDAO orderDAO;
 
@@ -35,7 +40,7 @@ public class OrderController {
     }
 
     private ModelAndView orderListpage() {
-        ModelAndView modelAndView = new ModelAndView("orderList");
+        ModelAndView modelAndView = new ModelAndView("orderListJSTL");
         modelAndView.addObject("orders", orderDAO.findAll());
         return modelAndView;
     }
@@ -46,15 +51,16 @@ public class OrderController {
         String orderType = request.getParameter("ordertype");
         int orderPrice = Integer.parseInt(request.getParameter("orderprice"));
         int orderQuantity = Integer.parseInt(request.getParameter("orderquantity"));
-        int orderAmount = orderPrice * orderQuantity;
-        System.out.println("order details" +orderName +orderAmount +orderType);
-        MyOrder order = new MyOrder();
+
+
+        orderService.createOrder(orderName , orderType , orderPrice , orderQuantity);
+       /* MyOrder order = new MyOrder();
         order.setOrderName(orderName);
         order.setOrderType(orderType);
         order.setOrderPrice(orderPrice);
         order.setOrderQuantity(orderQuantity);
         order.setOrderAmount(orderAmount);
-        orderDAO.save(order);
+        orderDAO.save(order);*/
         return orderListpage();
     }
 
@@ -66,7 +72,8 @@ public class OrderController {
         String orderName = request.getParameter("ordername");
         String orderType = request.getParameter("ordertype");
         int orderQuantity = Integer.parseInt(request.getParameter("orderquantity"));
-        MyOrder myorder = orderDAO.findOne(orderId);
+        orderService.updateAccount(orderId , orderName , orderType , orderQuantity);
+       /* MyOrder myorder = orderDAO.findOne(orderId);
 
 
 
@@ -78,7 +85,7 @@ public class OrderController {
         myorder.setOrderQuantity(orderQuantity);
 
         myorder.setOrderAmount(orderAmount);
-        orderDAO.save(myorder);
+        orderDAO.save(myorder);*/
         return orderListpage();
 
     }
@@ -86,8 +93,8 @@ public class OrderController {
     @RequestMapping (value ="/loadOrder" , method ={RequestMethod.GET})
     public ModelAndView loadOrder(final HttpServletRequest request) throws Exception{
         int orderId = Integer.parseInt(request.getParameter("orderId"));
-        ModelAndView modelAndView = new ModelAndView("createOrder");
-        modelAndView.addObject("pagename" ,"update");
+        ModelAndView modelAndView = new ModelAndView("createOrderJSTL");
+      //  modelAndView.addObject("pagename" ,"update");
         modelAndView.addObject("order", orderDAO.findOne(orderId));
         return modelAndView;
     }
@@ -96,10 +103,10 @@ public class OrderController {
     @RequestMapping( value ="/deleteOrder" , method = { RequestMethod.GET })
     public ModelAndView deleteOrder(final HttpServletRequest request) throws Exception {
         int orderId = Integer.parseInt(request.getParameter("orderId"));
-        MyOrder order = new MyOrder();
+       /* MyOrder order = new MyOrder();
         order.setOrderId(orderId);
-        orderDAO.delete(order);
-
+        orderDAO.delete(order);*/
+        orderService.deleteOrder(orderId);
         return orderListpage();
     }
 }

@@ -56,7 +56,7 @@ public class AccountController {
     }
 
 
-    @RequestMapping(value = "/update", method = { RequestMethod.PUT })
+    @RequestMapping(value = "/updateAccount", method = { RequestMethod.PUT })
     public ModelAndView updateAccount(final HttpServletRequest request) throws Exception {
         String id = request.getParameter("id");
         String firstName = request.getParameter("firstName");
