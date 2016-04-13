@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.QueryParam;
 
 /**
  * Created by BusDa001 on 12/22/2015.
@@ -50,22 +51,18 @@ public class AccountRestController {
         return "Account created successfully";
     }
 
-    @RequestMapping(value = "/{id}", method = { RequestMethod.GET })
-    public String getAccount(final HttpServletRequest request) throws Exception {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        Account account = new Account();
-        account.setFirstName(firstName);
-        account.setLastName(lastName);
-        accountDAO.save(account);
-        return "Account created successfully";
+    @RequestMapping(value = "/account", method = { RequestMethod.GET })
+    public Account getAccount(final HttpServletRequest request, @PathVariable String id) throws Exception {
+        Account account = accountDAO.findById(new Long(id));
+        return account;
     }
 
-    @RequestMapping(value = "/update/{id}", method = { RequestMethod.PUT })
+    @RequestMapping(value = "/update/{id}", method = { RequestMethod.POST })
     public String updateAccount(final HttpServletRequest request, @PathVariable String id) throws Exception {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        accountService.updateAccount(id, firstName, lastName);
+        String balance = request.getParameter("balance");
+        accountService.updateAccount(id, firstName, lastName, Long.parseLong(balance));
         return "Account updated successfully";
     }
 

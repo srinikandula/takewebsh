@@ -31,4 +31,8 @@ public class Account implements Serializable {
     @Getter
     @Setter
     private long balance;
+
+    //[{"id":101,"firstName":"John","lastName":"carter","balance":1000},
+    // {"id":102,"firstName":"Joe","lastName":"Issace","balance":1000},
+    // {"id":103,"firstName":"John","lastName":"carter","balance":1000}]
 }

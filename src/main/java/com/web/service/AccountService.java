@@ -32,11 +32,24 @@ public class AccountService {
         return accountDAO.save(account);
     }
 
+    public void updateAccount(String id, String firstName, String lastName, long balance) {
+        if(firstName == null){
+            throw new NullPointerException("Invalid data for firstname");
+        }
+        Account account = accountDAO.findById(Long.parseLong(id));
+        if(account == null) {
+            throw new NullPointerException("Invalid id found");
+        }
+        account.setFirstName(firstName);
+        account.setLastName(lastName);
+        account.setBalance(balance);
+        accountDAO.save(account);
+    }
     public void updateAccount(String id, String firstName, String lastName) {
         if(firstName == null){
             throw new NullPointerException("Invalid data for firstname");
         }
-        Account account = accountDAO.findById(id);
+        Account account =  accountDAO.findById(Long.parseLong(id));
         if(account == null) {
             throw new NullPointerException("Invalid id found");
         }
@@ -44,5 +57,4 @@ public class AccountService {
         account.setLastName(lastName);
         accountDAO.save(account);
     }
-
 }

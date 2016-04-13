@@ -14,7 +14,8 @@
 
 
         <p>
-            <input type="text" id="firstName" placeholder="First Name" onblur="checkAccountWithFirstName()"/>
+           <input type="hidden" id="accountId">
+           <input type="text" id="firstName" placeholder="First Name" onblur="checkAccountWithFirstName()"/>
         </p>
         <p>
             <input type="text" id="lastName" placeholder="Last Name"/>
@@ -22,7 +23,7 @@
         <p>
             <input type="text" id="balance" placeholder="Balance"/>
         </p>
-    <button onclick="createAccount()">Create Account</button><button onclick="loadAccounts()">Load Accounts</button>
+    <button onclick="createAccount()">Save Account</button><button onclick="loadAccounts()">Load Accounts</button>
     <p id="responseMessage" class="label label-success"></p>
     <p id="errorMessage" class="label label-danger"></p>
     <br/>
