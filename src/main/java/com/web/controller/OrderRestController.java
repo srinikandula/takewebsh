@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,9 +23,9 @@ import static com.web.dao.OrderDAO.*;
  * Created by njonnala on 4/1/2016.
  */
 @Api(value = "Order Controller")
-@RequestMapping
-@Controller
-public class OrderController {
+@RequestMapping (value = "/api/order")
+@RestController
+public class OrderRestController {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
@@ -36,15 +36,11 @@ public class OrderController {
     private OrderDAO orderDAO;
 
     @RequestMapping(value = "/orderList", method = { RequestMethod.GET })
-    public ModelAndView getOrders(final HttpServletRequest request) throws Exception {
-        return orderListpage();
+    public Iterable<MyOrder> getOrders(final HttpServletRequest request) throws Exception {
+        return orderDAO.findAll();
     }
 
-    private ModelAndView orderListpage() {
-        ModelAndView modelAndView = new ModelAndView("orderListJSTL");
-        modelAndView.addObject("orders", orderDAO.findAll());
-        return modelAndView;
-    }
+
 
     @RequestMapping(value = "/create", method = { RequestMethod.POST })
     public String createOrder(final HttpServletRequest request) throws Exception {
@@ -65,49 +61,31 @@ public class OrderController {
         return "Order Placed Successfully";
     }
 
-
-    @RequestMapping(value ="/updateOrder" , method = {RequestMethod.POST})
-    public ModelAndView updateOrder(final HttpServletRequest request) throws Exception{
-
-        int orderId = Integer.parseInt(request.getParameter("orderid"));
-        String orderName = request.getParameter("ordername");
-        String orderType = request.getParameter("ordertype");
-        int orderQuantity = Integer.parseInt(request.getParameter("orderquantity"));
-        orderService.updateAccount(orderId , orderName , orderType , orderQuantity);
-       /* MyOrder myorder = orderDAO.findOne(orderId);
-
-
-
-        int orderAmount = myorder.getOrderPrice() * orderQuantity;
-
-        myorder.setOrderName(orderName);
-        myorder.setOrderType(orderType);
-
-        myorder.setOrderQuantity(orderQuantity);
-
-        myorder.setOrderAmount(orderAmount);
-        orderDAO.save(myorder);*/
-        return orderListpage();
-
-    }
-
-    @RequestMapping (value ="/loadOrder" , method ={RequestMethod.GET})
-    public ModelAndView loadOrder(final HttpServletRequest request) throws Exception{
-        int orderId = Integer.parseInt(request.getParameter("orderId"));
-        ModelAndView modelAndView = new ModelAndView("createOrderJSTL");
-      //  modelAndView.addObject("pagename" ,"update");
-        modelAndView.addObject("order", orderDAO.findOne(orderId));
-        return modelAndView;
-    }
-
-
-    @RequestMapping( value ="/deleteOrder" , method = { RequestMethod.GET })
-    public ModelAndView deleteOrder(final HttpServletRequest request) throws Exception {
+    @RequestMapping( value ="/deleteOrder" , method = { RequestMethod.DELETE })
+    public String deleteOrder(final HttpServletRequest request) throws Exception {
         int orderId = Integer.parseInt(request.getParameter("orderId"));
        /* MyOrder order = new MyOrder();
         order.setOrderId(orderId);
         orderDAO.delete(order);*/
-        orderService.deleteOrder(orderId);
-        return orderListpage();
+       orderService.deleteOrder(orderId);
+        return "Order deleted successfully";
+    }
+
+    @RequestMapping(value = "/update", method = { RequestMethod.PUT })
+    public String updateAccount(final HttpServletRequest request) throws Exception {
+        int orderId = Integer.parseInt(request.getParameter("orderId"));
+        String orderName = request.getParameter("orderName");
+        String orderType = request.getParameter("orderType");
+        int orderQuantity = Integer.parseInt("orderQuantity");
+        orderService.updateAccount(orderId, orderName, orderType , orderQuantity);
+        return "Account updated successfully";
+    }
+
+    @RequestMapping (value ="/load" , method ={RequestMethod.GET})
+    public MyOrder loadOrder(final HttpServletRequest request) throws Exception{
+        int orderId = Integer.parseInt(request.getParameter("orderId"));
+        return orderService.findOneOrder(orderId);
+
+
     }
 }

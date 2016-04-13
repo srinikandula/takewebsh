@@ -87,7 +87,14 @@ public class OrderService {
         MyOrder order = new MyOrder();
         order.setOrderId(orderId);
         orderDAO.delete(order);
+
     }
 
+    public Iterable<MyOrder> findOrders(){
+        return orderDAO.findAll();
+    }
+    public MyOrder findOneOrder(int orderId){
+        return orderDAO.findOne(orderId);
+    }
 
 }

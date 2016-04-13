@@ -11,8 +11,15 @@
 <html>
 <head>
     <title>Order Details</title>
+    <script src="../js/takwebsh_order.js">
+        obj = JSON.parse(data);
+        console.log(obj);
+        document.getElementById("loadMyOrder").innerHTML = obj.orderName;
+
+    </script>
 </head>
 <body>
+<p id="loadMyOrder"></p>
 
 <table border="1" style="width:100%">
 
@@ -35,10 +42,11 @@
                 </c:if>
             </td>
             <c:set var="orderId" value="${order.orderId}"/>
-            <td><a href="<c:url value="/loadOrder">
+          <%--<td><a href="<c:url value="/">
                             <c:param name="orderId" value="${orderId}"/>
-                                </c:url>"><c:out value="${'Update'}"></c:out></a></td>
-            <td><a href='deleteOrder?orderId=" + order.getOrderId() + "'>Delete</a></td>
+                                </c:url>"><c:out value="${'Update'}"></c:out></a></td>--%>
+            <td><button onclick="loadOrder(<c:out value='${order.orderId}'/>)">Update</button> </td>
+            <td><button onclick="deleteOrder(<c:out value='${order.orderId}'/>)">Delete</button> </td>
 
         </tr>
     </c:forEach>

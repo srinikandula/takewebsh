@@ -121,11 +121,11 @@ out.print("orderid" +obj);*/%>
         <form action="updateOrder" method="post">
 
 
-            <tr><td>OrderID : <input type="text" name="orderid" value="${orderId}"/></td></tr>
-            <tr><td>Order Name: <input type="text" name="ordername" value="${orderName}"></td></tr>
-            <tr><td> Order Type: <input type="text" name="ordertype" value="${orderType}"></td></tr>
+            <tr><td>OrderID : <input type="text" name="orderid" <c:out value="${orderId}"/>/></td></tr>
+            <tr><td>Order Name: <input type="text" name="ordername" <c:out value="${orderName}"/>></td></tr>
+            <tr><td> Order Type: <input type="text" name="ordertype" <c:out value="${orderType}"/></td></tr>
 
-            <tr><td>Order Quantity: <input type="text" name="orderquantity" value="${orderQuantity}"></td></tr>
+            <tr><td>Order Quantity: <input type="text" name="orderquantity" <c:out value="${orderQuantity}"/></td></tr>
 
            <tr> <td><input type="submit" name="submit" value="submit"></td></tr>
         </form>

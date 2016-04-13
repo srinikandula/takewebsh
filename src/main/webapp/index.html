@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:c="http://www.w3.org/1999/XSL/Transform">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="js/takwebsh_order.js">
+
+
+    </script>
 </head>
 <body>
-Home page for Click Through Tracking
+
+<div class="container">
+    <br/>
+
+
+    <p>
+        <input type="text" id="orderName" placeholder="Order Name"/>
+    </p>
+    <p>
+        <input type="text" id="orderType" placeholder="order Type"/>
+    </p>
+    <p>
+        <input type="text" id="orderPrice" placeholder="order Price"/>
+    </p>
+    <p>
+        <input type="text" id="orderQuantity" placeholder="order Quantity"/>
+    </p>
+
+    <button onclick="createOrder()">Place Order</button><button onclick="loadOrders()">Load Orders</button>
+    <p id="responseMessage" class="label label-success"></p>
+    <p id="errorMessage" class="label label-danger"></p>
+    <br/>
+    <br/>
+    <p id="ordersList">
+    </p>
+</div>
 </body>
 </html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy
