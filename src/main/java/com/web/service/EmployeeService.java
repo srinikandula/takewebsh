@@ -4,15 +4,19 @@ import com.web.dao.EmployeeDAO;
 import com.web.model.Employee;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by CrazyNaveen on 4/2/16.
  */
+@Component
+@Transactional
 public class EmployeeService {
 
     @Autowired
     @Setter
-    public EmployeeDAO employeeDAO;
+    private EmployeeDAO employeeDAO;
 
 
     public Employee createEmployee(final String name, final String address, final String salary){
@@ -49,6 +53,25 @@ public class EmployeeService {
         employeeDAO.save(employee);
 
     }
+
+
+    public void updateEmployee(String id, String name, String address, String salary) {
+        if(name == null){
+            throw new NullPointerException("Invalid data for Employee name");
+        }
+        Employee employee = employeeDAO.findByEmployeeId(Integer.parseInt(id));
+
+        if(employee == null) {
+            throw new NullPointerException("Invalid employee id found");
+        }
+        employee.setName(name);
+        employee.setAddress(address);
+        employee.setSalary(Integer.parseInt(salary));
+        //employee.setSalary(salary);
+        employeeDAO.save(employee);
+
+    }
+
 
 
     public void deleteEmployee(String id){

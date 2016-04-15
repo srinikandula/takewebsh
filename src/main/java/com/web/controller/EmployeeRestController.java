@@ -28,8 +28,8 @@ public class EmployeeRestController {
     @Autowired
     private EmployeeDAO employeeDAO;
 
-    /*@Autowired(required = true)
-    private EmployeeService employeeService;*/
+    @Autowired(required = true)
+    private EmployeeService employeeService;
 
     @RequestMapping(value = "/employeeListJstl", method = { RequestMethod.GET })
     public Iterable<Employee> getEmployees(final HttpServletRequest request) throws Exception {
@@ -53,29 +53,15 @@ public class EmployeeRestController {
         return "Employee is created";
     }
 
-    @RequestMapping(value = "/update", method = { RequestMethod.PUT })
-    public String updateEmployee(final HttpServletRequest request) throws Exception {
-        int id = Integer.parseInt(request.getParameter("id"));
+    @RequestMapping(value = "/update/{employeeId}", method = { RequestMethod.POST })
+    public String updateEmployee(final HttpServletRequest request, @PathVariable String employeeId) throws Exception {
+       // String id = request.getParameter("id");
         String name = request.getParameter("name");
         String address = request.getParameter("address");
         String salary = request.getParameter("salary");
-        Employee employee =  employeeDAO.findByEmployeeId(id);
-        employee.setName(name);
-        employee.setAddress(address);
-        employee.setSalary(Integer.parseInt(salary));
-        //employee.setSalary(salary);
-        employeeDAO.save(employee);
+        employeeService.updateEmployee(employeeId, name, address, salary);
         return "Employee is updated";
     }
-
-  /*  @RequestMapping(value = "/update/{employeeId}", method = { RequestMethod.PUT })
-    public String updateAccount(final HttpServletRequest request, @PathVariable String id) throws Exception {
-        String name = request.getParameter("name");
-        String address = request.getParameter("address");
-        String salary = request.getParameter("salary");
-        employeeService.nullCheck(id,name,address, salary);
-        return "Account updated successfully";
-    }*/
 
     @RequestMapping(value = "/delete", method = { RequestMethod.DELETE })
     public String deleteEmployee(final HttpServletRequest request) throws Exception {
@@ -87,14 +73,24 @@ public class EmployeeRestController {
         return "Employee is deleted";
     }
 
-
-    @RequestMapping(value = "/loadEmployee", method = { RequestMethod.GET })
-    public String loadEmployee(final HttpServletRequest request) throws Exception {
-        int id = Integer.parseInt(request.getParameter("id"));
-        ModelAndView modelAndView = new ModelAndView("updateEmployee");
-        modelAndView.addObject("load", employeeDAO.findByEmployeeId(id));
-        return "Load api is called";
+    @RequestMapping(value = "/{id}", method = { RequestMethod.GET })
+    public Employee getEmployee(final HttpServletRequest request, @PathVariable String id) throws Exception {
+       // int id = Integer.parseInt(request.getParameter("id"));
+       Employee employee = employeeDAO.findByEmployeeId(new Integer(id));
+        return employee;
     }
+
+    @RequestMapping(value = "/hasNameUsed", method = { RequestMethod.GET })
+    public boolean findEmployeeByName(final HttpServletRequest request) throws Exception {
+        String name = request.getParameter("name");
+        Iterable<Employee> employees = employeeDAO.findByName(name);
+        if(employees != null && employees.iterator().hasNext()) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
     @RequestMapping(value = "/test", method = { RequestMethod.GET })
     public String test(final HttpServletRequest request) {
         return "helloWorld";

@@ -7,6 +7,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="js/keerthiCreate.js"></script>
+
 </head>
 
 <body>
@@ -15,9 +16,12 @@
 <br/>
 
 <div class="container">
+    <p>
+        <input type="hidden" id="employeeId"/>
+    </p>
 
         <p>
-            <input type="text" name="name" id="name" placeholder="Name"/>
+            <input type="text" name="name" id="name" placeholder="Name" onblur="checkEmployeeWithName()"/>
         </p>
         <p>
             <input type="text" name="address" id="address" placeholder="Address"/>
@@ -26,13 +30,14 @@
             <input type="text" name="salary" id="salary" placeholder="Salary"/>
         </p>
 
-        <button onclick="createEmployee()">Create</button>
+        <button onclick="createEmployee()">Save</button>
         <p id="responseMessage" class="label label-success"></p>
         <p id="errorMessage" class="label label-danger"></p>
         <br/>
         <br/>
          <button onclick="loadEmployees()">Load Employees</button>
         <br/>
+    <br/>
 
     <p id="employees">
 
