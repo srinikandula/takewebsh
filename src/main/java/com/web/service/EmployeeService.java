@@ -12,7 +12,7 @@ public class EmployeeService {
 
     @Autowired
     @Setter
-    private EmployeeDAO employeeDAO;
+    public EmployeeDAO employeeDAO;
 
 
     public Employee createEmployee(final String name, final String address, final String salary){
@@ -29,6 +29,7 @@ public class EmployeeService {
         employee.setName(name);
         employee.setAddress(address);
         employee.setSalary(Integer.parseInt(salary));
+       // employee.setSalary(salary);
         return employeeDAO.save(employee);
     }
 
@@ -44,6 +45,7 @@ public class EmployeeService {
         employee.setName(name);
         employee.setAddress(address);
         employee.setSalary(Integer.parseInt(salary));
+        //employee.setSalary(salary);
         employeeDAO.save(employee);
 
     }

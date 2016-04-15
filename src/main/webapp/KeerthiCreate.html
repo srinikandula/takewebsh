@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Employee</title>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="js/keerthiCreate.js"></script>
+</head>
+
+<body>
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+
+        <p>
+            <input type="text" name="name" id="name" placeholder="Name"/>
+        </p>
+        <p>
+            <input type="text" name="address" id="address" placeholder="Address"/>
+        </p>
+        <p>
+            <input type="text" name="salary" id="salary" placeholder="Salary"/>
+        </p>
+
+        <button onclick="createEmployee()">Create</button>
+        <p id="responseMessage" class="label label-success"></p>
+        <p id="errorMessage" class="label label-danger"></p>
+        <br/>
+        <br/>
+         <button onclick="loadEmployees()">Load Employees</button>
+        <br/>
+
+    <p id="employees">
+
+
+    </p>
+
+
+</div>
+</body>
+</html>

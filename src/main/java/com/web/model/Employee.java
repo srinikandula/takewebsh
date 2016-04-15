@@ -29,6 +29,7 @@ public class Employee implements Serializable {
     @Getter
     @Setter
     private int salary;
+    //private String salary;
 
 
 
