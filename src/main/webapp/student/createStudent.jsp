@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="js/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../js/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script>
         $(function() {
@@ -24,7 +24,7 @@
     <div id="tabs-1">
         <p>
 
-        <form action="student" method="post">
+        <form action="" method="post">
             <table>
                 <tr>
                     <td>First Name : </td>
@@ -42,7 +42,22 @@
         </p>
     </div>
     <div id="tabs-2">
-
+    <p>
+        <form action="delete" method="post">
+            <table>
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type="text" name="firstName"></td>
+                </tr>
+                <tr>
+                    <td>Last Name : </td>
+                    <td> <input type="text" name="lastName"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"/></td>
+                </tr>
+            </table>
+    </p>
     </div>
     <div id="tabs-3">
         <p>
