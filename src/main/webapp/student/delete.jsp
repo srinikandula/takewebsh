@@ -10,9 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="js/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../js/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script>
         $(function() {
@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<form action="delete" method="post">
+<form action="deleteStudent" method="post">
     <table>
         <tr>
             <td>ID : </td>

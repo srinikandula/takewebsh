@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="js/springs.js"></script>
+</head>
+<body>
+<div class="container">
+    <br/>
+        <p>
+            <input type="hidden" id="studentId">
+            <input type="text" id="firstName" placeholder="Enter First Name" onblur="checkStudentWithFirstName()"/>
+        </p>
+        <p>
+            <input type="text" id="lastName" placeholder="Enter Last Name">
+        </p>
+        <button onclick="createAccount()">Create Account</button>
+        <button onclick="loadStudents()">Load Accounts</button>
+        <p id="responseMessage" class="label label-success"></p>
+        <p id="errorMessage" class="label label-danger"></p>
+    <br/>
+    <br/>
+    <p id="students">
+
+    </p>
+
+</div>
+</body>
+</html>
