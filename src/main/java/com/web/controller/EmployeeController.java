@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 @Api(value = "Employee Controller")
-@RestController
+@Controller
 @RequestMapping(value = "/employee/v1")
 public class EmployeeController {
 
@@ -24,7 +25,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeDAO employeeDAO;
 
-    @RequestMapping(value = "/employeeList", method = { RequestMethod.GET })
+    @RequestMapping(value = "/employeeListJstl", method = { RequestMethod.GET })
     public ModelAndView getEmployees(final HttpServletRequest request) throws Exception {
         return gotoEmployeeListPage();
     }
@@ -37,7 +38,8 @@ public class EmployeeController {
         Employee employee = new Employee();
         employee.setName(name);
         employee.setAddress(address);
-        employee.setSalary(Integer.parseInt(salary));
+       employee.setSalary(Integer.parseInt(salary));
+        //employee.setSalary(salary);
         employeeDAO.save(employee);
         return gotoEmployeeListPage();
     }
@@ -45,14 +47,15 @@ public class EmployeeController {
     @RequestMapping(value = "/update", method = { RequestMethod.PUT })
     public ModelAndView updateEmployee(final HttpServletRequest request) throws Exception {
         int id = Integer.parseInt(request.getParameter("id"));
-        ModelAndView modelAndView = new ModelAndView("employeeList");
+        ModelAndView modelAndView = new ModelAndView("employeeListJstl");
         String name = request.getParameter("name");
         String address = request.getParameter("address");
         String salary = request.getParameter("salary");
         Employee employee =  employeeDAO.findByEmployeeId(id);
         employee.setName(name);
         employee.setAddress(address);
-        employee.setSalary(Integer.parseInt(salary));
+       employee.setSalary(Integer.parseInt(salary));
+        //employee.setSalary(salary);
         employeeDAO.save(employee);
         return gotoEmployeeListPage();
     }
@@ -78,7 +81,7 @@ public class EmployeeController {
         return "helloWorld";
     }
     private ModelAndView gotoEmployeeListPage() {
-        ModelAndView modelAndView = new ModelAndView("employeeList");
+        ModelAndView modelAndView = new ModelAndView("employeeListJstl");
         modelAndView.addObject("employees", employeeDAO.findAll());
         return modelAndView;
     }
