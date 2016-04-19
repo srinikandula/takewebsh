@@ -1,5 +1,6 @@
 package com.web.controller;
 
+import com.web.controller.util.ControllerUtils;
 import com.web.dao.AccountDAO;
 import com.web.model.Account;
 import com.web.service.AccountService;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Created by BusDa001 on 12/22/2015.
@@ -29,12 +31,12 @@ public class AccountRestController {
     @Autowired
     private AccountDAO accountDAO;
 
-    @RequestMapping(value = "/list", method = { RequestMethod.GET })
+    @RequestMapping(value = "/list", method = { RequestMethod.GET }, produces = ControllerUtils.JSON_UTF8)
     public Iterable<Account> getAccounts(final HttpServletRequest request) throws Exception {
         return accountDAO.findAll();
     }
 
-    @RequestMapping(value = "/create", method = { RequestMethod.POST })
+    @RequestMapping(value = "/create", method = { RequestMethod.POST }, produces = MediaType.TEXT_PLAIN)
     public String createAccount(final HttpServletRequest request) throws Exception {
         String firstName = request.getParameter("fName");
         String lastName = request.getParameter("lName");
@@ -51,13 +53,13 @@ public class AccountRestController {
         return "Account created successfully";
     }
 
-    @RequestMapping(value = "/account", method = { RequestMethod.GET })
+    @RequestMapping(value = "/{id}", method = { RequestMethod.GET }, produces = ControllerUtils.JSON_UTF8)
     public Account getAccount(final HttpServletRequest request, @PathVariable String id) throws Exception {
         Account account = accountDAO.findById(new Long(id));
         return account;
     }
 
-    @RequestMapping(value = "/update/{id}", method = { RequestMethod.POST })
+    @RequestMapping(value = "/update/{id}", method = { RequestMethod.PUT }, produces = MediaType.TEXT_PLAIN)
     public String updateAccount(final HttpServletRequest request, @PathVariable String id) throws Exception {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -66,7 +68,7 @@ public class AccountRestController {
         return "Account updated successfully";
     }
 
-    @RequestMapping(value = "/delete", method = { RequestMethod.DELETE })
+    @RequestMapping(value = "/delete", method = { RequestMethod.DELETE }, produces = MediaType.TEXT_PLAIN)
     public String updateAccount(final HttpServletRequest request) throws Exception {
         String id = request.getParameter("id");
         Account account = accountDAO.findById(new Long(id));
@@ -75,7 +77,7 @@ public class AccountRestController {
     }
 
 
-    @RequestMapping(value = "/hasFirstNameUsed", method = { RequestMethod.GET })
+    @RequestMapping(value = "/hasFirstNameUsed", method = { RequestMethod.GET } , produces = MediaType.TEXT_PLAIN)
     public boolean findAccountByFirstName(final HttpServletRequest request) throws Exception {
         String fName = request.getParameter("fNmae");
         Iterable<Account> accounts = accountDAO.findByFirstName(fName);

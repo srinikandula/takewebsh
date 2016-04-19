@@ -104,17 +104,17 @@ function loadAccounts(){
             console.log(data)
             var accounts = data;
             var output ="<table border='1'><tbody>";
-            for(var i=0; i<data.length;i++){
-                var account = data[i];
-                output += "<tr>" +
-                    "<td>"+account.id+"</td>" +
-                    "<td>"+account.firstName+"</td>" +
-                    "<td>"+account.lastName+"</td>" +
-                    "<td>"+account.balance+"</td>" +
-                    "<td><button onclick='loadAccount("+account.id+")'>Lookup</button></td>" +
-                    "<td><button onclick='deleteAccount("+account.id+")'>Delete</button></td>" +
-                    "</tr>";
-            }
+                for(var i=0; i<data.length;i++){
+                    var account = data[i];
+                    output += "<tr>" +
+                        "<td>"+account.id+"</td>" +
+                        "<td>"+account.firstName+"</td>" +
+                        "<td>"+account.lastName+"</td>" +
+                        "<td>"+account.balance+"</td>" +
+                        "<td><button onclick='loadAccount("+account.id+")'>Lookup</button></td>" +
+                        "<td><button onclick='deleteAccount("+account.id+")'>Delete</button></td>" +
+                        "</tr>";
+                }
             output += "</tbody></table>"
             $("#accounts").html(output);
         }
