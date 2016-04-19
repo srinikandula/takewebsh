@@ -25,8 +25,8 @@ import javax.servlet.http.HttpServletRequest;
 public class StudentController {
     private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
 
-   // @Autowired(required = true)
-    //private StudentService accountService;
+   @Autowired(required = true)
+    private StudentService studentService;
 
     @Autowired
     private StudentDAO studentDAO;
@@ -56,18 +56,16 @@ public class StudentController {
     }
 
 
-    @RequestMapping (value = "/update", method = { RequestMethod.GET })
+    @RequestMapping (value = "/updateStudent", method = { RequestMethod.POST })
 
       public  ModelAndView update(final HttpServletRequest request) throws Exception{
-        int id = Integer.parseInt(request.getParameter("id"));
+        String id = (request.getParameter("id"));
         ModelAndView modelAndView = new ModelAndView("studentsList");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        Student student = studentDAO.findByStudentId(id);
-        student.setFirstName(firstName);
-        student.setLastName(lastName);
-        studentDAO.save(student);
+        studentService.updateStudent(id, firstName, lastName);
         return gotoStudentListpage();
+
         //public ModelAndView update( @RequestParam("id") String id) throws Exception {
         //Student student = new Student();
         //student.setStudentId(Long.valueOf(id));
@@ -83,18 +81,20 @@ public class StudentController {
     }
 
 
-    @RequestMapping(value = "/delete", method = { RequestMethod.GET })
+
+
+    @RequestMapping(value = "/deleteStudent", method = { RequestMethod.GET })
     public ModelAndView delete(final HttpServletRequest request) throws Exception {
-        int id = Integer.parseInt(request.getParameter("id"));
-        Student student = new Student();
-        student.setStudentId(id);
-        studentDAO.delete(student);
+        String id = (request.getParameter("id"));
+        studentService.deleteStudent(id);
         return gotoStudentListpage();
     }
 
+
+
     @RequestMapping(value = "/loadStudent", method = {RequestMethod.GET})
     public ModelAndView loadStudent(final  HttpServletRequest request) throws Exception{
-        int id = Integer.parseInt(request.getParameter("id"));
+        String id = (request.getParameter("id"));
         ModelAndView modelAndView = new ModelAndView("update");
         modelAndView.addObject("load",studentDAO.findByStudentId(id));
         return modelAndView;
