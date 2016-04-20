@@ -85,7 +85,7 @@ public class StudentRestController {
     }
 
     @RequestMapping(value = "/hasFirstNameUsed", method = { RequestMethod.GET},produces =MediaType.TEXT_PLAIN_VALUE)
-    
+
     public boolean findStudentByFirstName(final HttpServletRequest request) throws Exception {
         String fName = request.getParameter("fName");
         Iterable<Student> students = studentDAO.findByFirstName(fName);
