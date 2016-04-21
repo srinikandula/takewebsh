@@ -1,5 +1,6 @@
 package com.web.controller;
 
+import com.web.controller.util.ControllerUtils;
 import com.web.dao.EmployeeDAO;
 import com.web.model.Account;
 import com.web.model.Employee;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Created by CrazyNaveen on 4/12/16.
@@ -31,12 +33,12 @@ public class EmployeeRestController {
     @Autowired(required = true)
     private EmployeeService employeeService;
 
-    @RequestMapping(value = "/employeeListJstl", method = { RequestMethod.GET })
+    @RequestMapping(value = "/employeeListJstl", method = { RequestMethod.GET },  produces = ControllerUtils.JSON_UTF8)
     public Iterable<Employee> getEmployees(final HttpServletRequest request) throws Exception {
         return employeeDAO.findAll();
     }
 
-    @RequestMapping(value = "/create", method = { RequestMethod.POST })
+    @RequestMapping(value = "/create", method = { RequestMethod.POST }, produces = MediaType.TEXT_PLAIN)
     public String createEmployee(final HttpServletRequest request) throws Exception {
         String name = request.getParameter("name");
         String address = request.getParameter("address");
@@ -53,7 +55,7 @@ public class EmployeeRestController {
         return "Employee is created";
     }
 
-    @RequestMapping(value = "/update/{employeeId}", method = { RequestMethod.POST })
+    @RequestMapping(value = "/update/{employeeId}", method = { RequestMethod.PUT }, produces = MediaType.TEXT_PLAIN)
     public String updateEmployee(final HttpServletRequest request, @PathVariable String employeeId) throws Exception {
        // String id = request.getParameter("id");
         String name = request.getParameter("name");
@@ -63,7 +65,7 @@ public class EmployeeRestController {
         return "Employee is updated";
     }
 
-    @RequestMapping(value = "/delete", method = { RequestMethod.DELETE })
+    @RequestMapping(value = "/delete", method = { RequestMethod.DELETE },  produces = MediaType.TEXT_PLAIN)
     public String deleteEmployee(final HttpServletRequest request) throws Exception {
         String id = request.getParameter("id");
         //Employee employee = new Employee();
@@ -73,14 +75,14 @@ public class EmployeeRestController {
         return "Employee is deleted";
     }
 
-    @RequestMapping(value = "/{id}", method = { RequestMethod.GET })
+    @RequestMapping(value = "/{id}", method = { RequestMethod.GET }, produces = ControllerUtils.JSON_UTF8)
     public Employee getEmployee(final HttpServletRequest request, @PathVariable String id) throws Exception {
        // int id = Integer.parseInt(request.getParameter("id"));
        Employee employee = employeeDAO.findByEmployeeId(new Integer(id));
         return employee;
     }
 
-    @RequestMapping(value = "/hasNameUsed", method = { RequestMethod.GET })
+    @RequestMapping(value = "/hasNameUsed", method = { RequestMethod.GET }, produces = MediaType.TEXT_PLAIN)
     public boolean findEmployeeByName(final HttpServletRequest request) throws Exception {
         String name = request.getParameter("name");
         Iterable<Employee> employees = employeeDAO.findByName(name);
