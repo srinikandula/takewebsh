@@ -3,26 +3,21 @@
  */
 var app = angular.module("takewebsh", []);
 
-app.controller("accountController", function($scope, $http, $log) {
+app.controller("accountController", function($scope, accountService, $http, $log) {
     $scope.accounts = [];
     $scope.account = {};
     $scope.loadAccounts = function() {
-        $http.get('/api/account/list')
-            .success(function (data) {
-                $scope.accounts = data;
-            })
-            .error(function (error) {
-                $log.debug("error retrieving accounts");
-            });
+        accountService.loadAccounts($scope.loadAccountsComplete);
     }
+    $scope.loadAccountsComplete = function(data){
+        $scope.accounts = data;
+    }
+
     $scope.loadAccount = function(account) {
-        $http.get('/api/account/'+account.id)
-            .success(function (data) {
-                $scope.account = data;
-            })
-            .error(function (error) {
-                $log.debug("error retrieving accounts");
-            });
+        accountService.loadAccount(account, function(data){
+            $scope.account = data;
+        });
+
     }
     $scope.createAccount = function() {
         if($scope.account.id) {
