@@ -1,8 +1,6 @@
 package com.web.controller;
 
-import com.web.controller.util.ControllerUtils;
 import com.web.dao.EmployeeDAO;
-import com.web.model.Account;
 import com.web.model.Employee;
 import com.web.service.EmployeeService;
 import io.swagger.annotations.Api;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.MediaType;

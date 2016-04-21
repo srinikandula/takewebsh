@@ -55,6 +55,19 @@ app.controller("employeeController", function($scope, $http,$log){
         }
     }
 
+    $scope.createEmployee = function() {
+
+        $http.post("api/employee/create?name=" + $scope.employee.name + "&address" + $scope.employee.address + "&salary" + $scope.employee.salary)
+            .success(function (data) {
+                    $scope.loadEmployees();
+                    $scope.employee = {};
+            })
+            .error(function (error) {
+                    $log.debug("error creating employee");
+            });
+
+    }
+
 
     $scope.deleteEmployee = function(employee) {
         $http.delete("api/employee/delete?id=" + employee.employeeId)
