@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp">
+    myCtrl
+    <div ng-controller="myCtrl">
+        {{ firstName + " " + lastName }}
+    </div>
+    <br/>
+    <br/>
+
+    Student
+    <div ng-controller="studentController">
+        {{ firstName + " " + lastName }}
+        <h1>Order </h1>
+
+        <p> Price : <input ng-model="price"> </p>
+        <p> Quantity : <input ng-model="quantity"> </p>
+
+
+        <p> Find total <span ng-bind="total"></span> </p>
+        <button ng-click="calculateTotal()">Total</button>
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.firstName = "John";
+            $scope.lastName = "Doe";
+
+        });
+
+        app.controller("studentController", function($scope) {
+            $scope.firstName = "Joe";
+            $scope.lastName = "Bart";
+            $scope.total = 0;
+
+            $scope.calculateTotal = function(){
+                console.log("calculateTotal ");
+                $scope.total = $scope.price * $scope.quantity;
+
+            }
+        });
+    </script>
+
+</body>
+</html>

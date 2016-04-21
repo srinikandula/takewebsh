@@ -37,7 +37,7 @@ public class StudentRestController {
     }
 
 
-    @RequestMapping(value = "/create", method = {RequestMethod.POST}, produces=MediaType.TEXT_PLAIN_VALUE)
+    @RequestMapping(value = "/create", method = {RequestMethod.POST}, produces= MediaType.TEXT_PLAIN_VALUE)
     public  String createAccount(final HttpServletRequest request) throws  Exception {
         String firstName = request.getParameter("fName");
         String lastName = request.getParameter("lName");
@@ -53,6 +53,7 @@ public class StudentRestController {
     }
 
     @RequestMapping(value = "/{studentId}", method = {RequestMethod.GET}, produces = ControllerUtils.JSON_UTF8)
+
     //public String getAccount(final HttpServletRequest request) throws Exception {
        // String firstName = request.getParameter("firstName");
        // String lastName = request.getParameter("lastName");
@@ -85,7 +86,6 @@ public class StudentRestController {
     }
 
     @RequestMapping(value = "/hasFirstNameUsed", method = { RequestMethod.GET},produces =MediaType.TEXT_PLAIN_VALUE)
-
     public boolean findStudentByFirstName(final HttpServletRequest request) throws Exception {
         String fName = request.getParameter("fName");
         Iterable<Student> students = studentDAO.findByFirstName(fName);

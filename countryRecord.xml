@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<country xmlns:ns2="com.web.jaxb.Country">
+    <countryName>USA</countryName>
+    <countryPopulation>5000000.0</countryPopulation>
+    <stateList>
+        <state>
+            <stateName>New York</stateName>
+            <statePopulation>1000000</statePopulation>
+        </state>
+        <state>
+            <stateName>New Jersey</stateName>
+            <statePopulation>2000000</statePopulation>
+        </state>
+    </stateList>
+</country>
