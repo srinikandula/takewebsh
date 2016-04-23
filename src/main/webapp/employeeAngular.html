@@ -6,6 +6,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="js/employeeController.js"></script>
+    <script src="js/services/employeeService.js"></script>
     <style>
         td{
             style:"text-align:right";
@@ -35,9 +36,7 @@
 
                         <td><button ng-click="loadEmployee(employee)">Update</button></td>
 
-                        <td><button ng-click="updateEmployee(employee)">Update</button></td>
-
-                        <td><button ng-click="deleteEmployee(employee)">Delete</button></td>
+                        <td><button ng-click="deleteEmployee(employee.employeeId)">Delete</button></td>
                     </tr>
                 </table>
             </p>

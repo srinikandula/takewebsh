@@ -1,5 +1,6 @@
 package com.web.controller;
 
+import com.web.controller.util.ControllerUtils;
 import com.web.dao.EmployeeDAO;
 import com.web.model.Employee;
 import com.web.service.EmployeeService;
@@ -30,7 +31,7 @@ public class EmployeeRestController {
     @Autowired(required = true)
     private EmployeeService employeeService;
 
-    @RequestMapping(value = "/employeeListJstl", method = { RequestMethod.GET },  produces = ControllerUtils.JSON_UTF8)
+    @RequestMapping(value = "/list", method = { RequestMethod.GET },  produces = ControllerUtils.JSON_UTF8)
     public Iterable<Employee> getEmployees(final HttpServletRequest request) throws Exception {
         return employeeDAO.findAll();
     }
