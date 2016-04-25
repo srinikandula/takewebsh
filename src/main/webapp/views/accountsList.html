@@ -1,0 +1,11 @@
+<table border="2" cellpadding="3" cellspacing="3">
+    <tr ng-repeat="account in accounts">
+        <td>{{account.firstName}}</td>
+        <td>{{account.lastName}}</td>
+        <td>{{account.balance}}</td>
+        <td><button ng-click="loadAccount(account.id)">Update</button></td>
+        <td><button ng-click="deleteAccount(account)">Delete</button></td>
+    </tr>
+</table>
+<br/>
+<button ng-click="gotoCreateAccount()">Create</button>

@@ -1,30 +1,29 @@
 /**
  * Created by skandula on 4/18/16.
  */
-var app = angular.module("takewebsh", []);
+var app = angular.module("takewebsh");
 
-app.controller("accountController", function($scope, accountService, $http, $log) {
+app.controller("AccountAddController", function($scope, accountService, $http, $log, $location, $routeParams) {
     $scope.accounts = [];
     $scope.account = {};
-    $scope.loadAccounts = function() {
-        accountService.loadAccounts($scope.loadAccountsComplete);
-    }
-    $scope.loadAccountsComplete = function(data){
-        $scope.accounts = data;
-    }
+    $scope.accountId = $routeParams.id;
 
-    $scope.loadAccount = function(account) {
-        accountService.loadAccount(account, function(data){
+    $scope.loadAccount = function() {
+        accountService.loadAccount($scope.accountId, function(data){
             $scope.account = data;
         });
 
+    }
+    //if there is an account id then load that account
+    if($scope.accountId) {
+        $scope.loadAccount();
     }
     $scope.createAccount = function() {
         if($scope.account.id) {
             $http.put('/api/account/update/'+$scope.account.id+'?firstName='+$scope.account.firstName
                 +'&lastName='+$scope.account.lastName+'&balance='+$scope.account.balance)
                 .success(function (data) {
-                    $scope.loadAccounts();
+                    $location.url('/');
                     $scope.account = {};
                 })
                 .error(function (error) {
@@ -34,7 +33,7 @@ app.controller("accountController", function($scope, accountService, $http, $log
             $http.post('/api/account/create?fName='+$scope.account.firstName
             +'&lName='+$scope.account.lastName+'&balance='+$scope.account.balance)
             .success(function (data) {
-                $scope.loadAccounts();
+                $location.url('/');
                 $scope.account = {};
             })
             .error(function (error) {
@@ -43,17 +42,6 @@ app.controller("accountController", function($scope, accountService, $http, $log
         }
     }
 
-    $scope.deleteAccount = function(account) {
-        $http.delete('/api/account/delete?id='+account.id)
-            .success(function (message) {
-               $log.debug("account deleted");
-               $scope.loadAccounts();
-            })
-            .error(function (error) {
-                $log.debug("error deleting accounts");
-            });
 
-    }
 
-    $scope.loadAccounts();
 });

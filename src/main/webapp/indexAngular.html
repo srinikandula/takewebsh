@@ -1,39 +1,20 @@
 <!DOCTYPE html>
 <html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-<script src="js/accountController.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/accountListController.js"></script>
+<script src="js/controllers/accountAddController.js"></script>
 <script src="js/services/accountService.js"></script>
+
 <body>
 
 <div ng-app="takewebsh">
     <div class="container">
         <h1>Account Home page</h1>
+        <div ng-view/>
 
-        <div ng-controller="accountController">
-            <p>
-            <div class="row"><input type="text" ng-model="account.firstName" placeholder="First Name"> </div>
-            <br/>
-            <div class="row"><input type="text" ng-model="account.lastName" placeholder="Last Name"></div>
-            <br/>
-            <div class="row"><input type="text" ng-model="account.balance" placeholder="Balance"></div>
-            <br/>
-            <div class="row"><button ng-click="createAccount()">Save</button></div>
-            </p>
-
-
-            <p>
-            <table border="2" cellpadding="3" cellspacing="3">
-                <tr ng-repeat="account in accounts">
-                    <td>{{account.firstName}}</td>
-                    <td>{{account.lastName}}</td>
-                    <td>{{account.balance}}</td>
-                    <td><button ng-click="loadAccount(account)">Update</button></td>
-                    <td><button ng-click="deleteAccount(account)">Delete</button></td>
-                </tr>
-            </table>
-            </p>
-        </div>
     </div>
 </div>
 
