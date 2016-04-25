@@ -1,6 +1,7 @@
 /**
  * Created by CrazyNaveen on 4/18/16.
  */
+'use strict'
 
 var app = angular.module("takewebsh",[]);
 

@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Employee</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="js/employeeController.js"></script>
+    <script src="js/keeApp.js"></script>
+   <!-- <script src="js/employeeController.js"></script>-->
+    <script src="js/employeeListController.js"></script>
+    <script src="js/addEmployeeController.js"></script>
     <script src="js/services/employeeService.js"></script>
     <style>
         td{
@@ -18,14 +23,16 @@
 <div ng-app="takewebsh">
     <div class="container">
         <h1>Employee Home Page</h1>
-        <div ng-controller="employeeController">
+
+        <div ng-view/>
+
+        <!--<div ng-controller="employeeController">
             <p>
                 <div class="row"><input type=text" ng-model="employee.name" placeholder="Name"></div><br>
                 <div class="row"><input type=text" ng-model="employee.address" placeholder="Address"></div><br>
                 <div class="row"><input type=text" ng-model="employee.salary" placeholder="Salary"></div><br>
                 <div><button ng-click="createEmployee()">Save</button></div><br>
             </p>
-
             <p>
             <h2>Employee List</h2>
                 <table border="1" cellpadding="1" cellspacing="1" width="70%">
@@ -40,8 +47,7 @@
                     </tr>
                 </table>
             </p>
-
-        </div>
+        </div>-->
     </div>
 </div>
 </body>
