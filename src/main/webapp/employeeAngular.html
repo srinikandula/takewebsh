@@ -8,9 +8,9 @@
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="js/keeApp.js"></script>
-   <!-- <script src="js/employeeController.js"></script>-->
-    <script src="js/employeeListController.js"></script>
-    <script src="js/addEmployeeController.js"></script>
+    <!--<script src="js/controllers/employeeController.js"></script>-->
+    <script src="js/controllers/employeeListController.js"></script>
+    <script src="js/controllers/addEmployeeController.js"></script>
     <script src="js/services/employeeService.js"></script>
     <style>
         td{
@@ -23,10 +23,9 @@
 <div ng-app="takewebsh">
     <div class="container">
         <h1>Employee Home Page</h1>
-
         <div ng-view/>
 
-        <!--<div ng-controller="employeeController">
+       <!-- <div ng-controller="employeeController">
             <p>
                 <div class="row"><input type=text" ng-model="employee.name" placeholder="Name"></div><br>
                 <div class="row"><input type=text" ng-model="employee.address" placeholder="Address"></div><br>
