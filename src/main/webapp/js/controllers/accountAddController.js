@@ -3,16 +3,19 @@
  */
 var app = angular.module("takewebsh");
 
-app.controller("AccountAddController", function($scope, accountService, $http, $log, $location, $routeParams) {
+app.controller("AccountAddController", function($scope, $rootScope, accountService, $http, $log, $location, $routeParams) {
     $scope.accounts = [];
     $scope.account = {};
     $scope.accountId = $routeParams.id;
+    $scope.$on('testEvent', function(){
+       console.log("test event received in AccountAddController ");
 
+    });
     $scope.loadAccount = function() {
         accountService.loadAccount($scope.accountId, function(data){
             $scope.account = data;
         });
-
+        $rootScope.$broadcast('test');
     }
     //if there is an account id then load that account
     if($scope.accountId) {

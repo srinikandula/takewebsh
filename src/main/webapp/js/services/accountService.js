@@ -5,12 +5,17 @@
 /*global angular, _*/
 
 var takewebsh = angular.module('takewebsh');
-takewebsh.factory('accountService', function ($rootScope, $http, $log, $window) {
+takewebsh.service('accountService', function ($rootScope, $http, $log, $window) {
+    var  accounts = [];
     return {
+
         loadAccounts : function(loadComplete) {
             $http.get('/api/account/list')
-                .success(function (accounts) {
-                    loadComplete(accounts);
+                .success(function (data) {
+                    accounts = data;
+                    console.log("loading complete");
+                    //loadComplete(data);
+                    $rootScope.$broadcast('testEvent');
                 })
                 .error(function (error) {
                     $log.debug("error retrieving accounts");
@@ -33,6 +38,10 @@ takewebsh.factory('accountService', function ($rootScope, $http, $log, $window) 
                 .error(function (error) {
                     $log.debug("error deleting accounts");
                 });
+        },
+        getAccounts: function(){
+            console.log("get accounts "+ accounts);
+            return accounts;
         }
     }
 });

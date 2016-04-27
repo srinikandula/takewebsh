@@ -9,7 +9,10 @@ app.controller("AccountListController", function($scope, accountService, $locati
     $scope.account = {};
     $scope.loadAccounts = function() {
         accountService.loadAccounts($scope.loadAccountsComplete);
+        $scope.accounts = accountService.getAccounts();
+        //accountService.loadAccounts();
     }
+
     $scope.loadAccountsComplete = function(data){
         $scope.accounts = data;
     }
@@ -24,6 +27,9 @@ app.controller("AccountListController", function($scope, accountService, $locati
             $scope.loadAccounts();
         });
     }
+    $scope.$on('testEvent', function(){
+        $scope.accounts = accountService.getAccounts();
+    });
 
     $scope.loadAccounts();
 });
