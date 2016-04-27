@@ -16,8 +16,17 @@ takewebsh.factory('employeeService', function ($rootScope, $http, $log, $window)
                     $log.debug("error retrieving employees");
                 });
         },
-        loadEmployee:function(employee, loadComplete) {
+        /*loadEmployee:function(employee, loadComplete) {
             $http.get('/api/employee/'+employee.employeeId)
+                .success(function (data) {
+                    loadComplete(data);
+                })
+                .error(function (error) {
+                    $log.debug("error retrieving employee");
+                });
+        },*/
+        loadEmployee:function(employeeId, loadComplete) {
+            $http.get('/api/employee/'+employeeId)
                 .success(function (data) {
                     loadComplete(data);
                 })

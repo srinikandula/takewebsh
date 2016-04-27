@@ -3,9 +3,9 @@
  */
 'use strict'
 
-var app = angular.module("takewebsh",[]);
+var takewebsh = angular.module("takewebsh");
 
-app.controller("employeeController", function($scope, employeeService, $http, $log){
+takewebsh.controller("employeeController", function($scope, employeeService, $http, $log){
     $scope.employees = [];
     $scope.employee = {};
 
@@ -44,7 +44,7 @@ app.controller("employeeController", function($scope, employeeService, $http, $l
 
     /*$scope.createEmployee = function() {
 
-        $http.post("api/employee/create?name=" + $scope.employee.name + "&address" + $scope.employee.address + "&salary" + $scope.employee.salary)
+        $http.post("api/employee/create?name=" + $scope.employee.name + "&address=" + $scope.employee.address + "&salary=" + $scope.employee.salary)
             .success(function (data) {
                     $scope.loadEmployees();
                     $scope.employee = {};
@@ -54,9 +54,8 @@ app.controller("employeeController", function($scope, employeeService, $http, $l
             });
 
     }
-*/
 
-    /*$scope.deleteEmployee = function(employee) {
+    $scope.deleteEmployee = function(employee) {
         $http.delete("api/employee/delete?id=" + employee.employeeId)
             .success(function (message) {
                 $log.debug("Employee is deleted");
@@ -66,9 +65,9 @@ app.controller("employeeController", function($scope, employeeService, $http, $l
                 $log.debug("error in deleting employee");
             });
 
-    }*/
+    }
 
-    /*$scope.loadEmployees = function(){
+    $scope.loadEmployees = function(){
      $http.get("api/employee/list")
      .success(function(data){
      $scope.employees = data;
@@ -88,12 +87,8 @@ app.controller("employeeController", function($scope, employeeService, $http, $l
      $log.debug("error retrieving employee");
      });
      }
-     */
 
-
-
-
-
+*/
 
     $scope.loadEmployees();
 

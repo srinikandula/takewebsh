@@ -6,8 +6,11 @@
         <td>{{employee.address}}</td>
         <td>{{employee.salary}}</td>
 
-        <td><button ng-click="loadEmployee($scope.employeeId)">Update</button></td>
+        <td><button ng-click="loadEmployee(employee.employeeId)">Update</button></td>
 
         <td><button ng-click="deleteEmployee(employee.employeeId)">Delete</button></td>
     </tr>
 </table>
+
+<br/>
+<button ng-click="gotoCreateEmployee()">Create</button>
