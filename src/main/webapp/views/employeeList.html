@@ -1,0 +1,16 @@
+
+<h2>Employee List</h2>
+<table border="1" cellpadding="1" cellspacing="1" width="70%">
+    <tr ng-repeat="employee in employees" >
+        <td>{{employee.name}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.salary}}</td>
+
+        <td><button ng-click="loadEmployee(employee.employeeId)">Update</button></td>
+
+        <td><button ng-click="deleteEmployee(employee.employeeId)">Delete</button></td>
+    </tr>
+</table>
+
+<br/>
+<button ng-click="gotoCreateEmployee()">Create</button>
