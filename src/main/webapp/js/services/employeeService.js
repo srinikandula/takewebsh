@@ -6,11 +6,16 @@
 
 var takewebsh = angular.module('takewebsh');
 takewebsh.factory('employeeService', function ($rootScope, $http, $log, $window) {
+    var employees = [];
     return {
         loadEmployees : function(loadComplete) {
             $http.get('/api/employee/list')
                 .success(function (response) {
-                    loadComplete(response);
+                    employees = response;
+                    console.log("loading complete");
+                    //loadComplete(data);
+
+                    $rootScope.$broadcast("loadEvent");
                 })
                 .error(function (error) {
                     $log.debug("error retrieving employees");
@@ -66,7 +71,13 @@ takewebsh.factory('employeeService', function ($rootScope, $http, $log, $window)
                         $log.debug("error creating employee");
                     });
             }
-        }
+
+
+        },
+
+        getEmployees : function(){
+        return employees;
+    }
 
 
     }

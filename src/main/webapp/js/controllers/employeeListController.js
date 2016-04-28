@@ -11,6 +11,7 @@ app.controller("EmployeeListController", function($scope, employeeService, $loca
 
     $scope.loadEmployees = function () {
         employeeService.loadEmployees($scope.loadEmployeesComplete);
+        $scope.employees = employeeService.getEmployees();
     }
     $scope.loadEmployeesComplete = function (data) {
         $scope.employees = data;
@@ -28,5 +29,10 @@ app.controller("EmployeeListController", function($scope, employeeService, $loca
             $scope.loadEmployees();
         });
     }
+    $scope.$on("loadEvent" , function(){
+        console.log("load event is received on EmployeeListController");
+        //$scope.loadEmployees();
+        $scope.employees = employeeService.getEmployees();
+    })
     $scope.loadEmployees();
 });

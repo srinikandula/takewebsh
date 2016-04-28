@@ -8,7 +8,10 @@ app.controller("AddEmployeeController", function($scope, employeeService, $http,
     $scope.employees = [];
     $scope.employee = {};
     $scope.employeeId = $routeParams.id;
-
+    $scope.$on("loadEvent" , function(){
+        console.log("load event is received on AddEmployeeController");
+        $scope.loadEmployees();
+    })
 
     $scope.loadEmployee = function() {
         employeeService.loadEmployee($scope.employeeId, function(data){
