@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
  * Created by devendra on 4/5/2016.
  */
 public class StudentServiceTest {
+    
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 

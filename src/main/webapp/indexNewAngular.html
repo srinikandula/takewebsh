@@ -3,6 +3,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 <script src="js/studentController.js"></script>
+<script src="js/services/studentService.js"></script>
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -29,7 +30,7 @@
             <td>{{student.firstName}}</td>
             <td>{{student.lastName}}</td>
             <td><button ng-click="loadStudent(student)">Update</button></td>
-            <td><button ng-click="deleteStudent(student)">Delete</button></td>
+            <td><button ng-click="deleteStudent(student.studentId)">Delete</button></td>
         </tr>
     </table>
         </p>
