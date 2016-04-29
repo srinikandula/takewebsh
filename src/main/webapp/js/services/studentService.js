@@ -18,8 +18,8 @@ Springs.factory('studentService',function($rootScope, $http, $log, $window){
                 });
         },
 
-        loadStudent:function(student, loadComplete) {
-            $http.get('/api/student/' + student.studentId)
+        loadStudent:function(studentId, loadComplete) {
+            $http.get('/api/student/' + studentId)
                 .success(function (data) {
                     loadComplete(data);
                 })

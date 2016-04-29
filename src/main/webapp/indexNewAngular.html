@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-<script src="js/studentController.js"></script>
+<!--<script src="js/studentController.js"></script>-->
+<script src="js/devApp.js"></script>
+<script src="js/controllers/studentAddController.js"></script>
+<script src="js/controllers/studentListController.js"></script>
 <script src="js/services/studentService.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -14,29 +19,32 @@
 
     <div class="container">
         <h1>Hello</h1>
-        <div ng-controller="studentController">
-        <p>
-        <div class="row"><input  type="text" ng-model="student.firstName" placeholder="first Name"></div>
-        <br/>
-        <div class="row"><input  type="text" ng-model="student.lastName" placeholder="last Name"></div>
-        <br/>
-        <div class="row"><button ng-click="createAccount()">Create</button></div><br>
-        </p>
+        <div ng-view/>
 
 
-        <p>
-    <table border="3" cellpadding="3" cellspacing="3" >
-        <tr ng-repeat="student in students">
-            <td>{{student.firstName}}</td>
-            <td>{{student.lastName}}</td>
-            <td><button ng-click="loadStudent(student)">Update</button></td>
-            <td><button ng-click="deleteStudent(student.studentId)">Delete</button></td>
-        </tr>
-    </table>
-        </p>
-</div>
-</div>
-</div>
+        <!--     <div ng-controller="studentController">
+             <p>
+             <div class="row"><input  type="text" ng-model="student.firstName" placeholder="first Name"></div>
+             <br/>
+             <div class="row"><input  type="text" ng-model="student.lastName" placeholder="last Name"></div>
+             <br/>
+             <div class="row"><button ng-click="createAccount()">Create</button></div><br>
+             </p>
 
-</body>
-</html>
+
+             <p>
+         <table border="3" cellpadding="3" cellspacing="3" >
+             <tr ng-repeat="student in students">
+                 <td>{{student.firstName}}</td>
+                 <td>{{student.lastName}}</td>
+                 <td><button ng-click="loadStudent(student)">Update</button></td>
+                 <td><button ng-click="deleteStudent(student.studentId)">Delete</button></td>
+             </tr>
+         </table>
+             </p>
+     </div>  -->
+     </div>
+     </div>
+
+     </body>
+     </html>
