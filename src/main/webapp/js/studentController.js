@@ -4,61 +4,65 @@
 
 var app = angular.module("Springs", []);
 
-app.controller("studentController", function($scope, $http, $log) {
+app.controller("studentController", function($scope,$http, studentService, $log) {
     $scope.students = [];
     $scope.student = {};
-    $scope.loadStudents = function () {
-        $http.get('/api/student/list')
-            .success(function (data) {
-                $scope.students = data;
-            })
-            .error(function (error) {
-                $log.debug("error retrieving data");
 
-            });
+    $scope.loadStudents = function() {
+        studentService.loadStudents($scope.loadStudentsComplete);
     }
-    $scope.loadStudent = function (student) {
-        $http.get('/api/student/' + student.studentId)
-            .success(function (data) {
-                $scope.student = data;
-            })
-            .error(function (error) {
-                $log.debug("error retrieving accounts");
-            });
+    $scope.loadStudentsComplete = function(data){
+        $scope.students = data;
     }
-    $scope.createAccount = function () {
-        if ($scope.student.studentId) {
-            $http.put('/api/student/update/' + $scope.student.studentId + '?firstName=' + $scope.student.firstName + '&lastName=' + $scope.student.lastName)
-                .success(function (data) {
-                    $scope.loadStudents();
-                    $scope.student = {};
-                })
-                .error(function (error) {
-                    $log.debug("error retrieving accounts");
-                });
-        } else {
-            $http.post('/api/student/create?fName=' + $scope.student.firstName + '&lName=' + $scope.student.lastName)
-                .success(function (data) {
-                    $scope.loadStudents();
-                    $scope.student = {};
-                })
-                .error(function (error) {
-                    $log.debug("error retrieving data");
 
-                });
-        }
+    $scope.loadStudent = function(student) {
+        studentService.loadStudent(student, function(data){
+            $scope.student = data;
+        });
+
     }
-    $scope.deleteStudent = function (student) {
-        $http.delete('/api/student/delete?id=' + student.studentId)
-            .success(function (message) {
-                $log.debug("account deleted");
-                $scope.loadStudents();
-            })
-            .error(function (error) {
-                $log.debug("error retrieving data");
-            });
-     }
+
+
+    $scope.createAccount = function() {
+        studentService.createAccount($scope.student, function(){
+            $scope.loadStudents();
+            $scope.student={};
+        });
+    }
+
+    $scope.deleteStudent=function(student){
+        studentService.deleteStudent(student,function(){
+            $scope.loadStudents();
+        });
+    }
+
+    /* $scope.deleteStudent = function (student) {
+         $http.delete('/api/student/delete?id=' + student.studentId)
+             .success(function (message) {
+                 $log.debug("account deleted");
+                 $scope.loadStudents();
+             })
+             .error(function (error) {
+                 $log.debug("error retrieving data");
+             });
+     }*/
 
     $scope.loadStudents();
 
 });
+
+
+/* $scope.createAccount = function () {
+     studentService.createAccount($scope.student, function(){
+            $scope.loadStudents();
+     });
+ }
+
+ $scope.deleteStudent = function (student) {
+     studentService.deleteStudent(student, function(data){
+        $scope.student=data;
+     });
+ }
+
+ $scope.loadStudents();
+});*/

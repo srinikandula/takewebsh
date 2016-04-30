@@ -10,7 +10,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-public class JAXBJavaToXml {
+public class JAXBJavatoXML {
     public static void main(String[] args) {
 
         // creating country object
