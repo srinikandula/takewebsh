@@ -66,9 +66,13 @@ public class Application extends SpringBootServletInitializer {
 	}
 
 	@Bean
-	public Docket documentation() {
-		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any()).paths(paths())
-				.build().pathMapping("/").useDefaultResponseMessages(false).apiInfo(apiInfo());
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2)
+				.select()
+				.apis(RequestHandlerSelectors.any())
+				.paths(regex("/api/.*"))
+				.build()
+				.apiInfo(apiInfo());
 	}
 
 	@Bean
@@ -78,7 +82,7 @@ public class Application extends SpringBootServletInitializer {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("SMS REST API").description("SMS Operations").version("2.0")
-				.contact("Dan@email.com").build();
+				.contact("srini@email.com").build();
 	}
 
 	public ObjectMapper objectMapper() {

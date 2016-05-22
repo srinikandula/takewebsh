@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table id="employees" border="2">
+
+
+</table>
+
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "/json/employees.json";
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            myFunction(myArr.students);
+        }
+    };
+    function myFunction(emps) {
+        var out = "";
+        var i;
+        for(i =0; i<emps.length; i++) {
+            out += "<tr><td>"+ emps[i].id+" </td> <td>"+ emps[i].name+" </td></tr>";
+        }
+        document.getElementById("employees").innerHTML = out;
+    }
+</script>
+
+</body>
+</html>
