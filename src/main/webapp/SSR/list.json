@@ -1,0 +1,56 @@
+{
+  "restaurants": [
+    {
+      "name": "Bawarchi",
+      "place": "Hyderabad",
+      "type": "Veg/Non-veg"
+    },
+    {
+      "name": "Paradise",
+      "place": "Hyderguda",
+      "type": "Veg/Non-veg"
+    },
+    {
+      "name": "Minerva",
+      "place": "Begumpet",
+      "type": "Non-Veg"
+    },
+    {
+      "name": "Mayuri",
+      "place": "Secunderabad",
+      "type": "Veg/Non-veg"
+    },
+    {
+      "name": "Alpha",
+      "place": "Begumpet",
+      "type": "Pure-Veg"
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Holiday-Inn",
+      "place": "Koti",
+      "type": "A Class"
+    },
+    {
+      "name": "5 Star",
+      "place": "Secunderabad",
+      "type": "B Class"
+    },
+    {
+      "name": "Supraja",
+      "place": "Chandanagar",
+      "type": "A Class"
+    },
+    {
+      "name": "Ashoka",
+      "place": "Mehdipatnam",
+      "type": "C Class"
+    },
+    {
+      "name": "Westin",
+      "place": "Koti",
+      "type": "A Class"
+    }
+  ]
+}

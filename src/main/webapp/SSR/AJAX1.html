@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Akshaya Restaurant</title>
+    <link rel="stylesheet" href="Akshaya.css">
+
+</head>
+<body>
+    <div id="header">
+        <h1>This is Header</h1>
+
+    </div>
+    <div id="nav">
+        <h1>This is nav</h1>
+    </div>
+    <div id="section">
+        <p>Section Line-1</p>
+        <div id="article">
+            <p>HOTELS:-</p>
+        </div>
+        <div id="aside">
+            <p>RESTAURANTS:-</p>
+            <table id="rest" border="2">
+
+            </table>
+        </div>
+        <p>Section bottom line</p>
+        <p>Section bottom line</p>
+        <p>Section bottom line</p>
+        <p>Section bottom line</p>
+        <p>Section bottom line</p>
+        <p>Section bottom line</p>
+    </div>
+    <div id="footer">
+        Copy Rights &copy Reserved<br />
+        Contact Us
+    </div>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "/SSR/list.json";
+
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var myArr = JSON.parse(xmlhttp.responseText);
+                myFunction(myArr.restaurants);
+            }
+        };
+        function myFunction(a) {
+            var out = "";
+            var i;
+            for(i =0; i<a.length; i++) {
+                out += "<tr><td>"+ a[i].name+" </td> <td>"+ a[i].place+" </td> <td>"+ a[i].type+" </td></tr>";
+            }
+            document.getElementById("rest").innerHTML = out;
+
+        }
+    </script>
+</body>
+</html>
