@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<br/>
+Firstname : <input type="text" id="firstName"> <input type="hidden" id="studentId">
+<br/>
+Lastname : <input type="text" id="lastName">
+<br/>
+Address : <input type="text" id="address">
+
+<br/>
+<button onclick="updateStudent()">Update</button>
+<br/><br/>
+<table id="employees" border="2">
+
+
+</table>
+
+<script>
+    $( document ).ready(function() {
+        loadStudents();
+    });
+
+    function loadStudents() {
+        $.ajax({
+            // The URL for the request
+            url: "/api/student/list",
+            // The data to send (will be converted to a query string)
+            data: {
+
+            },
+            // Whether this is a POST or GET request
+            type: "GET",
+            // The type of data we expect back
+            dataType : "json",
+        }).done(function(response ) {
+            myFunction(response);
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function deleteStudent(id) {
+        $.ajax({
+            url: "/api/student/delete/?id="+id,
+            type: "DELETE",
+            dataType : "json",
+        }).done(function() {
+            console.log("deleted");
+            loadStudents();
+        }).fail(function( xhr, status, errorThrown ) {
+            //alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function loadStudent(id) {
+        console.log("loading student with id " + id);
+        $.ajax({
+            // The URL for the request
+            url: "/api/student/"+id,
+            // The data to send (will be converted to a query string)
+            data: {
+
+            },
+            // Whether this is a POST or GET request
+            type: "GET",
+            // The type of data we expect back
+            dataType : "json",
+        }).done(function(student ) {
+            $("#firstName").val(student.firstName);
+            $("#lastName").val(student.lastName);
+            $("#studentId").val(student.studentId);
+
+        }).fail(function( xhr, status, errorThrown ) {
+            //alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function updateStudent() {
+        var id =  $("#studentId").val();
+        console.log("update student with id " + id);
+        $.ajax({
+            url: "/api/student/update/"+ id +"?firstName="+$("#firstName").val()+"&lastName="+$("#lastName").val(),
+            type: "PUT",
+            dataType : "json",
+        }).done(function() {
+            $("#firstName").val();
+            $("#lastName").val();
+            loadStudents()
+        }).fail(function( xhr, status, errorThrown ) {
+            loadStudents();
+            //alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+
+
+    function myFunction(emps) {
+        var out = "";
+        var i;
+        for(i =0; i<emps.length; i++) {
+            out += "<tr><td>"+ emps[i].firstName+" </td> <td>"+ emps[i].lastName+" </td><td><button onclick='loadStudent(" + emps[i].studentId+" )'>Load</button> <button onclick='deleteStudent(" + emps[i].studentId+" )'>Delete</button></button></td></tr>";
+        }
+        document.getElementById("employees").innerHTML = out;
+    }
+</script>
+
+</body>
+</html>
