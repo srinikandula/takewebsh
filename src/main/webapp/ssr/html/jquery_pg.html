@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ajax Using Jquery and Postgresql</title>
+    <link rel="stylesheet" href="../css/jquery_pg.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="header">
+    <h1>AJAX USING JQUERY</h1>
+</div>
+<div id="nav">
+    <h2>Working with DATABASE(Postgresql) concepts</h2>
+</div>
+<div id="section">
+    <p>This is section</p>
+    <div id="article">
+        <p> Employees</p>
+
+    </div>
+    <div id="aside">
+    <p>Accounts</p>
+        <div>
+            <table style="text-align: left">
+                <tr>
+                    <td>Id:</td>
+                    <td><input type="text" id="id"></td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" id="first_name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" id="last_name"></td>
+                </tr>
+                <tr>
+                    <td>Balance:</td>
+                    <td><input type="text" id="balance"></td>
+                </tr>
+
+            </table>
+            <button onclick="updateAccount()">Update</button>&nbsp<button id="create" onclick="create()">Create</button>
+        </div>
+        <div>
+            <table>
+                <tr><td>
+                        <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
+                            <tr><th>Id</th><th>Balance</th><th>First Name</th><th>Last Name</th><th>Operation</th></tr>
+                        </table>
+                        <table id="acc" border="1px" style="border-color:maroon;border-collapse: collapse;width: 100%">
+
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <p><span>Copy Rights &copy Reserved</span> <br/>
+        <span>Contact Us</span></p>
+
+</div>
+<script>
+    $( document ).ready(function() {
+        loadAccounts();
+    });
+
+    function loadAccounts() {
+        $.ajax({
+            url: "/api/account/list",
+            data: {
+
+            },
+            type: "GET",
+            dataType : "json",
+        }).done(function(response ) {
+            myFunction(response);
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function load_person_info(id) {
+        console.log("loading person info with id " + id);
+        $.ajax({
+            url: "/api/account/"+id,
+            data: {
+            },
+            type: "GET",
+            dataType : "json",
+        }).done(function(account ) {
+            $("#id").val(account.id);
+            $("#first_name").val(account.firstName);
+            $("#last_name").val(account.lastName);
+            $("#balance").val(account.balance);
+
+        }).fail(function( xhr, status, errorThrown ) {
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function deleteAccount(id) {
+        $.ajax({
+            url: "/api/account/delete/?id="+id,
+            type: "DELETE",
+            dataType : "json",
+        }).done(function() {
+            console.log("deleted");
+            loadAccounts();
+        }).fail(function( xhr, status, errorThrown ) {
+            //alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function updateAccount() {
+        var id =  $("#id").val();
+        console.log("update account with id " + id);
+        $.ajax({
+            url: "/api/account/update/"+ id +"?firstName="+$("#first_name").val()+"&lastName="+$("#last_name").val()+"&balance="+$("#balance").val(),
+            type: "PUT",
+            dataType : "json",
+        }).done(function() {
+            $("#firstName").val();
+            $("#lastName").val();
+            $("#balance").val();
+            loadAccounts();
+        }).fail(function( xhr, status, errorThrown ) {
+            loadAccounts();
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+       function myFunction(a) {
+        var out = "";
+        var i;
+        for (i = 0; i < a.length; i++) {
+            out += "<td>"+ a[i].id +"</td><td>"+ a[i].balance +"</td><td>"+ a[i].firstName +"</td><td>"+ a[i].lastName +"</td><td><button onclick='load_person_info(" + a[i].id+" )'>Load</button></td><td><button onclick='deleteAccount(" + a[i].id+" )'>Delete</button></td></tr>";
+        }
+        document.getElementById("acc").innerHTML = out;
+    }
+</script>
+</body>
+</html>
