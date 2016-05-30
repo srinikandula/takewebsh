@@ -9,21 +9,29 @@
 
 <script>
     var xmlhttp = new XMLHttpRequest();
-    var url = "/json/employees.json";
+    var url = "/api/student/list";
 
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var myArr = JSON.parse(xmlhttp.responseText);
+<<<<<<< HEAD
             myFunction(myArr.employees);
+=======
+            myFunction(myArr);
+>>>>>>> 70e94e0ad6a021573981c9b7fd79b9a3b1714fd9
         }
     };
     function myFunction(emps) {
         var out = "";
         var i;
         for(i =0; i<emps.length; i++) {
+<<<<<<< HEAD
             out +=  "<tr> <td>"+ emps[i].firstName+"</td><td>"+emps[i].lastName+"</td></td>";
+=======
+            out += "<tr><td>"+ emps[i].firstName+" </td> <td>"+ emps[i].lastName+" </td></tr>";
+>>>>>>> 70e94e0ad6a021573981c9b7fd79b9a3b1714fd9
         }
         document.getElementById("employees").innerHTML = out;
     }
