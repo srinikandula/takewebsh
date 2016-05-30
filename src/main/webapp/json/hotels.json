@@ -1,0 +1,53 @@
+{
+  "hotels": [
+    {
+      "Name": "Pelican Hotel"
+    },
+    {
+      "Name": "Fontainebleau Miami Beach"
+    },
+    {
+      "Name": "The Confidante"
+    },
+    {
+      "Name": "Metropolitan by COMO, Miami Beach"
+    },
+    {
+      "Name": "W South Beach"
+    }
+  ],
+  "ranking": [
+    {
+      "rank": 1
+    },
+    {
+      "rank": 2
+    },
+    {
+      "rank": 3
+    },
+    {
+      "rank": 4
+    },
+    {
+      "rank": 5
+    }
+  ],
+  "prices": [
+    {
+      "price": 120
+    },
+    {
+      "price": 1150
+    },
+    {
+      "price": 100
+    },
+    {
+      "price": 90
+    },
+    {
+      "price": 80
+    }
+  ]
+}
