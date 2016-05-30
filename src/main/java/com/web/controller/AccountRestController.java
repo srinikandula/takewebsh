@@ -34,10 +34,9 @@ public class AccountRestController {
     }
 
     @RequestMapping(value = "/create", method = { RequestMethod.POST }, produces = MediaType.TEXT_PLAIN)
-    public String createAccount(final HttpServletRequest request) throws Exception {
-        String firstName = request.getParameter("fName");
-        String lastName = request.getParameter("lName");
-        String balance = request.getParameter("balance");
+    public String createAccount(final HttpServletRequest request, @RequestParam(name = "firstName") String firstName,
+                                @RequestParam(name = "lastName") String lastName,
+                                @RequestParam(name = "balance") String balance) throws Exception {
         Iterable<Account> accounts = accountDAO.findByFirstNameAndLastName(firstName, lastName);
         if(accounts.iterator().hasNext()) {
             throw new RuntimeException("Account with same names found");
@@ -57,17 +56,16 @@ public class AccountRestController {
     }
 
     @RequestMapping(value = "/update/{id}", method = { RequestMethod.PUT }, produces = MediaType.TEXT_PLAIN)
-    public String updateAccount(final HttpServletRequest request, @PathVariable String id) throws Exception {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String balance = request.getParameter("balance");
+    public String updateAccount(final HttpServletRequest request, @PathVariable String id,
+                                @RequestParam(name = "firstName") String firstName,
+                                @RequestParam(name = "lastName") String lastName,
+                                @RequestParam(name = "balance") String balance) throws Exception {
         accountService.updateAccount(id, firstName, lastName, Long.parseLong(balance));
         return "Account updated successfully";
     }
 
     @RequestMapping(value = "/delete", method = { RequestMethod.DELETE }, produces = MediaType.TEXT_PLAIN)
-    public String updateAccount(final HttpServletRequest request) throws Exception {
-        String id = request.getParameter("id");
+    public String deleteAccount(final HttpServletRequest request, @RequestParam(name = "id") String id ) throws Exception {
         Account account = accountDAO.findById(new Long(id));
         accountDAO.delete(account);
         return "Account deleted successfully";
