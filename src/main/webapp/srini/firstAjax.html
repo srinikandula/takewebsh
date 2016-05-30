@@ -16,14 +16,14 @@
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var myArr = JSON.parse(xmlhttp.responseText);
-            myFunction(myArr.students);
+            myFunction(myArr.employees);
         }
     };
     function myFunction(emps) {
         var out = "";
         var i;
         for(i =0; i<emps.length; i++) {
-            out += "<tr><td>"+ emps[i].id+" </td> <td>"+ emps[i].name+" </td></tr>";
+            out +=  "<tr> <td>"+ emps[i].firstName+"</td><td>"+emps[i].lastName+"</td></td>";
         }
         document.getElementById("employees").innerHTML = out;
     }
