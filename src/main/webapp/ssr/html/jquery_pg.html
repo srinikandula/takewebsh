@@ -19,6 +19,37 @@
     <p>This is section</p>
     <div id="article">
         <p> Employees</p>
+        <div>
+            <table style="text-align: left">
+                <tr>
+                    <td>Id:</td>
+                    <td><input type=text" id="employee_id"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type=text" id="address"></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type=text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Salary:</td>
+                    <td><input type=text" id="salary"></td>
+                </tr>
+            </table>
+            <button onclick="emp_update()">Update</button>&nbsp<button onclick="emp_create()">Create</button>
+            <table>
+                <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
+                    <tr>
+                        <th>Employee Id</th><th>Employee Address</th><th>Employee Name</th><th>Employee Salary</th>
+                    </tr>
+                </table>
+                <table id="emp" border="1px" style="border-color:maroon;border-collapse: collapse;width: 100%">
+
+                </table>
+            </table>
+        </div>
 
     </div>
     <div id="aside">
@@ -43,7 +74,7 @@
                 </tr>
 
             </table>
-            <button onclick="updateAccount()">Update</button>&nbsp<button id="create" onclick="create()">Create</button>
+            <button onclick="updateAccount()">Update</button>&nbsp<button onclick="createAccounts()">Create</button>
         </div>
         <div>
             <table>
@@ -70,7 +101,25 @@
 <script>
     $( document ).ready(function() {
         loadAccounts();
+        loadEmployees();
     });
+    function loadEmployees() {
+        $.ajax({
+            url: "/api/employee/list",
+            data: {
+
+            },
+            type: "GET",
+            dataType : "json",
+        }).done(function(response ) {
+            myFunction1(response);
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
 
     function loadAccounts() {
         $.ajax({
@@ -143,6 +192,26 @@
             console.dir( xhr );
         });
     }
+    function createAccounts(){
+        $.ajax({
+            url: "/api/account/update/"+ id +"?firstName="+$("#first_name").val()+"&lastName="+$("#last_name").val()+"&balance="+$("#balance").val(),
+            data: {
+                id:123
+            },
+            type: "POST",
+            dataType : "json",
+        }).done(function( ) {
+            $("#firstName").val();
+            $("#lastName").val();
+            $("#balance").val();
+            loadAccounts();
+                }).fail(function( xhr, status, errorThrown ) {
+                    alert( "Sorry, there was a problem!" );
+                    console.log( "Error: " + errorThrown );
+                    console.log( "Status: " + status );
+                    console.dir( xhr );
+                })
+    }
        function myFunction(a) {
         var out = "";
         var i;
@@ -150,6 +219,14 @@
             out += "<td>"+ a[i].id +"</td><td>"+ a[i].balance +"</td><td>"+ a[i].firstName +"</td><td>"+ a[i].lastName +"</td><td><button onclick='load_person_info(" + a[i].id+" )'>Load</button></td><td><button onclick='deleteAccount(" + a[i].id+" )'>Delete</button></td></tr>";
         }
         document.getElementById("acc").innerHTML = out;
+    }
+    function myFunction1(a) {
+        var out = "";
+        var i;
+        for (i = 0; i < a.length; i++) {
+            out += "<td>"+ a[i].employee_id +"</td><td>"+ a[i].address +"</td><td>"+ a[i].name +"</td><td>"+ a[i].salary +"</td><td><button onclick='load_emp_info(" + a[i].employee_id+" )'>Load</button></td><td><button onclick='deleteAccount(" + a[i].employee_id+" )'>Delete</button></td></tr>";
+        }
+        document.getElementById("emp").innerHTML = out;
     }
 </script>
 </body>
