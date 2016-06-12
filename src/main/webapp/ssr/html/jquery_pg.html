@@ -74,7 +74,7 @@
                 </tr>
 
             </table>
-            <button onclick="updateAccount()">Update</button>&nbsp<button onclick="createAccounts()">Create</button>
+            <button onclick="updateAccount()">Update</button>&nbsp<button onclick="createAccount()">Create</button>
         </div>
         <div>
             <table>
@@ -161,8 +161,7 @@
     function deleteAccount(id) {
         $.ajax({
             url: "/api/account/delete/?id="+id,
-            type: "DELETE",
-            dataType : "json",
+            type: "DELETE"
         }).done(function() {
             console.log("deleted");
             loadAccounts();
@@ -175,15 +174,16 @@
     }
     function updateAccount() {
         var id =  $("#id").val();
-        console.log("update account with id " + id);
+
         $.ajax({
             url: "/api/account/update/"+ id +"?firstName="+$("#first_name").val()+"&lastName="+$("#last_name").val()+"&balance="+$("#balance").val(),
-            type: "PUT",
-            dataType : "json",
+            type: "PUT"
         }).done(function() {
-            $("#firstName").val();
-            $("#lastName").val();
-            $("#balance").val();
+            console.log("done update account with id " + id);
+            $("#id").val("");
+            $("#first_name").val("");
+            $("#last_name").val("");
+            $("#balance").val("");
             loadAccounts();
         }).fail(function( xhr, status, errorThrown ) {
             loadAccounts();
@@ -192,25 +192,22 @@
             console.dir( xhr );
         });
     }
-    function createAccounts(){
+    function createAccount(){
         $.ajax({
-            url: "/api/account/update/"+ id +"?firstName="+$("#first_name").val()+"&lastName="+$("#last_name").val()+"&balance="+$("#balance").val(),
-            data: {
-                id:123
-            },
-            type: "POST",
-            dataType : "json",
+            url: "/api/account/create?firstName="+$("#first_name").val()+"&lastName="+$("#last_name").val()+"&balance="+$("#balance").val(),
+            type: "POST"
         }).done(function( ) {
-            $("#firstName").val();
-            $("#lastName").val();
-            $("#balance").val();
+            $("#id").val("");
+            $("#first_name").val("");
+            $("#last_name").val("");
+            $("#balance").val("");
             loadAccounts();
-                }).fail(function( xhr, status, errorThrown ) {
-                    alert( "Sorry, there was a problem!" );
-                    console.log( "Error: " + errorThrown );
-                    console.log( "Status: " + status );
-                    console.dir( xhr );
-                })
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        })
     }
        function myFunction(a) {
         var out = "";
