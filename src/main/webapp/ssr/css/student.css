@@ -1,0 +1,53 @@
+body{
+    margin:0px;
+    background: url("../css/images.jpg");
+    background-size:cover;
+    color:white;
+    text-align: center;
+}
+#header{
+    height: 50px;
+    width:100%;
+    border: 1px solid red;
+    color:white;
+    text-align: center;
+}
+#nav{
+    height: 50px;
+    width:100%;
+    border: 1px solid red;
+    color:white;
+    text-align: center;
+}
+#section{
+    height: 600px;
+    width:100%;
+    border: 1px solid red;
+    color:white;
+    text-align: center;
+    float: inherit;
+}
+#article{
+    height: 500px;
+    width:30%;
+    border: 1px solid red;
+    float:left;
+    color:white;
+    text-align: center;
+}
+#aside{
+    height: 500px;
+    width:30%;
+    border: 1px solid red;
+    float:right;
+    color:white;
+    text-align: center;
+}
+#footer{
+    height: 50px;
+    width:100%;
+    border: 1px solid red;
+    clear:both;
+    color:white;
+    text-align: center;
+}

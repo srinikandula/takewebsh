@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Ajax with Jquery and Postgres</title>
+    <link rel="stylesheet" href="../css/student.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <p>Student Ajax Using JQuery and Postgres</p>
+    </div>
+    <div id="nav">
+        <p>Nav</p>
+    </div>
+    <div id="section">
+        <p>Student Ajax Using JQuery and Postgres</p>
+        <div id="article">
+            <p>Employees</p>
+        </div>
+        <div id="aside">
+            <p>Accounts</p>
+        </div>
+            <div>
+                <p>Students Info</p>
+                <table>
+                    <tr>
+                        <td>STUDENT ID:</td><td><input type="text" id="student_id"></td>
+                    </tr>
+                    <tr>
+                        <td>FIRST NAME:</td><td><input type="text" id="first_name"></td>
+                    </tr>
+                    <tr>
+                        <td>LAST NAME:</td><td><input type="text" id="last_name"></td>
+                    </tr>
+                </table>
+                <button onclick="update_student_info()" style="width:110px">Update Existing</button>&nbsp<button onclick="create_student_info()" style="width:110px">Add New</button>
+
+                <table>
+                    <tr><td>
+                        <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
+                            <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Operation</th></tr>
+                        </table>
+                        <table id="Students_table" border="1px" style="border-color:maroon;border-collapse: collapse;width: 100%">
+
+                        </table>
+                    </td>
+                    </tr>
+
+                </table>
+            </div>
+    </div>
+
+    <div id="footer">
+        <p>Copy Rights &copy Reserved</p>
+    </div>
+<script>
+        $(document).ready(function(){
+            students_info();
+        });
+   function students_info(){
+       $.ajax({
+           url: "/api/student/list",
+           data: {
+           },
+           type: "GET",
+           dataType : "json"
+       }).done(function(response) {
+           loop(response);
+         }).fail(function( xhr, status, errorThrown ) {
+           alert( "Sorry, there was a problem!" );
+           console.log( "Error: " + errorThrown );
+           console.log( "Status: " + status );
+           console.dir( xhr );
+       })
+   }
+        function load_student_info(){
+
+   }
+   function update_student_info(){
+
+   }
+   function delete_student_info(){
+
+   }
+   function create_student_info(){
+
+   }
+    function loop(a) {
+        var out="";
+        var i;
+        for (i = 0; i < a.length; i++) {
+            out += "<tr><td>"+a[i].studentId+"</td> <td>"+a[i].firstName+"</td> <td>"+a[i].lastName+"</td> <td><button onclick=''>Load</button></td> <td><button onclick=''>Delete</button></td> </tr>"
+        }
+        document.getElementById("Students_table").innerHTML = out;
+    }
+</script>
+
+</body>
+</html>
