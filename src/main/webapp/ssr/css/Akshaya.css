@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-image: url("http://feelgrafix.com/data/background-images/Background-Images-12.jpg");
+    background-image: url("../css/background.jpg");
 }
 #header{
     width:100%;
