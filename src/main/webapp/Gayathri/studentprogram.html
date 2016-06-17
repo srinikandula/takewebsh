@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>Ajax With Jquery</title>
+</head>
+<style>
+    input[type="text"]{
+        border-radius: 10px;
+        -moz-border-radius:10px;
+        -webkit-border-radius:10px;
+    }
+    body{
+        background-image: url("https://s-media-cache-ak0.pinimg.com/736x/37/ee/1b/37ee1b0b8a80a8a7028e1586cee9ff5c.jpg");
+        background-repeat: no-repeat ;
+        background-size:1350px;
+    }
+    #nav{
+        height:550px;
+        width:1000px;
+        float:left;
+        padding:15px;
+        line-height:5px;
+    }
+    .button{
+        background-color: limegreen;
+        color:white;
+        padding:6px 25px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+        cursor:pointer;
+        text-decoration: none;
+        margin:4px 2px;
+    }
+    th{
+        padding:8px;
+        text-align: left;
+        border-bottom: 1px solid white;
+    }
+</style>
+<body>
+<h1 style="text-align: center;">Using <span style="color:orangered;">AJAX commands</span> with Jquery</h1>
+<div id="nav">
+    <h2 style="text-align: left;">Employees Data</h2>
+    <table style="text-align: center;">
+        <tr>
+            <td>ID: </td>
+            <td> <input type="text" id="employee_Id" ></td>
+            <td>Address:</td>
+            <td><input type="text" id="employee_Address"></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="employee_Name"></td>
+            <td>Salary</td>
+            <td><input type="text" id="employee_Salary"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button class="button" onclick="updateEmployees()">Update</button></td>
+            <td><button class="button" onclick="createEmployee()">Create</button></td>
+        </tr>
+    </table>
+
+    <table style="width:100%; border-collapse: collapse;">
+
+        <th>Employee ID</th><th>Employee Address</th><th>Employee Name</th><th>Employee Salary</th>
+    </table>
+    <table id="employees" style="width:100%; ">
+
+    </table>
+
+</div>
+
+<script>
+    $( document ).ready(function() {
+        loadEmployees();
+    });
+    function loadEmployees() {
+        $.ajax({
+            url: "/api/employee/list",
+            data: {
+
+            },
+            type : "GET",
+            dataType : "JSON"
+        }) .done(function(response ) {
+            myFunction(response);
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function deleteEmployee(id) {
+        $.ajax({
+            url: "/api/employee/delete/?id="+id,
+            type:"DELETE"
+        }).done(function(){
+            console.log("deleted");
+            loadEmployees();
+        }).fail(function( xhr, status, errorThrown ) {
+            //alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+    function load_information_of_employee(id){
+        console.log("loading person info with id " + id);
+        $.ajax({
+            url: "/api/employee/"+id,
+            data: {
+
+            },
+            type : "GET",
+            datatype : "JSON"
+        }).done(function(employee ) {
+            $("#employee_Id").val(employee.employeeId);
+            $("#employee_Address").val(employee.address);
+            $("#employee_Name").val(employee.name);
+            $("#employee_Salary").val(employee.salary);
+
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+    }
+
+    function updateEmployees(){
+        var employeeId =  $("#employee_Id").val();
+        $.ajax({
+            url: "/api/employee/update/"+ employeeId + "?address="+$("#employee_Address").val()+ "&name="+$("#employee_Name").val()+ "&salary="+$("#employee_Salary").val(),
+            type : "PUT"
+
+        }) .done(function(employee) {
+            $("#employee_Id").val(employee.employeeId);
+            $("#employee_Address").val(employee.address);
+            $("#employee_Name").val(employee.name);
+            $("#employee_Salary").val(employee.salary);
+            loadEmployees();
+        }).fail(function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+        });
+
+    }
+    function myFunction(e) {
+        var out = "";
+        var i;
+        for(i =0; i<e.length; i++) {
+            out += "<tr><td>"+ e[i].employeeId+" </td> <td>"+ e[i].address+ " </td> <td>"+ e[i].name+ " </td> <td>"+ e[i].salary+"</td> <td><button class='button' onclick='load_information_of_employee("+ e[i].employeeId +")'>Load</button></td><td><button class='button' onclick='deleteEmployee("+ e[i].employeeId +")'>Delete</button></td> ";
+        }
+        document.getElementById("employees").innerHTML = out;
+    }
+</script>
+
+</body>
+</html>
