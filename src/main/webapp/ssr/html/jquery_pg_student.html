@@ -36,17 +36,11 @@
                 </table>
                 <button onclick="update_student_info()" style="width:110px">Update Existing</button>&nbsp<button onclick="create_student_info()" style="width:110px">Add New</button>
 
-                <table>
-                    <tr><td>
-                        <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
-                            <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Operation</th></tr>
-                        </table>
-                        <table id="Students_table" border="1px" style="border-color:maroon;border-collapse: collapse;width: 100%">
+                <table border="1px" style="border-color:maroon;border-collapse: collapse;width:35%">
+                    <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Operation</th></tr>
+                    <tbody id="Students_table">
 
-                        </table>
-                    </td>
-                    </tr>
-
+                    </tbody>
                 </table>
             </div>
     </div>
@@ -90,7 +84,7 @@
         var out="";
         var i;
         for (i = 0; i < a.length; i++) {
-            out += "<tr><td>"+a[i].studentId+"</td> <td>"+a[i].firstName+"</td> <td>"+a[i].lastName+"</td> <td><button onclick=''>Load</button></td> <td><button onclick=''>Delete</button></td> </tr>"
+            out += "<tr><td>"+a[i].studentId+"</td> <td>"+a[i].firstName+"</td> <td>"+a[i].lastName+"</td> <td><button onclick=''>Load</button>&nbsp<button onclick=''>Delete</button></td> </tr>"
         }
         document.getElementById("Students_table").innerHTML = out;
     }

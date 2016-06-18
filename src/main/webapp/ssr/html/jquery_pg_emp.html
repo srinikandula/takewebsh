@@ -37,18 +37,13 @@
             </table>
             <button onclick="update_emp_info()">Update</button>&nbsp<button onclick="create_emp_info()">Create</button>
             <div>
-                <table>
-                    <tr><td>
-                        <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
-                            <tr><th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Operation</th></tr>
-                        </table>
-                        <table id="emp" border="1px" style="border-color:maroon;border-collapse: collapse;width: 100%">
+                 <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
+                     <tr><th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Operation</th></tr>
+                     <tbody id="emp">
 
-                        </table>
-                    </td>
-                    </tr>
+                     </tbody>
+                 </table>
 
-                </table>
             </div>
         </div>
     </div>
@@ -161,7 +156,7 @@
         var out="";
         var i;
        for(i=0;i<a.length;i++) {
-           out+="<tr><td>"+a[i].employeeId+"</td><td>"+a[i].name+"</td><td>"+a[i].address+"</td><td>"+a[i].salary+"</td><td><button onclick='load_emp_info("+a[i].employeeId+")'>Load</button></td><td><button onclick='delete_emp_info("+a[i].employeeId+")'>Delete</button></td></tr>";
+           out+="<tr><td>"+a[i].employeeId+"</td><td>"+a[i].name+"</td><td>"+a[i].address+"</td><td>"+a[i].salary+"</td><td><button onclick='load_emp_info("+a[i].employeeId+")'>Load</button>&nbsp<button onclick='delete_emp_info("+a[i].employeeId+")'>Delete</button></td></tr>";
        }
        document.getElementById("emp").innerHTML=out;
     }
