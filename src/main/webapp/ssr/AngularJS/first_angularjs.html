@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>My First AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+</head>
+<body ng-app="myModule">
+        <div ng-controller="myController">
+            <div>
+                First Name:{{ employee.firstName }}
+            </div>
+            <div>
+                Last Name:{{ employee.lastName }}
+            </div>
+            <div>
+                Gender:{{ employee.gender }}
+            </div>
+
+        </div>
+
+<script>
+    var myApp=angular
+            .module("myModule",[])
+            .controller("myController",function($scope){
+                var employee={
+                    firstName:'Sridhar',
+                    lastName:'Syamala',
+                    gender:'male'
+                };
+                $scope.employee=employee;
+            });
+
+</script>
+
+</body>
+</html>

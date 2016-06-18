@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image example in AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <div>
+            First Name:{{ details.firstName }}
+        </div>
+        <div>
+            Last Name:{{ details.lastName }}
+        </div>
+        <div>
+            Country:{{ details.country }}
+        </div>
+        <div>
+            Age:{{ details.age }}
+        </div>
+        <div>
+            Gender:{{ details.gender }}
+        </div>
+        <div>
+            Country Flag:<br/><img ng-src="{{ details.flag }}" alt="{{details.firstName + '\'s' +' '+ 'Flag'}}" style="height:100px;width:200px">
+
+        </div>
+    </div>
+
+<script>
+    var myApp=angular
+            .module("myModule",[])
+            .controller("myController",function($scope){
+                var details={
+                    firstName:'Sridhar Reddy',
+                    lastName:'Syamala',
+                    country:'India',
+                    age:26,
+                    gender:'Male',
+                    flag:'../AngularJS/download.png'
+                };
+                $scope.details=details;
+            });
+</script>
+
+</body>
+</html>
