@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="angularExample_1.js"></script>
+<body>
+
+<p>Try to change the names.</p>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+    <br>
+    Full Name: {{firstName + " " + lastName}}
+
+
+    <div ng-controller="secondCtrl">
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+    </div>
+    <div ng-controller="thirdCtrl">
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
