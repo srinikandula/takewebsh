@@ -40,7 +40,14 @@
                  <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
                      <tr><th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Operation</th></tr>
                      <tbody id="emp">
-
+                     <tr ng-repeat="employee in employees">
+                         <td>{{employee.employeeId}}</td>
+                         <td>{{employee.name}}</td>
+                         <td>{{employee.address}}</td>
+                         <td>{{employee.salary}}</td>
+                         <td><button ng-click='load_emp_info(' + {{employee.employeeId}} + ')>Load</button></td>
+                         <td><button ng-click='delete_emp_info(' + {{employee.employeeId}} + ')>Delete</button></td>
+                     </tr>
                      </tbody>
                  </table>
 
