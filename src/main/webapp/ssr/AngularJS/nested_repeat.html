@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nested repeat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+</head>
+<body ng-app="myModule">
+    <div  ng-controller="myController">
+        <ul>
+            <li ng-repeat="a in cities">
+                {{a.name}}
+                <ul>
+                    <li ng-repeat="b in a.college">
+                        {{b.name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<script>
+    var myApp=angular
+            .module("myModule",[])
+            .controller("myController",function($scope){
+                var cities=[
+                    {
+                        name:'Hyderabad',
+                        college:[
+                            {name:'CBIT'},
+                            {name:'MGIT'},
+                            {name:'VNR'},
+                            {name:'GRIT'},
+                            {name:'BVRIT'}
+                        ]
+                    },
+                    {
+                        name:'Guntur',
+                        college:[
+                            {name:'DVR'},
+                            {name:'JBIT'},
+                            {name:'VBIT'},
+                            {name:'JOGI'},
+                            {name:'TRR'}
+                        ]
+                    },
+                    {
+                        name:'Vizag',
+                        college:[
+                            {name:'DRK'},
+                            {name:'GNIT'},
+                            {name:'Sri Devi'},
+                            {name:'JNTU'},
+                            {name:'KU'}
+                        ]
+                    }
+
+                ];
+               $scope.cities=cities;
+            });
+</script>
+
+</body>
+</html>
