@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+</head>
+<body ng-app="myModule" ng-controller="myController">
+<div>
+    <table border="1px" style="border-collapse: collapse">
+        <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Department</th><th>Marks</th></tr>
+        <tbody>
+        <tr ng-repeat="student in students">
+            <td>{{ student.id }}</td>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.lastName }}</td>
+            <td>{{ student.department }}</td>
+            <td>{{ student.marks }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var myApp=angular
+            .module("myModule",[])
+            .controller("myController",function($scope){
+                var students=[
+                    {id:1,firstName:'Sridhar Reddy',lastName:'Syamala',department:'EEE',marks:'80%'},
+                    {id:2,firstName:'Sridhar',lastName:'S',department:'ECE',marks:'78%'},
+                    {id:3,firstName:'Reddy',lastName:'Sy',department:'Mech',marks:'65%'},
+                    {id:4,firstName:'Siddhu',lastName:'S',department:'Civil',marks:'79%'},
+                    {id:5,firstName:'Sri',lastName:'Syam',department:'CSE',marks:'84%'}
+                ];
+                $scope.students=students;
+            });
+
+</script>
+
+</body>
+</html>

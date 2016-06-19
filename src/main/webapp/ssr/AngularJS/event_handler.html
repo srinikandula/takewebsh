@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event handler example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table border="1px solid black">
+            <thead>
+            <tr>
+                <th>Movie</th><th>likes</th><th>Dislikes</th><th>Like/Dislike</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="a in movies">
+                <td>{{ a.name }}</td><td>{{ a.likes }}</td><td>{{ a.dislikes }}</td>
+                <td>
+                    <input type="button" value="Like" ng-click="likeFunction(a)" >
+                    <input type="button" value="Dislike" ng-click="dislikeFunction(a)" >
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script>
+    var myApp=angular
+            .module("myModule",[])
+            .controller("myController",function($scope){
+                var movies=[
+                    {name:'Sardar Gabbar Singh', likes:0, dislikes:0},
+                    {name:'Bramhotsavam', likes:0, dislikes:0},
+                    {name:'A Aa', likes:0, dislikes:0},
+                    {name:'Sarainodu', likes:0, dislikes:0},
+                    {name:'Supreme', likes:0, dislikes:0}
+                ];
+                $scope.movies=movies;
+                $scope.likeFunction=function(b){
+                    b.likes++;
+                }
+                $scope.dislikeFunction=function(b){
+                    b.dislikes++;
+                }
+            });
+</script>
+
+</body>
+</html>
