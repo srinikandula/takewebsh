@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax to Angular Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="../AngularJS/ajax_to_angular.js"></script>
+
+</head>
+<body ng-app="myModule" ng-controller="myController">
+    <div>
+        <table border="1px" style="border-collapse: collapse">
+            <tr>
+                <td>Employee Id:</td><td><input type="text" ng-model="emp_id"></td>
+            </tr>
+            <tr>
+                <td>Employee Address:</td><td><input type="text" ng-model="emp_add"></td>
+            </tr>
+            <tr>
+                <td>Employee Name:</td><td><input type="text" ng-model="emp_name"></td>
+            </tr>
+            <tr>
+                <td>Employee Salary:</td><td><input type="text" ng-model="emp_salary"></td>
+            </tr>
+        </table>
+        <br />
+        <button ng-click="emp_update()">Update</button>&nbsp<button ng-click="emp_create()">Create</button>
+        <br /><br />
+        <table border="1px" style="border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Load/Delete</th>
+                </tr>
+                </thead>
+                <tbody >
+                <tr ng-repeat="a in employees track by $index">
+                    <td>{{ a.employeeId }}</td><td>{{ a.address }}</td><td>{{ a.name }}</td><td>{{ a.salary }}</td>
+                    <td><button ng-click="emp_info_load(a.employeeId)">Load</button><button ng-click="emp_info_delete(a.employeeId)">Delete</button></td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>

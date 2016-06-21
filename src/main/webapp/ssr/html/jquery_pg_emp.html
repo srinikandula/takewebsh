@@ -36,18 +36,16 @@
                 </tr>
             </table>
             <button onclick="update_emp_info()">Update</button>&nbsp<button onclick="create_emp_info()">Create</button>
+            <br /><br/>
             <div>
                  <table border="1px" style="border-color:maroon;border-collapse: collapse;width:100%">
-                     <tr><th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Operation</th></tr>
+                     <thead>
+                        <tr>
+                            <th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Operation</th>
+                        </tr>
+                     </thead>
                      <tbody id="emp">
-                     <tr ng-repeat="employee in employees">
-                         <td>{{employee.employeeId}}</td>
-                         <td>{{employee.name}}</td>
-                         <td>{{employee.address}}</td>
-                         <td>{{employee.salary}}</td>
-                         <td><button ng-click='load_emp_info(' + {{employee.employeeId}} + ')>Load</button></td>
-                         <td><button ng-click='delete_emp_info(' + {{employee.employeeId}} + ')>Delete</button></td>
-                     </tr>
+
                      </tbody>
                  </table>
 
