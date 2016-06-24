@@ -1,0 +1,11 @@
+body{
+    background-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/backgrounds/legacy-previews/backgrounds/watercolor-grunge/watercolor-grunge-000001-lime-green.jpg");
+    background-size:1200px;
+}
+input{
+    border-radius:6px;
+    padding:4px 6px;
+}
+input.ng-invalid{
+    background-color: #00b3ee;
+}
