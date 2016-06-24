@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AngularJS Examples</title>
+        <link rel="stylesheet" href="AngularJSStyle.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    </head>
+    <body>
+        <h1>AngularJS Expressions</h1>
+        <div ng-app="" ng-init="myColor='yellow'">
+            <p>Example for AngularJS</p>
+            <p>NAME : <input type="text" ng-model="name" placeholder="Enter Your name"></p>
+            <h2>Hello {{name}}</h2>
+            <p ng-bind="name"></p>
+            <p>Expression for (47*23)=: {{47 * 23}}</p>
+            <input style="background-color:{{myColor}}" ng-model="myColor" value="{{myColor}}" border-radius="6px;">
+            <p>The backgroung of input box will be the whatever color we enter lets try.</p>
+            <div>
+                <form ng-app="" name="myForm">
+                    Email:
+                        <input type="email" name="myAddress" ng-model="text">
+                        <span ng-show="myForm.myAddress.$error.email">Not a valid email-id address.</span>
+                        <p>If we don't enter a email Id it will show not a valid email-id address.</p>
+                        Enter Your name:
+                        <input name="myName" ng-model="myText" required>
+
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
