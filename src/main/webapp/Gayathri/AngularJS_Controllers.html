@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            background-image: url("http://cosmouk.cdnds.net/15/21/980x490/landscape_nrm_1432121747-real-harry-potter-craigslist.jpg");
+            color:white;
+            background-size: 1300px;
+        }
+        input[type=text]{
+            width:10%;
+            padding:10px 15px;
+            margin: 8px 0;
+            display: inline-block;
+            border:1px solid white;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>AngularJS controllers</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myapp" ng-controller="myctrl">
+                First Name: <input type="text" ng-model="firstName"><br>
+                Middle Name: <input type="text" ng-model="middleName"><br>
+                Last Name: <input type="text" ng-model="lastName"><br>
+                <br>
+
+            <div ng-controller="ctrl#1">
+                Address: <input type="text" ng-model="address"><br>
+                Email Id: <input type="text" ng-model="EmailId"><br>
+                City: <input type="text" ng-model="city"><br>
+                State: <input type="text" ng-model="State"><br>
+                Country: <input type="text" ng-model="country"><br>
+                Zip Code: <input type="text" ng-model="zipcode"><br>
+                <br>
+               <b> Details: {{ firstName + "  " + middleName + "  " +lastName + ',' +"  " +address + ',' + "  " +EmailId +','  + "  "  + city +',' + "  " + State + ','+ "  " + country + "  "+ ',' + zipcode }}</b>
+
+            </div>
+        </div>
+        <script>
+            var app = angular.module('myapp', []);
+
+            app.controller('myctrl', function($scope){
+                $scope.firstName= "Akshaj";
+                $scope.middleName= "Samrat";
+                $scope.lastName= "Vardharajula";
+            });
+            app.controller('ctrl#1', function($scope){
+                $scope.address= "2-3-70/27 singapore colony";
+                $scope.EmailId= "Akshaj01@gmail.com";
+                $scope.city= "Banglore";
+                $scope.State= "Karnataka";
+                $scope.country= "India";
+                $scope.zipcode= "500015";
+            });
+        </script>
+
+    </body>
+</html>

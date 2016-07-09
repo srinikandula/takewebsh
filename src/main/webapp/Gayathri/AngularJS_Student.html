@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .button{
+            background-color: violet;
+            color:white;
+            padding:6px 25px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            cursor:pointer;
+            text-decoration: none;
+            margin:4px 2px;
+        }
+        input{
+            border-radius:8px;
+            padding:4px 6px;
+        }
+        body{
+            background-image: url("https://c1.staticflickr.com/3/2863/12122811465_414a4e8a30_b.jpg");
+            background-size: 1200px;
+        }
+        #nav{
+            width:1200px;
+            float:left;
+            padding:10px;
+            height:500px;
+
+        }
+
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>AngularJS_$http_withstudent</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="Student_app.js"></script>
+    </head>
+    <body ng-app="StdApp">
+        <h1 style="text-align: center">Students Information</h1>
+        <div id="nav">
+            <table style="text-align: center;">
+                <tr>
+                    <td>ID: </td>
+                    <td> <input type="text" ng-model="stdId" ></td>
+                    <td>FirstName:</td>
+                    <td><input type="text" ng-model="stdFirstName"></td>
+                </tr>
+                <tr>
+                    <td>LastName:</td>
+                    <td><input type="text" ng-model="stdLastName"></td>
+                    <td>Address</td>
+                    <td><input type="text" ng-model="stdAddress"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="button" ng-click="update_std_info()">Update</button>&nbsp<button class="button" ng-click="create_std_info()">Create</button></td>
+                    <div>
+                        {{students}}
+                        <table  style="border-collapse: collapse;width:100%">
+                            <tr><th>Id</th><th>Address</th><th>Name</th><th>Salary</th><th>Operation</th></tr>
+                        </table>
+                        <table>
+                             <tbody id="std">
+                                 <tr ng-repeat="student in students">
+                                    <td>{{stdent.stdId}}</td>
+                                    <td>{{student.FisrtName}}</td>
+                                    <td>{{student.LastName}}</td>
+                                    <td>{{student.Address}}</td>
+                                    <td><button class="button" ng-click=load_std_info(student.stdId)>Load</button>
+                                        <button class="button" ng-click=delete_std_info(student.stdId)>Delete</button></td>
+                                </tr>
+                             </tbody>
+                        </table>
+                    </div>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+        <style>
+            body{
+                background-image: url("http://freephotos.atguru.in/hdphotos/hd-disney-wallpapers/341253-disney-aladin-hd-wallpaper.jpg");
+                background-repeat: no-repeat;
+                background-size: 1400px;
+                color:white;
+            }
+            table{
+                border-collapse: collapse;
+                width: 50%;
+                border:1px solid #ddd;
+                text-align: left;
+            }
+            th,td{
+                vertical-align: bottom;
+                padding:8px;
+                height: 10px;
+            }
+        </style>
+        <head>
+            <title>AgularJS_Tables</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        </head>
+        <body>
+            <h1>Displaying information of employees using $http</h1>
+            <div ng-app="employee" ng-controller="employeectrl">
+                <table>
+                    <tr><th>Employee Id</th><br>
+                        <th>Employee Address</th><br>
+                        <th>Employee Name</th><br>
+                        <th>Employee Salary</th></tr>
+                </table>
+                <table>
+                    <tr ng-repeat="employee in employees">
+                        <td style="text-align: right">{{employee.employeeId}}</td>
+                        <td style="text-align:center">{{employee.address}}</td>
+                        <td >{{employee.name}}</td>
+                        <td style="text-align:center">{{employee.salary}}</td>
+                    </tr>
+                </table>
+            </div>
+
+        </body>
+        <script>
+            var app = angular.module('employee', []);
+            app.controller('employeectrl', function($scope, $http){
+                $scope.employeeId = null;
+                $scope.address = null;
+                $scope.name = null;
+                $scope.salary = null;
+                $scope.employees = [];
+                $scope.loadEmployees = function(){
+                    console.log("loading employees");
+                    $http.get('/api/employee/list')
+                            .success(function (data) {
+                                $scope.employees = data;
+
+                            })
+                            .error(function (error) {
+                                $log.debug("error retrieving accounts");
+                            });
+                };
+                $scope.load_info_Employees = function(id) {
+                    console.log("loading person info with id " + id );
+                    $http.get("/api/employee/" + id)
+                            .then(function (employee) {
+                                $scope.employee_id = employee.employeeId;
+                                $scope.address = employee.address;
+                                $scope.name = employee.name;
+                                $scope.salary = employee.salary;
+                            },function( xhr, status, errorThrown ) {
+                                alert( "Sorry, there was a problem!" );
+                                console.log( "Error: " + errorThrown );
+                                console.log( "Status: " + status );
+                                console.dir( xhr );
+                            });
+                };
+                $scope.loadEmployees();
+            })
+        </script>
+</html>
