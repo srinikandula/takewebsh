@@ -1,0 +1,45 @@
+body{
+    background-image: url("bg_image.jpg");
+    background-size: cover;
+    margin:0px;
+}
+
+#header{
+    color: red;
+    text-align: center;
+    border: 1px solid dimgrey;
+}
+#nav{
+    color: blue;
+    text-align: center;
+    border: 1px solid dimgrey;
+}
+#section{
+    color:white;
+    text-align: center;
+    border: 1px solid dimgrey;
+    height:500px;
+    width:100%;
+}
+#article{
+    color:white;
+    text-align: center;
+    border: 1px solid dimgrey;
+    height:400px;
+    width:30%;
+    float: left;
+}
+#aside{
+    color:white;
+    text-align: center;
+    border: 1px solid dimgrey;
+    height:400px;
+    width:30%;
+    float: right;
+}
+#footer{
+    color:white;
+    text-align: center;
+    border: 1px solid dimgrey;
+    clear: both;
+}

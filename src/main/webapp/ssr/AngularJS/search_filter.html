@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Filter example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="/ssr/AngularJS/search_filter.js"></script>
+</head>
+<body ng-app="myModule" >
+<div ng-controller="myController">
+<input type="text" placeholder="Search Name" ng-model="search.name" />&nbsp
+<input type="text" placeholder="search city"  ng-model="search.address"/>
+<input type="checkbox" ng-model="exactMatch"/>Exact Match
+<br /><br />
+
+    <table border="1px" style="border-collapse: collapse;border-color:grey;">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in employees | filter:search:exactMatch">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.salary}}</td>
+            <td>{{x.address}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Services</title>
+    <link rel="stylesheet" href="angular_services.css">
+</head>
+<body>
+    <div id="header">
+        <p>Am header</p>
+    </div>
+    <div id="nav">
+        <p>Am nav</p>
+    </div>
+    <div id="section">
+        <p>Am section</p>
+
+        <div id="article">
+            <p>Employees</p>
+
+            <table border="1px solid grey" style="border-collapse:collapse;width:100%;text-align: left"  >
+                <tr>
+                    <td>Employee Id:</td>
+                    <td><input type="text" id="emp_id"></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="emp_name"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" id="emp_address"></td>
+                </tr>
+                <tr>
+                    <td>Salary:</td>
+                    <td><input type="text" id="emp_salary"></td>
+                </tr>
+                <tr style="text-align: center">
+                    <td colspan="2"><button onclick="emp_update()">Update</button>&nbsp<button onclick="emp_create()">Create</button></td>
+                </tr>
+            </table>
+            <p>Employees Data</p>
+            <p id="emp_data"></p>
+        </div>
+        <div id="aside">
+            <p>Accounts</p>
+            <table border="1px solid grey" style="border-collapse:collapse;width:100%;text-align: left"  >
+                <tr>
+                    <td>Id:</td>
+                    <td><input type="text" id="id"></td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" id="first_name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" id="last_name"></td>
+                </tr>
+                <tr>
+                    <td>Balance:</td>
+                    <td><input type="text" id="balance"></td>
+                </tr>
+                <tr style="text-align: center">
+                    <td colspan="2"><button onclick="acc_update()">Update</button>&nbsp<button onclick="acc_create()">Create</button></td>
+                </tr>
+            </table>
+            <p>Accounts Data</p>
+            <p id="accounts_data"></p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Copy &copy Rights Reserved</p>
+    </div>
+
+</body>
+</html>
