@@ -1,0 +1,47 @@
+.wrap {
+    height: 300px;
+    width: 300px;
+    background: lime;
+    position: relative;
+    overflow:hidden;
+    border-radius:50%;
+}
+.logoWrap {
+    height: 200px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 200px;
+    transform: rotate(65deg);
+    background: black;
+    transition:all 0.1s;
+}
+.logoWrap:before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: blue;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+    transition:all 0.8s;
+}
+.logoWrap:after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 160px;
+    background: blue;
+    border-bottom: 20px solid black;
+    top: 10%;
+    right: -40px;
+    transform: rotate(-45deg);
+    transition:all 0.8s;
+}
+.wrap:hover .logoWrap{
+    background:tomato;
+}
+.wrap:hover .logoWrap:after{
+    border-bottom: 20px solid tomato;
+}
