@@ -19,13 +19,26 @@ body{
 	border: 1px solid blue;
 	background-color: black;	
 }
-.search-box{	
-	border-radius:5px 0px 0px 5px;
-}
 .search-btn{
 	margin-left: -4px;
-	border-radius:0px 5px 5px 0px; 	
 }
-.search-text-color{
+.search-box-width{
+	width: 300px;	
+}
+#menu-links-top-padding{
+	padding-top:40px;
+	text-align: right;			
+}
+.menu-text-color{
 	color: white;
+	border-right: 1px solid grey;
+	padding-right: 10px;
+	font-size: 12px;
 }
+li>a{
+	color: white;
+	border-right: 1px solid grey;
+	padding-right: 10px;
+	font-size: 12px;
+}
+
