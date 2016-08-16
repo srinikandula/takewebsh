@@ -1,0 +1,53 @@
+body{
+    background-image: url("slider_bg.jpg");
+    background-size: cover;
+    text-align: center;
+    color:red;
+}
+#container{
+    width:80%;
+    margin:0px auto;
+}
+#header{
+    border: 1px solid red;
+    width:100%;
+    height:50px;
+}
+#nav{
+    border: 1px solid red;
+    width:100%;
+    height:50px;
+}
+#section{
+    border: 1px solid red;
+    width:100%;
+    height:500px;
+}
+#footer{
+    border: 1px solid red;
+    width:100%;
+    color:white;
+    clear:both;
+}
+.img{
+    width:500px;
+    height:auto;
+    position: absolute;
+    margin-left: -250px;
+    top:30%;
+}
+.previous_click{
+    width:50px;
+    height:auto;
+    position: absolute;
+    top: 55%;
+    margin-left: -250px;
+
+}
+.next_click{
+    width:50px;
+    height:auto;
+    position: absolute;
+    top: 55%;
+    margin-left: 200px;
+}

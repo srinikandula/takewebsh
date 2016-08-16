@@ -1,0 +1,22 @@
+.border-red{
+    border: 1px solid red;
+    margin: 0px;
+}
+.border-blue{
+    border: 1px solid blue;
+    margin: 0px;
+}
+.border-green{
+    border: 1px solid green;
+    margin: 0px;
+}
+.border-fields{
+    border: 1px solid yellow;
+    margin: 0px;
+    vertical-align: middle;
+}
+input{
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: inherit;
+}

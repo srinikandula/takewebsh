@@ -1,0 +1,50 @@
+body{
+    background-image:url("bg_image.jpg");
+    background-size: cover;
+    margin: 0px;
+}
+#header{
+    border:1px solid grey;
+    height: 50px;
+    width:100%;
+    color: red;
+    text-align: center;
+}
+#nav{
+    border:1px solid grey;
+    height: 50px;
+    width:100%;
+    color: red;
+    text-align: center;
+}
+#section{
+    border:1px solid grey;
+    height: 600px;
+    width:100%;
+    color: red;
+    text-align: center;
+}
+#article{
+    border:1px solid grey;
+    height: 500px;
+    width:35%;
+    color: red;
+    float: left;
+    text-align: center;
+}
+#aside{
+    border:1px solid grey;
+    height: 500px;
+    width:45%;
+    color: red;
+    float: right;
+    text-align: center;
+}
+#footer{
+    border:1px solid grey;
+    height: 50px;
+    width:100%;
+    color: white;
+    clear: both;
+    text-align: center;
+}

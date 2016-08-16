@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD operations using Angular with JQuery</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="angular_jquery.js"></script>
+</head>
+<body>
+<div id="header">
+    <p>Am header</p>
+</div>
+<div id="nav">
+    <p>Am Nav</p>
+</div>
+<div id="section">
+    <p>Am Section</p>
+    <div id="article" ng-app="app" ng-controller="empController">
+        <p>Employees</p>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: left">
+            <tr>
+                <td>Employee Id:</td><td><input type="text" ng-model="emp_id"></td>
+            </tr>
+            <tr>
+                <td>Employee Name:</td><td><input type="text" ng-model="emp_name"></td>
+            </tr>
+            <tr>
+                <td>Employee Address:</td><td><input type="text" ng-model="emp_add"></td>
+            </tr>
+            <tr>
+                <td>Employee Salary:</td><td><input type="text" ng-model="emp_sal"></td>
+            </tr>
+            <tr style="text-align: center">
+                <td colspan="2"><button ng-click="emp_update()">Update</button>&nbsp<button ng-click="emp_create()">Create</button></td>
+            </tr>
+        </table>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: left">
+            <thead>
+                <tr style="text-align: center">
+                    <th>Employee Id</th><th>Employee Name</th><th>Employee Address</th><th>Employee Salary</th><th>Load/Delete</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="a in employees" >
+            <tr>
+                <td>{{a.employeeId}}</td><td>{{a.name}}</td><td>{{a.address}}</td><td>{{a.salary}}</td>
+                <td><button ng-click="emp_load(a.employeeId)">Load</button><button ng-click="emp_delete(a.employeeId)">Delete</button></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div id="aside" ng-app="app" ng-controller="accController">
+        <p>Accounts</p>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: left">
+            <tr>
+                <td>Account Id:</td><td><input type="text" ng-model="acc_id"></td>
+            </tr>
+            <tr>
+                <td>First Name:</td><td><input type="text" ng-model="first_name"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td><td><input type="text" ng-model="last_name"></td>
+            </tr>
+            <tr>
+                <td>Balance:</td><td><input type="text" ng-model="balance"></td>
+            </tr>
+            <tr style="text-align: center">
+                <td colspan="2"><button ng-click="acc_update()">Update</button>&nbsp<button ng-click="acc_create()">Create</button></td>
+            </tr>
+        </table>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: left">
+            <thead>
+            <tr style="text-align: center">
+                <th>Account Id</th><th>First Name</th><th>Last Name</th><th>Balance</th><th>Load/Delete</th>
+            </tr>
+            </thead>
+            <tbody ng-repeat="a in accounts" >
+            <tr>
+                <td>{{a.id}}</td><td>{{a.firstName}}</td><td>{{a.lastName}}</td><td>{{a.balance}}</td>
+                <td><button ng-click="acc_load()">Load</button><button ng-click="acc_delete()">Delete</button></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="footer">
+    <p>Copy &copy Rights Reserved</p>
+</div>
+
+
+</body>
+</html>

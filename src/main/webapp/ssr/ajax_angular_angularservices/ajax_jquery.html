@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD operations using Ajax with JQuery</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="ajax_jquery.js"></script>
+</head>
+<body>
+<div id="header">
+    <p>Am header</p>
+</div>
+<div id="nav">
+    <p>Am Nav</p>
+</div>
+<div id="section">
+    <p>Am Section</p>
+    <div id="article">
+        <p>Employees</p>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: left">
+            <tr>
+                <td>Employee Id:</td><td><input type="text" id="emp_id"></td>
+            </tr>
+            <tr>
+                <td>Name:</td><td><input type="text" id="emp_name"></td>
+            </tr>
+            <tr>
+                <td>Address:</td><td><input type="text" id="emp_add"></td>
+            </tr>
+            <tr>
+                <td>Salary:</td><td><input type="text" id="emp_sal"></td>
+            </tr>
+            <tr style="text-align: center">
+                <td colspan="2"><button onclick="emp_update()">Update</button>&nbsp<button onclick="emp_create()">Create</button></td>
+            </tr>
+        </table>
+        <br><br>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: center">
+            <thead>
+            <tr>
+                <th>Id</th><th>Name</th><th>Address</th><th>Salary</th><th>Load/Delete</th>
+            </tr>
+            </thead>
+            <tbody  id="emp_table"></tbody>
+
+        </table>
+    </div>
+    <div id="aside">
+        <p>Accounts</p>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: left">
+            <tr>
+                <td>Account Id:</td><td><input type="text" id="acc_id"></td>
+            </tr>
+            <tr>
+                <td>First Name:</td><td><input type="text" id="first_name"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td><td><input type="text" id="last_name"></td>
+            </tr>
+            <tr>
+                <td>Balance:</td><td><input type="text" id="acc_balance"></td>
+            </tr>
+            <tr style="text-align: center">
+                <td colspan="2"><button onclick="acc_update()">Update</button>&nbsp<button onclick="acc_create()">Create</button></td>
+            </tr>
+        </table>
+        <br><br>
+        <table border="1px solid grey" style="border-collapse: collapse;width:100%;text-align: center">
+            <thead>
+            <tr>
+                <th>Account Id</th><th>First Name</th><th>Last Name</th><th>Account Balance</th><th>Load/Delete</th>
+            </tr>
+            </thead>
+            <tbody  id="acc_table"></tbody>
+
+        </table>
+    </div>
+    <p>Students</p>
+</div>
+<div id="footer">
+    <p>Copy &copy Rights Reserved</p>
+</div>
+
+</body>
+</html>
