@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Top Cars</title>
+<style>
+body{
+	background-image: url("1.jpg");
+	margin: 0px;
+}
+#header{
+	border: 1px solid red;
+	padding-bottom: 10px;	
+	color:white;
+	text-align:center;
+	width:100%;
+	height:50px;
+}
+#nav{
+	border: 1px solid red;
+	text-align:center;
+	width: 100%;
+	height:20px;
+	overflow: auto;
+}
+#section{
+	border: 1px solid red;
+	text-align:center;
+	width: 100%;
+	height:500px;
+}
+#article{
+	border: 1px solid red;
+	text-align:center;
+	width:40%;
+	height:400px;
+	float: left;
+	position: absolute;
+}
+#aside{
+	border: 1px solid red;
+	text-align:center;
+	width: 30%;
+	height:400px;
+	float: right;
+	position: relative;
+}
+#footer{
+	border: 1px solid red;
+	text-align:center;
+	color:white;
+	width:100%;
+	height:20px;
+	clear: both;
+}
+.block{
+	display: block;
+}
+li {
+	display: inline;
+    background-color: grey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/*.dropbtn {
+    
+    font-size: 16px;
+    border: none;
+    cursor: pointer;*/
+}
+
+.dropdown {
+    position: relative;
+    display: inline;
+    list-style: none;
+    margin-left:10px; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover{
+    background-color: #3e8e41;
+}
+input[type=text], 
+.select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<h1>Am in Head</h1>
+</div>
+<div id="nav">
+<span class="block">By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</span>
+
+<span>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</span>
+</div>
+<div id="section">
+<p>Am in section</p>
+<div id="article" style="line-height:15px">
+			<span>cars</span> 
+			<br>
+			<br>
+			<br>
+			<ul>
+				<li class="dropdown" style="margin:4px"><a href="">Make</a>
+				<div class="dropdown-content">
+				         <a href="http://automobiles.honda.com/">Honda</a>
+				         <a href="http://www.toyota.com/">Tayota</a>
+				         <a href="http://www.nissanusa.com/">Nissan</a>
+				 </div></li>
+				<li><a href="" >model</a></li>
+				<li><a href="">Year</a></li>					
+			</ul>
+
+</div>
+<div id="aside">
+<p>Details</p>
+<div class="btn">
+  <form action="action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="india">India</option>
+      <option value="england">England</option>
+      <option value="south africa">South Africa</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</div>
+<div id="footer">
+<span>Copy &copy Rights Reserved</span>
+</div>
+
+</body>
+</html>
