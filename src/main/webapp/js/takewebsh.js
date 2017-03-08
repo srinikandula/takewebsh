@@ -16,7 +16,7 @@ function createAccount() {
         $.ajax({
             type: "POST",
             url: '/api/account/create',
-            data: {'fName': firstName, 'lName': lastName, 'balance': balance},
+            data: {'firstName': firstName, 'lastName': lastName, 'balance': balance},
             success: function (data, status, req) {
                 console.log("Account is created");
                 $("#responseMessage").html(data);

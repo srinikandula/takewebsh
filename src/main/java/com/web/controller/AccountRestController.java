@@ -34,8 +34,8 @@ public class AccountRestController {
     }
 
     @RequestMapping(value = "/create", method = { RequestMethod.POST }, produces = MediaType.TEXT_PLAIN)
-    public String createAccount(final HttpServletRequest request, @RequestParam(name = "firstName") String firstName,
-                                @RequestParam(name = "lastName") String lastName,
+    public String createAccount(final HttpServletRequest request, @RequestParam(name = "fName") String firstName,
+                                @RequestParam(name = "lName") String lastName,
                                 @RequestParam(name = "balance") String balance) throws Exception {
         Iterable<Account> accounts = accountDAO.findByFirstNameAndLastName(firstName, lastName);
         if(accounts.iterator().hasNext()) {
