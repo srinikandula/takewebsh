@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <style>
+        table, th, td {
+        border: 2px solid black;
+            }
+    </style>
+    
+    
+<script src="/js/harshaCals.js"></script>
+    
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    
+        <table  >
+            <br>
+            <tr>
+                
+                    <input ng-model="output" type="text" value='' maxlength="16">
+            </tr>
+            <tr>
+                    <td ><input type="button" id="1" value='1' ng-click = "num('1');" ></td>
+                    <td ><input type="button" id="2" value='2' ng-click = "num('2');" ></td>            
+                    <td ><input type="button" id="3" value='3' ng-click = "num('3');" ></td>
+                    <td ><input type="button" id="+" value='+' ng-click = "myOperator('+');"></td>
+            </tr>
+            <tr>
+                    <td ><input type="button" id="4" value='4' ng-click = "num('4');" ></td>
+                    <td ><input type="button" id="5" value='5' ng-click = "num('5');" ></td>             
+                    <td ><input type="button" id="6" value='6' ng-click = "num('6');" ></td>
+                    <td ><input type="button" id="-" value='-' ng-click = "myOperator('-');"></td>
+            </tr>
+            <tr>
+                    <td ><input type="button" id="7" value='7' ng-click = "num('7');" ></td>
+                    <td ><input type="button" id="8" value='8' ng-click = "num('8');" ></td>             
+                    <td ><input type="button" id="9" value='9' ng-click = "num('9');" ></td>
+                    <td ><input type="button" id="*" value='*' ng-click = "myOperator('*');"></td>
+           </tr>
+            <tr>
+                    <td ><input type="button" id="c" value='c' ng-click = "clearAll();"></td>
+                    <td ><input type="button" id="0" value='0' ng-click = "num('0');"></td>            
+                    <td ><input type="button" id="=" value='=' ng-click = "equ();"></td>
+                    <td ><input type="button" id="/" value='/' ng-click = "myOperator('/');"></td>
+            </tr>
+                
+            
+        </table>
+    
+</body>
+    
+</html>
