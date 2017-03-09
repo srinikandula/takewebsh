@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Referece</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="myApp">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">HTML</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="javascript.html">JavaScript</a></li>
+            <li class="active"><a href="angular.html">Angular</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#doc">Home</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#tags">HTML Tags</a></li>
+            </ul><br>
+        </div>
+
+        <div ng-view class="col-sm-10">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+            .when("/intro", {
+                templateUrl : "intro.html"
+            })
+            .when("/tags", {
+                templateUrl : "tags.html"
+            })
+            .otherwise({
+                redirectTo: '/'
+            })
+    });
+</script>
+</body>
+</html>
