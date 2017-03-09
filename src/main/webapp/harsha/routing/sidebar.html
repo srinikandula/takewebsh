@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="simple-sidebar.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+</head>
+
+<body ng-app="myApp">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#/">Routing Example</a>
+                </li>
+                <li>
+                    <a href="#apple">Apple</a>
+                </li>
+                <li>
+                    <a href="#samsung">Samsung</a>
+                </li>
+                <li>
+                    <a href="#lenovo">Lenovo</a>
+                </li>
+                <li>
+                    <a href="#LG">LG</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div ng-view>
+                            here will be the view
+                        </div>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+
+
+    <!-- Bootstrap Core JavaScript -->
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl : "main.html"
+
+                })
+                .when("/apple", {
+                    templateUrl : "apple.html",
+                    controller:"appleCtrl"
+                })
+                .when("/samsung", {
+                    templateUrl : "samsung.html",
+                    controller:"samsungCtrl"
+
+                })
+                .when("/lenovo", {
+                    templateUrl : "lenovo.html",
+                    controller:"lenovoCtrl"
+
+                })
+                .when("/LG", {
+                    templateUrl : "LG.html",
+                    controller:"LGCtrl"
+
+                })
+                .otherwise({
+                    templateUrl: 'error.html'
+                });
+        });
+
+        app.controller("appleCtrl", function($scope){
+            $scope.heading = "This is Apple Image";
+        });
+        app.controller("samsungCtrl", function($scope){
+            $scope.heading = "This is Samsung Image";
+        });
+        app.controller("lenovoCtrl", function($scope){
+            $scope.heading = "This is Lenovo Image";
+        });
+        app.controller("LGCtrl", function($scope){
+            $scope.heading = "This is LG Image";
+        });
+    </script>
+
+
+</body>
+
+</html>
