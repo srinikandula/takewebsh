@@ -23,8 +23,8 @@ app.controller("AccountAddController", function($scope, $rootScope, accountServi
     }
     $scope.createAccount = function() {
         if($scope.account.id) {
-            $http.put('/api/account/update/'+$scope.account.id+'?firstName='+$scope.account.firstName
-                +'&lastName='+$scope.account.lastName+'&balance='+$scope.account.balance)
+            $http.put('/api/account/update/'+$scope.account.id+'?fName='+$scope.account.firstName
+                +'&lName='+$scope.account.lastName+'&balance='+$scope.account.balance)
                 .success(function (data) {
                     $location.url('/');
                     $scope.account = {};
@@ -44,7 +44,9 @@ app.controller("AccountAddController", function($scope, $rootScope, accountServi
             });
         }
     }
-
+    $scope.cancel = function() {
+        $location.url('/');
+    }
 
 
 });
