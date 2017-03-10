@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Broadcasting</title>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script>
+        var app = angular.module('app', []);
+
+        app.controller("firstCtrl", function ($scope,$rootScope) {
+            $scope.message = "";
+            $scope.handleClick = function (msg) {
+                $scope.$broadcast('eventName', { message: msg });
+            };
+            $scope.rootCast = function (msg) {
+                $rootScope.$broadcast('eventName', { message: msg });
+            };
+            $scope.$on('sendingUp', function (event, args) {
+                $scope.message = args.message;
+                console.log(args.message);
+            });
+        });
+
+        app.controller("secondCtrl", function ($scope) {
+            $scope.emitMessage = "";
+            $scope.$on('eventName', function (event, args) {
+                $scope.message = args.message;
+                console.log($scope.message);
+            });
+            $scope.sendUp = function(){
+                $scope.$emit('sendingUp', { message:$scope.emitMessage});
+            };
+        });
+
+    </script>
+</head>
+<body ng-app="app">
+<div ng-controller="firstCtrl" style="border:2px solid #E75D5C; padding:5px;">
+    <h1>Parent Controller</h1>
+    <input ng-model="msg">
+    <button ng-click="handleClick(msg);">Broadcast</button>
+    <button ng-click="rootCast(msg);">rootCast</button>
+    Emit message:{{message}}
+    <br /><br />
+    <div ng-controller="secondCtrl" style="border:2px solid #428bca;padding:5px;">
+        <h1>Child Controller</h1>
+        <p>Broadcast Message : {{message}}</p>
+
+        <p><input ng-model="emitMessage"><button ng-click="sendUp(emitMessage);">Emit</button></p>
+    </div>
+</div>
+
+<div ng-controller="secondCtrl" style="border:2px solid #428bca;padding:5px;">
+    <h1>Sister Controller</h1>
+    <p>Broadcast Message : {{message}}</p>
+    <p><input ng-model="emitMessage"><button ng-click="sendUp(emitMessage);">Emit</button></p>
+</div>
+
+</body>
+</html>

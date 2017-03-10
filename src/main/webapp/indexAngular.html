@@ -13,6 +13,12 @@
 <div ng-app="takewebsh">
     <div class="container">
         <h1>Account Home page</h1>
+
+        <div ng-controller="CountController">
+            Total Accounts:{{accounts.length}}
+        </div>
+
+
         <div ng-view/>
 
     </div>

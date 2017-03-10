@@ -4,13 +4,14 @@
 "use strict";
 var app = angular.module("takewebsh");
 
-app.controller("AccountListController", function($scope, accountService, $location) {
+app.controller("AccountListController", function($scope, $rootScope, accountService, $location) {
     $scope.accounts = [];
     $scope.account = {};
     $scope.loadAccounts = function() {
-        accountService.loadAccounts($scope.loadAccountsComplete);
-        $scope.accounts = accountService.getAccounts();
-        //accountService.loadAccounts();
+        accountService.loadAccounts(function(data){
+            $scope.accounts = data;
+            $rootScope.$broadcast("AccountsLoaded",{message:'Hey'});
+        });
     }
 
     $scope.loadAccountsComplete = function(data){
@@ -27,9 +28,15 @@ app.controller("AccountListController", function($scope, accountService, $locati
             $scope.loadAccounts();
         });
     }
-    $scope.$on('testEvent', function(){
+    $scope.$on('AccountsLoaded', function(){
         $scope.accounts = accountService.getAccounts();
     });
-
     $scope.loadAccounts();
+}).controller("CountController", function($scope, accountService, $location) {
+    console.log('Count controller is loading...');
+    $scope.accounts = [];
+    $scope.$on('AccountsLoaded', function(event,args){
+        console.log('received broadcast...')
+        $scope.accounts = accountService.getAccounts();
+    });
 });

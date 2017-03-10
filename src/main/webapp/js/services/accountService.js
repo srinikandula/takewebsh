@@ -8,13 +8,12 @@ var takewebsh = angular.module('takewebsh');
 takewebsh.service('accountService', function ($rootScope, $http, $log, $window) {
     var  accounts = [];
     return {
-        loadAccounts : function(loadComplete) {
+        loadAccounts : function(callback) {
             $http.get('/api/account/list')
                 .success(function (data) {
                     accounts = data;
-                    console.log("loading complete");
-                    //loadComplete(data);
-                    $rootScope.$broadcast('testEvent');
+                    callback(data);
+                    console.log("broadcasting now..");
                 })
                 .error(function (error) {
                     $log.debug("error retrieving accounts");
