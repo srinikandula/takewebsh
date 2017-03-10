@@ -33,8 +33,8 @@ app.controller("AccountAddController", function($scope, $rootScope, accountServi
                     $log.debug("error retrieving accounts");
                 });
         } else {
-            $http.post('/api/account/create?firstName='+$scope.account.firstName
-            +'&lastName='+$scope.account.lastName+'&balance='+$scope.account.balance)
+            $http.post('/api/account/create?fName='+$scope.account.firstName
+            +'&lName='+$scope.account.lastName+'&balance='+$scope.account.balance)
             .success(function (data) {
                 $location.url('/');
                 $scope.account = {};
