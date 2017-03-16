@@ -1,20 +1,15 @@
-var app = angular.module("myApp",['ngRoute']);
-    app.config(['$routeProvider',
-                function ($routeProvider) {
-                $routeProvider
-                    .when('/',{
-                        templateUrl:'view/listView.html',
-                        controller: 'studentListController'
-                    })
-                    .when('/addStudent',{
-                        templateUrl:'view/studentAdd.html',
-                        controller: 'studentAddController'
-                    })
-                    .when('/updateStudent/:id',{
-                        templateUrl:'view/studentAdd.html',
-                        controller: 'studentAddController'
-                    })
-                    .otherwise({
-                        redirectTo: '/'
-                    })
-                }]);
+var app = angular.module('myApp', [
+    'ui.router',
+    'myApp.studentModule',
+]);
+
+app.config(['$stateProvider','$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('students', {
+                url: '/',
+                templateUrl: 'view/listView.html',
+                controller: 'studentController'
+            });
+        $urlRouterProvider.otherwise('/');
+    }]);

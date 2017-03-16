@@ -4,20 +4,48 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/node_modules/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="/node_modules/ng-table/bundles/ng-table.css">
+    <script src="/node_modules/ng-table/bundles/ng-table.js"></script>
+    <script src="/node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/controllers/studentAddController.js"></script>
-    <script src="js/controllers/studentListController.js"></script>
+    <script src="js/module/studentModule.js"></script>
     <script src="js/services/studentService.js"></script>
-    <link rel="stylesheet" href="/Abhi/table.css">
+    <link rel="stylesheet" href="js/css/table.css">
+    <link rel="stylesheet" href="js/css/app.css">
 </head>
 <body ng-app="myApp">
-<div>
-    <h1>Student Details</h1><br/><br/>
-    <div ng-view>
-
-
+<nav class="navbar navbar-default panel_heading_background ng-scope" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand"> Project</a>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-xs-2">
+        <div class="nav-side-menu">
+            <div class="menu-list">
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li>
+                        <h3>Students</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-9">
+        <breadscrumb class="ng-scope">
+            <div class="breadcrumbs printhide" ng-click="breadscrumb_print_fn()">
+                <div class="view-container">
+                    <div class="view-frame">
+                        <ui-view></ui-view>
+                    </div>
+                </div>
+            </div>
+        </breadscrumb>
     </div>
 </div>
-
 </body>
 </html>
