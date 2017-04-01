@@ -4,11 +4,11 @@
     <title>HTML Referece</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -30,8 +30,8 @@
         <div class="col-sm-2 sidenav">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="#doc">Home</a></li>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#tags">HTML Tags</a></li>
+                <li><a href="#htmlIntro">Introduction</a></li>
+                <li><a href="#htmlTags">HTML Tags</a></li>
             </ul><br>
         </div><br/><br/>
         <br/>
@@ -47,13 +47,13 @@
     app.config(function($routeProvider) {
         $routeProvider
             .when("/", {
-                templateUrl : "home.html"
+                templateUrl : "partials/home.html"
             })
-            .when("/intro", {
-                templateUrl : "intro.html"
+            .when("/htmlIntro", {
+                templateUrl : "partials/htmlIntro.html"
             })
-            .when("/tags", {
-                templateUrl : "tags.html"
+            .when("/htmlTags", {
+                templateUrl : "partials/htmlTags.html"
             })
             .otherwise({
                 redirectTo: '/'
