@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angular Referece</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="myApp"  style="background-image:url(img.jpg)">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Angular</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="javascript.html">JavaScript</a></li>
+            <li class="active"><a href="doc.html">Html</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#doc">Home</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#angularReference">Angular Reference</a></li>
+            </ul><br>
+        </div><br/><br/>
+        <br/>
+
+        <div ng-view class="col-sm-10">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+            .when("/", {
+                templateUrl : "home.html"
+            })
+            .when("/intro", {
+                templateUrl : "intro.html"
+            })
+            .when("/angularReference", {
+                templateUrl : "partials/angularReference.html"
+            })
+            .otherwise({
+                redirectTo: '/'
+            })
+    });
+</script>
+</body>
+</html>
