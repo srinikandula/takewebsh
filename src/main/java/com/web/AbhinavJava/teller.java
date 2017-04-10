@@ -12,4 +12,4 @@ class teller extends account{
         bala = bala-amo;
         return bala;
     }
-}
+}    
