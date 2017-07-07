@@ -180,6 +180,7 @@ public class BankApp{
         } else {
             Account accountRecord =  (Account)new ObjectInputStream(new FileInputStream(f)).readObject();
             System.out.println("Balance is "+ accountRecord.getBalance());
+            System.out.println("SSN is "+ accountRecord.getSsn());
         }
     }
 
@@ -189,6 +190,8 @@ public class BankApp{
             Account acc = new Account();
             System.out.println("Please enter name");
             acc.setName(bufferedReader.readLine());
+            System.out.println("Please enter your ssn");
+            acc.setSsn(Long.valueOf(bufferedReader.readLine()));
             System.out.println("Please enter deposit balance");
             acc.setBalance(Double.valueOf(bufferedReader.readLine()));
             acc.setAccountId((int)(Math.random()*10000));
