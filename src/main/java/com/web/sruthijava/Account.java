@@ -9,6 +9,7 @@ public class Account implements Serializable {
         private int accountId;
         private String name;
         private double balance;
+        private transient long ssn;
 
         public void setName(String name) {
             this.name = name;
@@ -22,6 +23,8 @@ public class Account implements Serializable {
             this.accountId = accountId;
         }
 
+        public void setSsn(Long ssn){this.ssn = ssn;}
+
         public int getAccountId() {
             return accountId;
         }
@@ -31,4 +34,5 @@ public class Account implements Serializable {
         public double getBalance() {
             return balance;
         }
+        public long getSsn(){return ssn; }
 }
