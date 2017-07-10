@@ -3,16 +3,17 @@ package com.web.sruthijava;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
- * Created by chsru on 7/7/2017.
+ * Created by chsru on 7/8/2017.
  */
-public class BankApp {
-    static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-    private static ArrayList<Account> arrList = new ArrayList<Account>();
+public class tressSetExample {
 
+    static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    private static Set <Account> treeSet = new TreeSet<Account>(new AccountComparator());
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         int option = 0;
         do {
@@ -21,6 +22,7 @@ public class BankApp {
             System.out.println("3. Deposit");
             System.out.println("4. Withdraw");
             System.out.println("5. Delete Account");
+            System.out.println("6. Order Account");
             System.out.println("0. Exit");
             System.out.println("please enter your option");
             option = Integer.parseInt(bufferedReader.readLine());
@@ -40,12 +42,15 @@ public class BankApp {
                 case 5:
                     deleteAccount();
                     break;
+                case 6:
+                    orderAccount();
+                    break;
             }
         } while (option != 0);
     }
+
     public static void createNewAccount() throws IOException {
         Account newAccount = new Account();
-        arrList.add(newAccount);
         System.out.println("Please enter name");
         newAccount.setName(bufferedReader.readLine());
         System.out.println("Please enter your ssn");
@@ -54,13 +59,13 @@ public class BankApp {
         newAccount.setBalance(Double.valueOf(bufferedReader.readLine()));
         newAccount.setAccountId((int) (Math.random() * 10000));
         System.out.println("Account Number:" + newAccount.getAccountId());
-        System.out.println(arrList);
+        treeSet.add(newAccount);
     }
 
     public static void findBalance() throws IOException {
         System.out.println("Please enter your account number");
         int accountNumber = Integer.parseInt(bufferedReader.readLine());
-        Iterator<Account> itr = arrList.iterator();
+        Iterator<Account> itr = treeSet.iterator();
         while (itr.hasNext()){
             Account check = itr.next();
             if(check.getAccountId() == accountNumber)
@@ -72,12 +77,12 @@ public class BankApp {
     public static void deleteAccount() throws IOException{
         System.out.println("Please enter your account number");
         int accountNumber = Integer.parseInt(bufferedReader.readLine());
-        Iterator<Account> itr = arrList.iterator();
+        Iterator<Account> itr = treeSet.iterator();
         while (itr.hasNext()){
             Account check = itr.next();
             if(check.getAccountId() == accountNumber)
             {
-                arrList.remove(check);
+                treeSet.remove(check);
                 System.out.println("account deleted successfully");
                 break;
             }
@@ -88,7 +93,7 @@ public class BankApp {
         int accountNumber = Integer.parseInt(bufferedReader.readLine());
         System.out.println("Please enter deposit amount");
         int depositAmount = Integer.parseInt(bufferedReader.readLine());
-        Iterator<Account> itr = arrList.iterator();
+        Iterator<Account> itr = treeSet.iterator();
         while (itr.hasNext()){
             Account check = itr.next();
             if(check.getAccountId() == accountNumber)
@@ -103,7 +108,7 @@ public class BankApp {
         int accountNumber = Integer.parseInt(bufferedReader.readLine());
         System.out.println("Please enter withdraw amount");
         int withdrawAmount = Integer.parseInt(bufferedReader.readLine());
-        Iterator<Account> itr = arrList.iterator();
+        Iterator<Account> itr = treeSet.iterator();
         while (itr.hasNext()){
             Account check = itr.next();
             if(check.getAccountId() == accountNumber)
@@ -113,5 +118,13 @@ public class BankApp {
             }
         }
     }
-}
+    public static void orderAccount() throws IOException{
+        Iterator<Account> itr = treeSet.iterator();
+        while (itr.hasNext()){
+            Account temp = itr.next();
+            System.out.println("Account No : " +temp.getAccountId() + "Account Balance : " +temp.getBalance());
 
+        }
+
+    }
+}
