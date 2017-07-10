@@ -94,10 +94,10 @@ public class Application extends SpringBootServletInitializer {
 	@Bean
 	public ContentNegotiatingViewResolver viewResolver() {
 		ContentNegotiatingViewResolver resolver = new ContentNegotiatingViewResolver();
-		List<ViewResolver> viewResolvers = new ArrayList<>(1);
+		List<ViewResolver> viewResolvers = new ArrayList(1);
 		viewResolvers.add(jspViewResolver());
 		resolver.setViewResolvers(viewResolvers);
-		List<View> views = new ArrayList<>();
+		List<View> views = new ArrayList();
 		views.add(jsonView());
 		resolver.setDefaultViews(views);
 		return resolver;
