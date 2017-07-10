@@ -201,7 +201,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.4.1.1</version>
+            <version>RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
@@ -216,7 +216,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.0</version>
+            <version>RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -226,12 +226,12 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.0</version>
+            <version>RELEASE</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.14</version>
+            <version>RELEASE</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -241,7 +241,13 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>1.9.5</version>
+            <version>RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>3.5.6-Final</version>
         </dependency>
     </dependencies>
 

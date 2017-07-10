@@ -1,6 +1,6 @@
 package com.web.HarshaJava;
 
-import org.hibernate.annotations.SourceType;
+import org.hibernate.annotations.*;
 
 /**
  * Created by sriharshakota on 4/6/17.
