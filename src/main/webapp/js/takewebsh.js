@@ -31,7 +31,7 @@ function createAccount() {
         });
     }else {
         $.ajax({
-            type: "POST",
+            type: "PUT",
             url: '/api/account/update/'+accountId,
             data: {'firstName': firstName, 'lastName': lastName, 'balance': balance},
             success: function (data, status, req) {
