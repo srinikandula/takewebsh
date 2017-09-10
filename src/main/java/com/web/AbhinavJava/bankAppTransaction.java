@@ -59,10 +59,12 @@ public class bankAppTransaction {
                     connection.commit();
                     System.out.println("Transfer success");
                 } else {
+                    System.out.println("Check your Destination account number, Transfer failed and Amount refunded");
                     connection.rollback();
                 }
             } else {
                 System.out.println("Transfer failed");
+                connection.rollback();
             }
         };
     }
@@ -127,7 +129,9 @@ public class bankAppTransaction {
         System.out.println("Please enter deposit amount");
         int depositAmount = Integer.parseInt(bufferedReader.readLine());
 
-        deposit(getConnection(), accountNumber, depositAmount);
+        Connection connection = getConnection();
+        deposit(connection, accountNumber, depositAmount);
+        connection.close();
     }
 
     private static boolean deposit(Connection connection, int accountNumber, int depositAmount) throws Exception {
@@ -157,8 +161,9 @@ public class bankAppTransaction {
         }finally {
             rs.close();
             preparedStatement.close();
-            preparedStatement2.close();
-            //connection.close();
+            if(preparedStatement2 != null){
+                preparedStatement2.close();
+            }
         }
     }
 
@@ -168,7 +173,9 @@ public class bankAppTransaction {
         System.out.println("Please enter withdraw amount");
         int withdrawAmount = Integer.parseInt(bufferedReader.readLine());
 
+        Connection connection = getConnection();
         withdraw(getConnection(),accountNumber, withdrawAmount);
+        connection.close();
     }
 
     private static boolean withdraw(Connection connection, int accountNumber, int withdrawAmount) throws Exception {
@@ -204,8 +211,9 @@ public class bankAppTransaction {
         finally {
             rs.close();
             preparedStatement.close();
-            preparedStatement2.close();
-            //connection.close();
+            if(preparedStatement2 != null){
+                preparedStatement2.close();
+            }
         }
     }
 
@@ -232,7 +240,9 @@ public class bankAppTransaction {
             }
         }finally {
             preparedStatement.close();
-            statement2.close();
+            if(statement2 != null){
+                statement2.close();
+            }
             connection.close();
         }
     }
