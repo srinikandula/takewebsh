@@ -1,3 +1,4 @@
+
 package staticmethod;
 
 class Student{  
